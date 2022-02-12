@@ -1,0 +1,8 @@
+.typing__text{
+    white-space: pre;
+    font-weight: 300;
+    line-height: 1.2;
+    font-size: 24px;
+    color: #DAE0F2;
+    z-index: 2;
+}
