@@ -13,7 +13,7 @@ import StoryMobileFull from './components/Story/StoryMobileFull'
 import { useTransition, animated } from 'react-spring'
 
 const Routerelement = () => {
-    var check_html_hid = ["/wearefx"];
+    var check_html_hid = ["wearefx"];
     const location = useLocation();
     var loc__ = location.pathname.replace(/\//g, '');
     console.log(loc__);
