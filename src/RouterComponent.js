@@ -15,6 +15,7 @@ import { useTransition, animated } from 'react-spring'
 const Routerelement = () => {
     var check_html_hid = ["/wearefx"];
     const location = useLocation();
+    console.log(location);
     if(check_html_hid.indexOf(location.pathname) > -1) {
         try {
             document.getElementsByTagName("html")[0].style.overflow = "hidden"; 
