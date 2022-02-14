@@ -93,6 +93,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
 }
 #parallaxImageBlock {
     position: absolute !important;
@@ -179,16 +180,16 @@
     margin-bottom: 24px !important;
 }
 .arrowToTop {
-    margin-top: 20px;
+    margin-top: 24px;
 }
 .casesMain {
-    position: relative;
-    margin-top: 300px;
+    position: absolute;
     font-weight: normal;
     font-size: 40px;
     z-index: 40000;
     color: #fff;
     left: 60px;
+    bottom: 290px;
     transition: 0.3s ease-in-out;
 }
 .casesMain p {
@@ -328,7 +329,7 @@
     background-image: url('../../images/Showreel.svg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 110%;
+    background-size: cover;
     opacity: 0;
     animation: animBackground 0.2s ease-in-out forwards;
     top: 0;
@@ -341,7 +342,7 @@
     background-image: url('../../images/pumaback.svg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 110%;
+    background-size: cover;
     z-index: 2000;
     opacity: 0;
     animation: animBackground 0.2s ease-in-out forwards;
@@ -455,7 +456,7 @@
     transition: all 0.3s ease !important;
     opacity: 1;
     background-repeat: no-repeat;
-    background-size: 110%;
+    background-size: cover;
     background-position: center;
     backdrop-filter: none;
     animation: destroyBack 1s ease forwards;

@@ -104,18 +104,16 @@ export const Hire = ({
                     </div>
                     <div className="hireBLock__left__middle">
                         <p>
-                            All contents of this website are the property oF
-                            wearefx STUDIO. No part of this site, including all
-                            text and images, may be reproduced in any form
-                            without the prior written consent oF wearefx STUDIO
+                            All contents of this website are the property <br />oF
+                            wearefx STUDIO. No part of this site, <br />including all
+                            text and images, may be <br />reproduced in any form
+                            without the prior <br />written consent oF wearefx STUDIO
                             ©2021
                         </p>
                         <div className="arrowToTop" />
                     </div>
                     <h3 className="hireBLock__left__bottom">
-                        We’re curious how we can
-                        <br />
-                        help, get in touch 👋
+                        We’re curious how we can<br />help<span className='span__special__color'>,</span> get in touch 👋
                     </h3>
                 </div>
                 <div className="hireBLock__right">
@@ -144,14 +142,14 @@ export const Hire = ({
                             For general inquiries
                             <br />& new projects{' '}
                         </p>
-                        <h3>contact@wearefx.xyz</h3>
+                        <h3>contact@wearefx<span className='span__special__color'>.</span>xyz</h3>
                     </div>
                     <div className="hireBLock__right__bottom">
                         <div className="contact">
                             <p>Studio manager</p>
                             <p>Alex Dysenko</p>
                             <div className="contact__tel">
-                                <p>a@wearefx.xyz</p>
+                                <p>a@wearefx<span className='span__special__color'>.</span>xyz</p>
                                 <Link to="tel:+380935925000">
                                     +380935925000
                                 </Link>
@@ -161,7 +159,7 @@ export const Hire = ({
                             <p>Studio manager</p>
                             <p>Stas Ravsyi</p>
                             <div className="contact__tel">
-                                <p>s@wearefx.xyz</p>
+                                <p>s@wearefx<span className='span__special__color'>.</span>xyz</p>
                                 <a href="tel:+380636312065">+380636312065</a>
                             </div>
                         </div>

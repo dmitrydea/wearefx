@@ -50,7 +50,7 @@
 .mainPageSelector {
     opacity: 0;
     animation: unFocusFocus 2s forwards;
-    overflow-y: hidden !important;
+    overflow: hidden !important;
 }
 @keyframes unFocusFocus {
     0% {

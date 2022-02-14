@@ -191,6 +191,33 @@ const MainPage = ({
         drawAnimLine(canvas2, { x: e.clientX, y: e.clientY }, buttonsCoords[1])
         drawAnimLine(canvas3, { x: e.clientX, y: e.clientY }, buttonsCoords[2])
     }
+
+    const resizeEvent = (e) => {
+        var b1 = btn1Ref.current?.getBoundingClientRect();
+        var b2 = btn2Ref.current?.getBoundingClientRect();
+        var b3 = btn3Ref.current?.getBoundingClientRect();
+        try {
+            //if (isCasesEntered) ctx.lineTo(to.x + 4, to.y - 5)
+            //if (isStoryEntered) ctx.lineTo(to.x - 50, to.y + 25)
+            //if (isHireEntered) ctx.lineTo(to.x + 50, to.y + 25)
+            b1.x = b1.x + 50;
+            b1.y = b1.y + 50;
+
+            b2.x = b2.x + 50;
+            b2.y = b2.y + 50;
+
+            b3.x = b3.x + 50;
+            b3.y = b3.y + 50;
+        } catch(e) {
+
+        }
+        setButtonsCoords([
+            b1,
+            b2,
+            b3
+        ])
+    }
+
     useEffect(() => {
         applyLayout(canvas1)
         applyLayout(canvas2)
@@ -215,6 +242,8 @@ const MainPage = ({
         window.addEventListener('mousemove', onMove)
 
         window.addEventListener('mousemove', btnMove1)
+
+        window.addEventListener('resize', resizeEvent)
 
         return () => {
             window.removeEventListener('mousemove', onMove)

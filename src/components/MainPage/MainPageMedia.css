@@ -3,10 +3,7 @@
         left: 60px;
     }
     .hirePageVk {
-        margin-right: 30% !important;
-        width: 53% !important;
-        height: 556px !important;
-        margin-top: 15% !important;
+       
     }
     .text-block {
         height: 50vh !important;
@@ -25,7 +22,7 @@
         left: 99px !important;
     }
     .thirdCircle{
-        right: 60px;
+        right: 95px;
     }
     .thirdCircle:hover {
         bottom: 60px !important;
@@ -40,17 +37,18 @@
     .storyBlock h3 {
         font-size: 48px;
         line-height: 57px;
+        min-width: 576px;
     }
     .storyBlock div {
         font-size: 22px;
-        padding-left: 170px;
+        padding-left: 190px;
     }
     .casesArrow {
         margin: 0;
         padding: 0 !important;
     }
     .casesMain {
-        margin-top: 30%;
+
     }
     .casesMain p:nth-child(1) {
         font-size: 120px;
@@ -64,16 +62,16 @@
         height: 120px;
     }
     .gradientBtn p {
-        transform: translateY(calc(50%));
+
     }
     .firstCircle {
-        left: calc(47.9%);
+
     }
     .clickedCases {
-        left: calc(48.3%);
+
     }
     .hireBtn p {
-        transform: translateY(calc(70%));
+        
     }
     .hireBLock__left__bottom {
         font-size: 48px;
@@ -85,8 +83,7 @@
         margin-right: 48px;
     }
     .hireBLock {
-        margin-top: 11%;
-        margin-right: 26%;
+
     }
     .gradientBtnContact {
         width: 144px !important;
@@ -100,7 +97,7 @@
         top: 29% !important;
     }
     .casesTextBlock p {
-        width: 200px;
+
     }
     .cases-page-slider {
         left: calc(25%) !important;
@@ -331,7 +328,71 @@
         top: 27%;
     }
 }
+@media (max-width: 1550px) {
+    .storyBlock {
+        margin-top: 100px;
+        margin-left: 413px;
+    }
+    .storyBlock h3 {
+        z-index: 2000;
+        font-size: 30px;
+        font-weight: 300;
+    }
+    .casesArrPadding {
+        margin-top: 50px !important;
+    }
+    .storyBlock a, .storyBlock p {
+        font-size: 15px;
+    }
+    .hireBtn {
+        width: 110px;
+        height: 110px;
+    }
+    .pos1 {
+        width: 90px;
+        height: 90px;
+    }
+    .hireBLock {
+        margin-left: 220px;
+        margin-top: 140px;
+    }
+    .hireBLock__right__middle h3, .contact__tel, .hireBLock a {
+        font-weight: 450 !important;
+        color: #DAE0F2;
+        font-size: 17px !important;
+    }
+    .hireBLock__left__top a, .hireBLock__right__top p, .hireBLock__left__middle {
+        font-size: 15px;
+    }
+    .hireBLock__right__middle {
+        margin-top: 60px;
+    }
+    .hireBLock__right__middle p {
+        color: #dae0f2;
+        text-transform: uppercase;
+        font-size: 16px;
+        margin-bottom: 24px;
+    }
+    .hireBLock__right__middle h3 {
+        font-size: 40px !important;
+    }
+    .hireBLock__right__bottom {
+        margin-top: 60px;
+    }
+    .hireBLock__left {
+        margin-right: 80px;
+    }
+    .hireBLock__right__top p {
+        margin-right: 25px;
+    }
+    .hireBLock__right__middle h3 {
+        font-size: 30px !important;
+    }
+}
 @media (max-width: 1440px) {
+    .clickedStory {
+        left: 40px;
+    }
     .fhd {
         display: block !important;
     }
@@ -348,18 +409,87 @@
         display: block;
     }
     .storyBlock {
-        margin-top: 15%;
+        margin-top: 100px;
+        margin-left: 413px;
     }
-    .hireBLock {
-        margin-top: 13%;
-        width: 71%;
-        height: 65vh !important;
+    .hireBLock__right__middle h3, .contact__tel, .hireBLock a {
+        font-weight: 450 !important;
+        color: #DAE0F2;
+        font-size: 13px !important;
     }
-    .casesMain {
-        top: 0;
+    .hireBLock__left__top a {
+        color: #DAE0F2;
+        text-transform: uppercase;
+        font-weight: 300;
+        margin-right: 30px;
     }
-    .hireBtn {
-        padding-top: 1.5%;
+    .hireBLock__left__top a, .hireBLock__right__top p, .hireBLock__left__middle {
+        font-size: 14px !important;
+    }
+    .hireBLock__left__middle {
+        color: #dae0f2;
+        text-transform: uppercase;
+        font-weight: 450;
+        opacity: 0.6;
+        margin-top: 30px;
+    }
+    .hireBLock__left {
+        justify-content: flex-start;
+    }
+    .hireBLock__left__bottom {
+        font-size: 30px;
+        font-weight: 400;
+        margin-top: 15px;
+    }
+    .hireBLock__right__middle h3 {
+        font-size: 30px !important;
+    }
+    .hireBLock__right__bottom {
+        margin-top: 30px;
+    }
+    .hireBLock__right__bottom {
+        font-weight: normal;
+        font-size: 14px;
+    }
+    .contact p:nth-child(2) {
+        padding-bottom: 15px;
+    }
+}
+@media (max-width: 1336px) {
+    .storyBlock {
+        margin-top: 100px;
+        margin-left: 295px;
+    }
+    .typing__text {
+        display: none;
+    }
+}
+@media (max-width: 1200px) {
+    .storyBtn {
+        width: 110px !important;
+        height: 110px !important;
+    }
+    .pos2 {
+        width: 90px !important;
+        height: 90px !important;
+    }
+    .storyBlock {
+        margin-left: 230px;
+    }
+    .storyBlock h3 {
+        font-size: 34px;
+    }
+    .storyBlock > div {
+        padding-left: 90px;
+    }
+    .casesArrPadding {
+        margin-top: 15px !important;
+    }
+    .storyBlock p {
+        margin: 10px 0 10px 0;
+    }
+    .clickedStory {
+        left: 10px;
     }
 }
 @media (max-width: 1024px) {
@@ -378,16 +508,68 @@
         clip-path: polygon(51% 0%, 100% 15%, 100% 100%, 0 100%, 0 30%);
     }
     .casesArray {
-        bottom: 265px;
-        left: calc(75%);
+        bottom: 200px;
+        right: 60px !important;
+        left: auto !important;
     }
     .storyBlock {
-        margin-top: 15%;
+        margin-top: 100px;
     }
     .hireBLock {
         height: 490px;
         margin-top: 18%;
         margin-left: 12%;
+    }
+    .gradientBtn {
+        width: 110px;
+        height: 110px;
+    }
+    .shape {
+        width: 90px;
+        height: 90px;
+    }
+    .hireBLock__left {
+        margin-right: 55px;
+    }
+}
+@media (max-width: 900px) {
+    .storyBlock h3 {
+        font-size: 25px;
+    }
+    .storyBlock > div {
+        padding-left: 38px;
+    }
+    .storyBlock p {
+        font-size: 14px;
+    }
+    .storyBlock a, .storyBlock p {
+        margin: 0px 0 10px 0;
+    }
+    .hireBLock {
+        flex-direction: column;
+        height: 490px;
+        margin-top: 6%;
+        margin-left: 30%;
+    }
+    .hireBLock__right__bottom {
+        justify-content: flex-start;
+    }
+    .hireBLock__right__bottom .contact:first-child {
+        margin-right: 50px;
+    }
+    .clickedHire {
+        right: 15px !important;
+    }
+    .hireBLock__left__bottom {
+        font-size: 21px;
+        font-weight: 400;
+        margin-top: 15px;
+    }
+    .hireBLock__right {
+        margin-top: 20px;
+    }
+    .hireBLock__right__middle {
+        margin-top: 30px;
     }
 }
 @media (max-width: 768px) {
@@ -407,40 +589,44 @@
         display: block;
     }
     .casesArray {
-        bottom: 210px;
+        bottom: 60px;
+        left: 44px !important;
+        right: auto !important;
+        font-size: 30px !important;
     }
     .casesMain {
-        margin-top: 220px;
+        bottom: 660px;
     }
     .storyLayout {
         clip-path: polygon(18% 0, 100% 0, 100% 100%, 12% 89%);
     }
     .storyBlock h3 {
-        font-size: 24px;
+        font-size: 18px;
     }
     .storyBlock div {
         font-size: 12px;
     }
+    .storyBlock p {
+        font-size: 11px;
+      }
     .hireBLock__left {
         font-size: 15px;
     }
     .hireBLock__left__middle {
-        margin-top: 0;
-        width: 300px;
+      
     }
     .hireBLock {
-        margin-top: 19%;
-        margin-left: 8%;
+        
     }
     .hireBtn {
         top: 20px;
         left: 20px;
     }
     .hireBLock__right__middle {
-        margin-top: 50px;
+        
     }
     .hireBLock__right__bottom {
-        margin-top: 85px;
+        
     }
     .hireBLock__right__bottom .contact:nth-child(1) {
         margin-right: 10px;
@@ -452,7 +638,6 @@
         width: 30% !important;
     }
     .casesArray div {
-        height: 40px;
     }
     .pos1 {
         top: 27px;
@@ -464,6 +649,109 @@
     .hireBLock__right__top p,
     .hireBLock__right__top a {
         font-size: 15px !important;
+    }
+    .casesTextBlock p {
+        font-size: 15px !important;
+        display: none;
+    }
+    .casesArray div {
+        margin-top: 20px !important;
+    }
+    .storyBlock {
+        flex-direction: column !important;
+        margin-left: 185px;
+        margin-top: 55px;
+    }
+    .storyBlock > div {
+        padding-left: 0;
+        margin-top: 13px;
+    }
+    .casesArrow  {
+        display: none !important;
+    }
+}
+@media (max-width: 636px) {
+    .hireBLock {
+        margin-left: 60px;
+    }
+    .hireBtn {
+        left: auto !important;
+        right: 105px;
+    }
+    .pos1 {
+        left: auto !important;
+        right: 117px;
+    }
+    .hireBLock__left__top a, .hireBLock__right__top p, .hireBLock__left__middle {
+        font-size: 12px !important;
+    }
+    .hireBLock__left__bottom {
+        font-size: 18px;
+        font-weight: 400;
+        margin-top: 15px;
+    }
+    .hireBLock__right__middle p {
+        color: #dae0f2;
+        text-transform: uppercase;
+        font-size: 13px;
+        margin-bottom: 24px;
+    }
+    .hireBLock__right__middle h3 {
+        font-size: 23px !important;
+    }
+}
+@media (max-width: 612px) {
+    .storyBtn {
+        bottom: 60px;
+        top: auto !important;
+    }
+    .pos2 {
+        bottom: 70px;
+        top: auto !important;
+    }
+    .storyBlock {
+        margin-top: 50px;
+        margin-left: 155px;
+    }
+    .hireBtn, .pos1 {
+        display: none;
+    }
+}
+@media (max-width: 480px) {
+    .casesTextBlock .casesArrow {
+        display: none;
+    }
+}
+@media (max-height: 500px) and (max-width: 5000px) {
+    .casesTextBlock {
+        display: none;
+    }
+    .casesArray {
+        bottom: 60px;
+        left: 60px !important;
+        right: auto !important;
+    }
+    .casesMain {
+        bottom: 400px;
+    }
+}
+@media (max-height: 500px) and (max-width: 5000px) {
+    .casesTextBlock {
+        display: none;
+    }
+    .casesArray {
+       display: none;
+    }
+    .casesMain {
+        display: none;
+    }
+    .casesBtn, .pos33 {
+        left: 50%;
+        right: auto !important;
+        transform: translateX(-50%);
+    }
+    .firstCircle {
+        margin-top: -55px;
     }
 }
 @media (max-width: 425px) {
@@ -576,12 +864,12 @@
     }
     .main__bottom__video {    
         content: '';
-        width: 166%;
-        left: calc(-77%) !important;
-        transform: rotate(-90deg);
-        bottom: 0;
-        position: absolute;
+        width: 400px;
         left: 0;
+        transform: rotate(-90deg);
+        bottom: 50%;
+        position: absolute;
+        left: -44%;
     }
     .main__bottom {
         position: absolute;
@@ -720,7 +1008,7 @@ bottom: 50px;
     font-size: 18px;
 }
 .hireBLock__right__middle h3 {
-    font-size: 48px !important;
+    
 }
 .fhd {
     display: block;

@@ -98,8 +98,8 @@ export const Story = ({
             />
             <div className="storyBlock">
                 <h3>
-                    We are full-service experiential VFX production studio based
-                    in Ukraine inspired by the creative potential of emerging
+                    We are full-service <br />experiential VFX <br />production studio based
+                    in <br />Ukraine inspired by the <br />creative potential of <br />emerging
                     technologies. 😎
                 </h3>
                 <div>
@@ -111,15 +111,15 @@ export const Story = ({
                     </Link>
                     <div className="casesArrow casesArrPadding" />
                     <p>
-                        As a wide collective of highly skilled creatives, we
-                        vizualize any content on any screen and any space.
-                        Create CG and VFX for Advertising, TV, Print, digital,
-                        series, short and now long format films, games, VR and
+                        As a wide collective of highly <br />skilled creatives, we
+                        vizualize <br />any content on any screen <br />and any space.
+                        Create CG and <br />VFX for Advertising, TV, Print, <br />digital,
+                        series, short and now <br />long format films, games, VR <br />and
                         AR experiences.
                     </p>
                     <p>
-                        A deeply collaborative approach and respect for every
-                        aspect and role in the creation process stands at our
+                        A deeply collaborative <br />approach and respect for every <br />
+                        aspect and role in the creation <br />process stands at our
                         core.
                     </p>
                 </div>

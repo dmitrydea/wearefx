@@ -1,12 +1,13 @@
 .storyLayout {
+    overflow-y: auto;
     position: absolute;
     bottom: 0;
-    width: 100vw;
+    width: calc(100vw + 35px);
     height: 100vh;
     z-index: 2000;
     top: 0;
     opacity: 1 !important;
-    left: 0;
+    left: -35px;
     transition: clip-path 0.3s ease;
     animation: storyShow;
     animation-timing-function: cubic-bezier(0.67, 0.51, 0.51, 0.91);
@@ -77,7 +78,6 @@
 }
 .storyBtn {
     font-size: 13px;
-    padding-top: 9px;
     position: absolute;
     top: 60px;
     z-index: 2000;
@@ -90,19 +90,17 @@
 .storyBlock {
     transition: 0.3s ease;
     z-index: 2000;
-    margin: auto;
     color: #fff;
-    width: 50%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     font-weight: 300;
-    margin-top: 10%;
+    margin-top: 228px;
+    margin-left: 481px;
 }
 .storyBlock h3 {
     z-index: 2000;
     font-size: 40px;
-    margin-right: 20px;
     font-weight: 300;
 }
 .storyBlock a,
@@ -117,6 +115,13 @@
     display: flex;
     flex-direction: column;
 }
-.casesArrPadding{
-    margin-top: 90px !important;
+.storyBlock > div {
+    padding-left: 190px;
+}
+.casesArrPadding {
+    margin-top: 70px !important;
+}
+
+.storyBlock a:first-child {
+    margin-top: 0 !important;
 }
