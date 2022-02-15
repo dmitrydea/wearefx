@@ -193,7 +193,6 @@ const MainPage = ({
     }
 
     const resizeEvent = (e) => {
-        return;
         var b1 = btn1Ref.current?.getBoundingClientRect();
         var b2 = btn2Ref.current?.getBoundingClientRect();
         var b3 = btn3Ref.current?.getBoundingClientRect();
