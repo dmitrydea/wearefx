@@ -2,6 +2,9 @@
     .secondCircle{
         left: 60px;
     }
+    .hireBLock__right__middle h3 {
+        font-size: 38px !important;
+      }
     .hirePageVk {
        
     }
@@ -68,7 +71,7 @@
 
     }
     .clickedCases {
-
+        top: 110px;
     }
     .hireBtn p {
         
@@ -123,6 +126,9 @@
     }
 }
 @media (min-width: 2560px) {
+    .hireBLock__right__middle h3 {
+        font-size: 48px !important;
+      }
     .pos33 {
         bottom: 90px;
         right: 90px;
@@ -197,8 +203,8 @@
         bottom: -120px !important;
     }
     .clickedCases {
-        top: 70px;
-        left: calc(48%);
+        top: 98px !important;
+        left: 50% !important;
     }
     .mobile__btns {
         display: none;
@@ -256,12 +262,9 @@
         height: 42px;
         font-size: 36px;
         line-height: 46px;
-        width: 265px;
     }
     .mcDonalds:hover::before {
-        width: 50px;
-        height: 50px;
-        left: -50px;
+       
     }
     .casesMain p:nth-child(1) {
         font-size: 120px;
@@ -327,6 +330,11 @@
     .gradientBtnContact p {
         top: 27%;
     }
+}
+@media (min-width: 1550px) {
+    .hireBLock__right__middle h3 {
+        font-size: 38px !important;
+      }
 }
 @media (max-width: 1550px) {
     .storyBlock {
@@ -751,7 +759,7 @@
         transform: translateX(-50%);
     }
     .firstCircle {
-        margin-top: -55px;
+        
     }
 }
 @media (max-width: 425px) {
@@ -997,6 +1005,21 @@ bottom: 50px;
     .mobile {
         display: block !important;
     }
+}
+@media (max-height: 1400px) {
+    .firstCircle {
+        top: 8% !important;
+      }
+}
+@media (max-height: 980px) {
+    .firstCircle {
+        top: 6% !important;
+      }
+}
+@media (max-height: 680px) {
+    .firstCircle {
+        top: 4% !important;
+      }
 }
 .mobile__btns {
     display: none;

@@ -1,7 +1,7 @@
 .story-header {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding: 60px 60px 0 60px;
     top: 0;
     width: 100%;
@@ -12,30 +12,32 @@
 .header-left {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    width: 40%;
+    justify-content: flex-start;
 }
 .header-left div:nth-child(1) {
     display: flex;
     text-transform: uppercase;
+    margin-right: 235px;
 }
 .header-left div:nth-child(1) h1:nth-child(1) {
     color: #fff;
     font-weight: 300;
     padding-right: 15px;
+    font-size: 36px !important;
 }
 .header-left div:nth-child(1) h1:nth-child(2) {
     color: #eebf1b;
     font-weight: 400;
+    font-size: 36px !important;
 }
 .header-left div:nth-child(2) {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 .header-left div:nth-child(2) a {
-    width: 150px !important;
     color: #fff;
     text-transform: uppercase;
+    margin-right: 36px;
 }
 .header-right, .personal-right{
     content: '';

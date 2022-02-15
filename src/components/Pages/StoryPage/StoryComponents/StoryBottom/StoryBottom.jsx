@@ -5,10 +5,10 @@ import StoryFooter from './StoryFooter'
 const StoryBottom = () => {
     return (
         <div className="story-bottom">
-            <div className="story-main-content content-2">
+            <div className="story-main-content content-2 content-2-mb">
                 <p>
-                    We pushing the boundaries of visual effects and work with
-                    our clients to innovate in the real world.
+                    We pushing the boundaries<br />of visual effects and work<br />with
+                    our clients to innovate<br />in the real world.
                 </p>
             </div>
             <div className='marques'>

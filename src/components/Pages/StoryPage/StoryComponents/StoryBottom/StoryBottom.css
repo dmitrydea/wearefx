@@ -1,12 +1,14 @@
 .story-bottom {
     /* height: 150vh; */
     background-color: #071013;
+    background-image: url('../../../../../images/Noise.svg');
+    background-repeat: repeat;
+    background-size: 100%;
 }
 .marques{
     width: 100vw;
-    height: 50vh;
-    margin-top: 17vh;
-    margin-bottom: -12vh;
+    margin-top: 145px !important;
+    margin-bottom: 140px;
 }
 .marquee-img,
 .marquee-img-reverse {
@@ -71,7 +73,6 @@
 .story-bottom-marquee-reverse {
     max-width: 100vw;
     overflow: hidden;
-    padding-bottom: 100px;
 }
 .marquee-div {
     display: flex;
@@ -112,11 +113,11 @@
     }
 }
 .mForFooter{
-    margin-top: 300px;
+
 }
 .story-footer {
     background: rgb(0, 0, 0);
-    height: 138px;
+    padding: 60px 240px;
     position:relative;
     bottom: 0 !important;
     left: 0;
@@ -124,7 +125,7 @@
     align-items: center;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .story-footer-left {
     display: flex;
@@ -132,10 +133,16 @@
 }
 .story-footer-left a {
     color: #fff;
-    margin-right: 30px;
+    margin-right: 60px;
+    min-height: 24px;
+    font-size: 18px;
     font-weight: 300;
+    color: #EDF5FC;
     text-transform: uppercase;
     transition: all 0.3s;
+}
+.story-footer-left a:last-child {
+    margin-right: 0 !important;
 }
 .story-footer-left a:hover {
     transition: all 0.3s;
@@ -154,18 +161,23 @@
     display: flex;
     flex-direction: row;
     font-weight: 300;
+    font-size: 18px;
     color: #dae0f2;
     opacity: 0.6;
 }
 .story-footer-right div {
     display: flex;
+    align-items: baseline;
     flex-direction: row;
+}
+.story-footer-right div p {
+    text-transform: uppercase;
 }
 .story-footer-right div p:nth-child(2) {
     font-weight: normal;
     text-transform: uppercase;
     text-decoration: underline;
-    margin-right: 60px;
+    margin-right: 81px;
     margin-left: 5px;
 }
 .story-footer-right p:nth-child(2) {
@@ -177,7 +189,6 @@
     .story-footer {
         position: relative;
         flex-direction: column;
-        height: 350px;
     }
     .story-footer-left,
     .story-footer-right {

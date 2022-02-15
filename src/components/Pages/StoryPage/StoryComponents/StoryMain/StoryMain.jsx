@@ -24,6 +24,27 @@ const StoryMain = () => {
             </div>
             <div className="story-main-content">
                 <p>
+                    Specialized in high end CG and VFX<br />for Advertising, TV,
+                    Print, digital,<br />series, short and now long format<br />films
+                    since its launch, WeareFX has<br />consistently evolved their
+                    processes<br />as VFX specialists with a strong<br />emphasis on art
+                    direction, design<br />and technique development.
+                </p>
+                <p>
+                    Wearefx’s fully equipped and growing Ukraine based<br />studio is
+                    accompanied with a host of talents, including<br />experienced
+                    lead 3D Project Managers, 3D VFX<br />artists, animators, lead
+                    lighting and 3D renderers.<br />Their dedicated compositing teams
+                    include specialized<br />Flame Artists, Shoot Supervisors and a
+                    host of in<br />house, and After Effects compositors.{' '}
+                </p>
+                <p className='margin__special'>
+                    Our’s services include Autodesk Smoke, Flame,<br />DaVinci
+                    Resolve, Adobe Premiere Pro and Avid<br />Media Composer suites.
+                </p>
+            </div>
+            <div className="story-main-content story-main-content-mobile">
+                <p>
                     Specialized in high end CG and VFX for Advertising, TV,
                     Print, digital, series, short and now long format films
                     since its launch, WeareFX has consistently evolved their
@@ -38,8 +59,8 @@ const StoryMain = () => {
                     include specialized Flame Artists, Shoot Supervisors and a
                     host of in house, and After Effects compositors.{' '}
                 </p>
-                <p>
-                    Our’s services include Autodesk Smoke, Flame, DaVinci
+                <p className='margin__special'>
+                    Our’s services include Autodesk Smoke, Flame,DaVinci
                     Resolve, Adobe Premiere Pro and Avid Media Composer suites.
                 </p>
             </div>
