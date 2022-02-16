@@ -3,7 +3,7 @@
         left: 60px;
     }
     .hireBLock__right__middle h3 {
-        font-size: 38px !important;
+        font-size: 48px !important;
       }
     .hirePageVk {
        
@@ -121,8 +121,7 @@
         bottom: -120px !important;
     }
     .deb {
-        margin-right: 20%;
-        margin-top: 12%;
+        
     }
 }
 @media (min-width: 2560px) {
@@ -1031,7 +1030,7 @@ bottom: 50px;
     font-size: 18px;
 }
 .hireBLock__right__middle h3 {
-    
+    font-size: 48px !important;
 }
 .fhd {
     display: block;

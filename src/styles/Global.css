@@ -92,3 +92,8 @@ html {
 .page {
     position: absolute;
 }
+
+.hover__special__menu:hover {
+    transition: all 0.3s;
+    border-bottom: 1px solid #eebf1b;
+}

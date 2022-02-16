@@ -105,8 +105,13 @@ export default class Cube extends Component {
     }
 
     handleWindowResize = () => {
-        const width = this.mount.clientWidth
-        const height = this.mount.clientHeight
+        var width = this.mount.clientWidth
+        var height = 0;
+        if(document.documentElement.scrollHeight > document.documentElement.clientHeight) {
+            height = document.documentElement.clientHeight + 70
+        } else {
+            height = this.mount.clientHeight
+        }
 
         this.renderer.setSize(width, height)
         this.camera.aspect = width / height

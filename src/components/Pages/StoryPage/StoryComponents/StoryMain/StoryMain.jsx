@@ -13,8 +13,8 @@ const StoryMain = () => {
                         <h1>story</h1>
                     </div>
                     <div>
-                        <Link to="/cases">Cases</Link>
-                        <Link to="/hire">hire us</Link>
+                        <Link className='hover__special__menu' to="/cases">Cases</Link>
+                        <Link className='hover__special__menu' to="/hire">hire us</Link>
                     </div>
                 </div>
                 <Link to='/wearefx'>

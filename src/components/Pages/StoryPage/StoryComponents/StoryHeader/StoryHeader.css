@@ -33,6 +33,7 @@
 .header-left div:nth-child(2) {
     display: flex;
     justify-content: flex-start;
+    align-items: flex-start;
 }
 .header-left div:nth-child(2) a {
     color: #fff;

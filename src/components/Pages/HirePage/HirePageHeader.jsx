@@ -6,12 +6,12 @@ const HirePageHeader = () => {
         <div className="story-header">
             <div className="header-left">
                 <div>
-                    <h1>Hire</h1>
-                    <h1>us</h1>
+                    <h1 className='special__hire'>Hire</h1>
+                    <h1 className='special__hire_2'>us</h1>
                 </div>
                 <div>
-                    <Link to="/cases">Cases</Link>
-                    <Link to="/story">our story</Link>
+                    <Link className='hover__special__menu' to="/cases">Cases</Link>
+                    <Link className='hover__special__menu' to="/story">our story</Link>
                 </div>
             </div>
             <Link to="/wearefx">

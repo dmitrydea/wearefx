@@ -21,7 +21,7 @@ const HirePage = () => {
             <div className='hirefullPage'>
                 <Cube />
                 <HirePageHeader />
-                <div className="hireBLock deb">
+                <div className="hireBLock deb hireBLockFull">
                     <div className="hireBLock__left">
                         <div className="hireBLock__left__top">
                             <Link to="/wearefx">Instagram</Link>
@@ -30,18 +30,17 @@ const HirePage = () => {
                         </div>
                         <div className="hireBLock__left__middle">
                             <p>
-                                All contents of this website are the property oF
-                                wearefx STUDIO. No part of this site, including
-                                all text and images, may be reproduced in any
-                                form without the prior written consent oF
+                                All contents of this website are the property<br/>oF
+                                wearefx STUDIO. No part of this site,<br/>including
+                                all text and images, may be<br/>reproduced in any
+                                form without the prior<br/>written consent oF
                                 wearefx STUDIO ©2021
                             </p>
                             <div className="arrowToTop" />
                         </div>
                         <h3 className="hireBLock__left__bottom">
-                            We’re curious how we can
-                            <br />
-                            help, get in touch 👋
+                            We’re curious how<br />we can
+                            help<span className='span__special__color'>,</span><br />get in touch 👋
                         </h3>
                     </div>
                     <div className="hireBLock__right">
@@ -58,15 +57,15 @@ const HirePage = () => {
                             </Link>
                         </div>
                         <div className="hireBLock__right__middle">
-                            <p>For general inquiries & new projects </p>
-                            <h3>contact@wearefx.xyz</h3>
+                            <p>For general inquiries<br /> & new projects </p>
+                            <h3>contact@wearefx<span className='span__special__color'>.</span>xyz</h3>
                         </div>
                         <div className="hireBLock__right__bottom">
                             <div className="contact">
                                 <p>Studio manager</p>
                                 <p>Alex Dysenko</p>
                                 <div className="contact__tel">
-                                    <p>a@wearefx.xyz</p>
+                                    <p>a@wearefx<span className='span__special__color'>.</span>xyz</p>
                                     <a href="tel:+380935925000">
                                         +380935925000
                                     </a>
@@ -76,7 +75,7 @@ const HirePage = () => {
                                 <p>Studio manager</p>
                                 <p>Stas Ravsyi</p>
                                 <div className="contact__tel">
-                                    <p>s@wearefx.xyz</p>
+                                    <p>s@wearefx<span className='span__special__color'>.</span>xyz</p>
                                     <a href="tel:+380636312065">
                                         +380636312065
                                     </a>

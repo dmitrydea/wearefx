@@ -1,3 +1,6 @@
+.hireBLockFull {
+    height: auto !important;
+}
 .hireBtnViolet:hover {
     border: none !important;
     background-color: #fff;
@@ -5,12 +8,17 @@
     background-image: url('../../../images/CloseBlack.svg');
 }
 .hireBtnPage p{
-    padding-top: 10%;
+    padding-top: 0 !important;
 }
 .hireBtnPage{
     position: absolute !important;
-    bottom: 60px ;
+    bottom: -48px !important;
+    right: 60px !important;
 }
+.hireBtnPoA .pos3 {
+    bottom: -39px !important;
+    right: 70px !important;
+  }
 /* .hirefullPage{
     overflow-y: hidden !important;
     height: calc(84vh + 10px) !important;
@@ -38,7 +46,56 @@
     height: 100vh;
 }
 .hireBtnPoA{
-    position: absolute;
-    bottom: -120px;
-    right: 0px;
+    position: relative;
+}
+@media (max-width: 1920px) {
+    .hireBLockFull {
+        margin-left: 350px;
+    }
+}
+@media (max-width: 1550px) {
+    .hireBLock__right__middle h3 {
+        font-size: 35px !important;
+    }
+}
+@media (max-width: 1341px) {
+    .hireBLockFull {
+        margin-left: 22% !important;
+        margin-right: auto;
+      }
+}
+@media (max-width: 1200px) {
+    .hireBLockFull {
+        margin-left: 14% !important;
+        margin-right: auto;
+      }
+}
+@media (max-width: 1060px) {
+    .hireBLockFull {
+        margin-left: 60px !important;
+        margin-right: auto;
+      }
+}
+@media (max-width: 900px) {
+    .hireBLockFull {
+        margin-top: 120px !important;
+    }
+    .hireBtnPage {
+        position: absolute !important;
+        bottom: 60px !important;
+        right: 60px !important;
+    }
+    .hireBtnPoA .pos3 {
+        bottom: 69px !important;
+        right: 70px !important;
+    }
+    .hireBLockFull .hireBLock__right__bottom {
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+}
+@media (max-width: 608px) {
+    .hireBLockFull {
+        margin-top: 145px !important;
+    }
 }

@@ -155,10 +155,9 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    margin-left: 246px;
+    margin-left: 480px;
     margin-top: 240px;
     font-weight: 300;
-    height: 450px;
     color: #fff !important;
 }
 .hireBLock__left {
@@ -172,7 +171,7 @@
     color: #DAE0F2;
     text-transform: uppercase;
     font-weight: 300;
-    margin-right: 45px;
+    margin-right: 48px;
 }
 .hireBLock__left__middle {
     color: #dae0f2;
@@ -191,7 +190,7 @@
 .hireBLock__left__bottom {
     font-size: 35px;
     font-weight: 400;
-    margin-top: 96px;
+    margin-top: 72px;
 }
 .hireBLock__right {
     z-index: 2000;
@@ -226,7 +225,7 @@
     margin-bottom: 24px;
 }
 .hireBLock__right__middle h3 {
-    font-size: 30px;
+    font-size: 48px !important;
 }
 .hireBLock__right__bottom {
     display: flex;
@@ -262,5 +261,15 @@
     color: #dae0f2;
 }
 .span__special__color {
-    color: #EEBF1B;
+    color: #EEBF1B !important;
+}
+
+.special__hire {
+    color: #EEBF1B !important;
+    font-weight: 450 !important;
+}
+
+.special__hire_2 {
+    color: #EDF5FC !important;
+    font-weight: 300 !important;
 }
