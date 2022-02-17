@@ -32,32 +32,36 @@
     color: #fff;
     position: absolute;
     display: flex;
-    justify-content: center;
-    height: 350px;
+    justify-content: flex-start;
+    height: auto !important;
     flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    width: 420px;
+    flex-direction: row;
+    align-items: flex-start;
+    width: auto !important;
     bottom: 60px;
     z-index: 100000;
     font-weight: 300;
     left: calc(50%);
 }
 .casesArrayItem {
-    padding-bottom: 5px;
-    font-size: 36px;
+    padding: 0 12px !important;
+    position: relative !important;
+    font-size: 36px !important;
+    font-weight: 400;
     text-align: left;
-    width: 70%;
+    width: auto !important;
     margin-top: 0;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
     z-index: 2000;
-    height: 36px;
-    overflow: hidden;
+    overflow: visible;
+    display: flex !important;
+    align-items: center !important;
+    height: 36px !important;
 }
 .casesArrayItem span {
     display: block;
     padding-top: 0 !important;
-    padding: 5px;
+    
     opacity: 0;
     transform: translateX(-100%);
     animation: lesenka 0.4s ease-in forwards;
@@ -72,24 +76,29 @@
         transform: translateX(0%);
     }
 }
-.casesArrayItem:hover {
-    z-index: 2000;
-    background-color: rgb(255, 243, 79);
-    color: rgb(228, 113, 79);
-    transition: 0.3s ease-in-out;
-}
 .pos32{
     right: 70px;bottom: 70px;
 }
+/* MC */
+.hush-MC:hover {
+    z-index: 2000;
+    background-color: #EEBF1B;;
+    color: #071013;
+    transition: 0.3s ease-in-out;
+}
 
-.casesArrayItem:hover::before {
+.hush-MC:hover .schar__ {
+    color: #fff !important;
+}
+
+.hush-MC:hover::before {
     z-index: 2001;
     position: absolute;
     transition: 0.3s ease-in-out;
-    left: -36px;
+    left: -36px !important;
     content: '';
-    width: 36px;
-    height: 36px;
+    width: 36px !important;
+    height: 36px !important;
     background-image: url('../../../images/McDonalds.svg') !important;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -110,6 +119,49 @@
     animation: showMcHoveredBack 0.2s forwards linear;
     transition: all 0.4s ease-out !important;
 }
+/* PUMA */
+.hush-Puma:hover {
+    z-index: 2000;
+    background-color: #071013;
+    color: #EDF5FC;
+    transition: 0.3s ease-in-out;
+}
+
+.hush-Puma:hover .schar__ {
+    color: #fff !important;
+}
+
+.hush-Puma:hover::before {
+    z-index: 2001;
+    position: absolute;
+    transition: 0.3s ease-in-out;
+    left: -36px !important;
+    content: '';
+    width: 36px !important;
+    height: 36px !important;
+    background-image: url('../../../images/Puma.svg') !important;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+.PumaHoveredBack {
+    position: absolute;
+    top: 0;
+    z-index: 22000;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../../../images/pumaback.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    animation: showMcHoveredBack 0.2s forwards linear;
+    transition: all 0.4s ease-out !important;
+}
+
+
+
 .transition-background {
     position: absolute;
     top: 0;
@@ -162,3 +214,217 @@
       transform: scale3d(1, 1, 1);
     }
   }
+
+.casesBtnPage {
+    right: 60px !important;
+    bottom: 60px !important;
+}
+.cases-Array > div:first-child {
+    margin-right: 138px !important;
+}
+
+.cases-Array > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.cases-page .universalBack {
+    transform: perspective(1000px) rotateY(20deg) rotateX(-5deg) scale3d(1, 1, 1);
+    top: calc(-17vh);
+    left: calc(-2vw);
+    width: calc(119vw);
+    height: calc(127vh);
+}
+
+.cases-page .pos32 {
+    z-index: 22222 !important;
+}
+
+.cases-page .casesMain {
+    position: absolute !important;
+    top: calc(19%) !important;
+    margin-top: 0 !important;
+}
+
+@media (max-width: 2560px) {
+    .cases-page .universalBack {
+        transform: perspective(1000px) rotateY(20deg) rotateX(-5deg) scale3d(1, 1, 1) !important;
+        top: calc(-20vh) !important;
+        left: calc(2vw) !important;
+        width: calc(119vw) !important;
+        height: calc(137vh) !important;
+      }
+}
+@media (max-width: 2260px) {
+    .cases-page .universalBack {
+        transform: perspective(1000px) rotateY(20deg) rotateX(-5deg) scale3d(1, 1, 1) !important;
+        top: calc(-26vh) !important;
+        left: calc(0vw) !important;
+        width: calc(119vw) !important;
+        height: calc(137vh) !important;
+    
+    }
+}
+@media (max-width: 1950px) {
+    .cases-page .universalBack {
+        transform: perspective(1000px) rotateY(20deg) rotateX(-5deg) scale3d(1, 1, 1) !important;
+        top: calc(-17vh) !important;
+        left: calc(-2vw) !important;
+        width: calc(119vw) !important;
+        height: calc(127vh) !important;
+    }
+}
+@media (max-width: 1760px) {
+    .cases-page .universalBack {
+        transform: perspective(1000px) rotateY(20deg) rotateX(-5deg) scale3d(1, 1, 1) !important;
+        top: calc(-20vh) !important;
+        left: calc(-3vw) !important;
+        width: calc(119vw) !important;
+        height: calc(127vh) !important;
+    }
+}
+@media (max-width: 1560px) {
+    .cases-page .universalBack {
+        transform: perspective(1000px) rotateY(20deg) rotateX(-5deg) scale3d(1, 1, 1) !important;
+        top: calc(-20vh) !important;
+        left: calc(-6vw) !important;
+        width: calc(119vw) !important;
+        height: calc(127vh) !important;
+    }
+    .cases-page-slider {
+        left: calc(50.1%) !important;
+    }
+    .cases-Array {
+        bottom: 220px !important;
+        left: calc(50%) !important;
+    }
+}
+@media (max-width: 1245px) {
+    .casesArrayItem {
+        font-size: 25px !important;
+    }
+    .cases-Array > div:first-child {
+        margin-right: 65px !important;
+    }
+    .cases-Array {
+        bottom: 150px !important;
+        left: calc(50%) !important;
+    }
+    .cases-page .casesMain p:nth-child(1) {
+        font-size: 40px;
+    }
+}
+@media (max-width: 700px) {
+    .casesArrayItem {
+        padding: 0 12px !important;
+        position: relative !important;
+        font-size: 20px !important;
+        font-weight: 400;
+        text-align: left;
+        width: auto !important;
+        margin-top: 0;
+        margin-bottom: 16px;
+        z-index: 2000;
+        overflow: visible;
+        display: flex !important;
+        align-items: center !important;
+        height: 20px !important;
+    }
+    .casesArrayItem:hover::before {
+        left: -20px !important;
+        width: 20px !important;
+        height: 20px !important;
+    }
+}
+@media (max-width: 650px) {
+    .cases-Array {
+        bottom: 220px !important;
+        left: 60px !important;
+    }
+    .cases-page-slider {
+        left: 60px !important;
+    }
+}
+
+@media (max-height: 650px) and (max-width: 1560px) {
+    .cases-page .casesMain {
+        display: none !important;
+    }
+    .cases-Array {
+        flex-direction: column;
+    }
+    .cases-Array > div {
+        flex-direction: row;
+    }
+    .casesArrayItem {
+        margin-right: 50px;
+    }
+    .casesTextBlock {
+        display: none;
+    }
+    .cases-Array {
+        top: calc(27%) !important;
+        bottom: auto !important;
+        left: 60px !important;
+    }
+    .cases-page-slider {
+        left: 60px !important;
+    }
+    .cases-Array > div {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-height: 991px) and (max-width: 876px) {
+    .cases-page .casesMain {
+        display: none !important;
+    }
+    .cases-Array {
+        flex-direction: column;
+    }
+    .cases-Array > div {
+        flex-direction: row;
+    }
+    .casesArrayItem {
+        margin-right: 50px;
+    }
+    .casesTextBlock {
+        display: none;
+    }
+    .cases-Array {
+        top: calc(25%) !important;
+        bottom: auto !important;
+        left: 60px !important;
+    }
+    .cases-page-slider {
+        left: 60px !important;
+    }
+    .cases-Array > div {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+@media (max-height: 500px) and (max-width: 5000px) {
+    .casesTextBlock {
+        display: none;
+    }
+    .casesArray {
+       display: none;
+    }
+    .casesMain {
+        display: none;
+    }
+    .casesBtn, .pos33 {
+        left: 50%;
+        right: auto !important;
+        transform: translateX(-50%);
+    }
+    .casesBtnPage {
+        right: 6px !important;
+        bottom: 60px !important;
+        left: auto !important;
+    }
+}
+
+

@@ -25,7 +25,7 @@ const MainPage = ({
 }) => {
     const casesArray = [
         {
-            title: "McDonald<span style='color:#fff;'>'</span>s",
+            title: "McDonald<span class='schar__'>'</span>s",
             id: 1,
             className: 'mcDonalds',
             background: 'mcBack',

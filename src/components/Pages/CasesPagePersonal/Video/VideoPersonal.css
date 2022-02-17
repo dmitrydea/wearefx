@@ -47,6 +47,7 @@
 .video-text {
     font-size: 18px;
     width: 72px;
+    text-transform: uppercase;
     color: #edf5fc !important;
     bottom: 0;
 }
@@ -178,7 +179,7 @@
     z-index: 3;
     width: 95%;
     -webkit-appearance: none;
-    height: 10px;
+    height: 3px;
     border-radius: 0px;
     outline: none;
     background-color: rgba(238, 245, 252, 0.24);

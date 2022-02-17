@@ -15,3 +15,20 @@
     -webkit-background-color: #e4b50b;
     -webkit-transition: all 1s linear !important;
 }
+
+.video-object-special {
+    height: 100vh;
+}
+
+.video-toner-special {
+    height: 100vh;
+}
+
+.video-controls-special {
+    justify-content: center;
+    bottom: 126px;
+}
+
+.video-controls-special .video-center {
+    justify-content: center;
+}

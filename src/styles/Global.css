@@ -97,3 +97,26 @@ html {
     transition: all 0.3s;
     border-bottom: 1px solid #eebf1b;
 }
+
+.schar__ {
+    color: #eebf1b;
+    display: inline !important;
+}
+
+.casesArray div:hover .schar__ {
+    color: #fff !important;
+}
+
+.casesArray span:hover .schar__ {
+    color: #fff !important;
+}
+
+.casesArray .casesArrayItem:hover span .schar__ {
+    color: #fff !important;
+}
+
+.displayNoneMain {
+    display: none !important;
+}
+
+

@@ -31,7 +31,7 @@ const VideoControls = ({
             >
                 <div className="video-text">
                     <div className="casesArrow" />
-                    <p>Scroll down to view details</p>
+                    <p>Scroll<br />down<br />to view<br />details</p>
                 </div>
                 <div className="video-center">
                     <div

@@ -94,7 +94,7 @@
         top: 100px !important;
     }
     .posStickBtn {
-        top: 100px !important;
+        
     }
     .gradientBtnContact p {
         top: 29% !important;
@@ -125,6 +125,21 @@
     }
 }
 @media (min-width: 2560px) {
+    .posStickBtn .gradientBtnContact {
+        width: 110px !important;
+        height: 110px !important;
+        border-radius: 50%;
+        position: relative; 
+        background: linear-gradient(125deg, #7344f4 10%, #eec01b 50%, #7344f4 90%);
+        background-size: 600% 600%;
+        box-shadow: 0 0 0 0 #eec01b;
+        animation: gradient 5s ease infinite;
+    }
+    .text-block p:nth-child(1) {
+        margin-right: calc(44%) !important;
+        font-weight: normal;
+        text-transform: uppercase;
+    }
     .hireBLock__right__middle h3 {
         font-size: 48px !important;
       }
@@ -329,13 +344,88 @@
     .gradientBtnContact p {
         top: 27%;
     }
+    .cases-page .pos32 {
+        right: 70px !important;
+        bottom: 70px !important;
+    }
+    .cases-page .universalBack {
+        transform: perspective(1000px) rotateY(5deg) rotateX(-2deg) scale3d(1, 1, 1) !important;
+        top: -9vh !important;
+        left: calc(-20vw) !important;
+        width: calc(127vw) !important;
+        height: calc(110vh) !important;
+      }
 }
 @media (min-width: 1550px) {
     .hireBLock__right__middle h3 {
         font-size: 38px !important;
       }
 }
+@media (max-width: 2560px) {
+    .text-block p:nth-child(1) {
+        margin-right: calc(42%);
+        font-weight: normal;
+        text-transform: uppercase;
+    }
+}
+@media (max-width: 2320px) {
+    .text-block p:nth-child(1) {
+        margin-right: calc(30%);
+        font-weight: normal;
+        text-transform: uppercase;
+    }
+}
+@media (max-width: 1920px) {
+    .text-block p:nth-child(1) {
+        margin-right: calc(40%);
+        font-weight: normal;
+        text-transform: uppercase;
+    }
+}
 @media (max-width: 1550px) {
+    .personal-page .info-block h1 {
+        font-size: 72px;
+        font-weight: 450;
+    }
+    .personal-page .info-block {
+        padding: 90px 120px;
+    }
+    .personal-page .contactBTNMY {
+        top: 120px;
+        right: 120px;
+    }
+    .personal-page .pos6 {
+        top: 129px;
+        right: 129px;
+    }
+    .personal-page .line-block div p {
+        font-size: 25px;
+        color: #edf5fc;
+        text-transform: uppercase;
+    }
+    .personal-page .big-block p:nth-child(1) {
+        font-size: 38px !important;
+    }
+    .personal-page .contact-block {
+        width: 100% !important;
+        background-color: #071013;
+        padding: 120px;
+        position: relative;
+    }
+    .personal-page .text-block p:nth-child(1) {
+        margin-right: calc(28%);
+        font-weight: normal;
+        text-transform: uppercase;
+    }
+    .personal-page .text-block {
+        padding: 100px 120px;
+    }
+    .header-title {
+        padding: 60px 0 0 60px;
+        font-size: 60px;
+        color: #edf5fc;
+        font-weight: normal;
+    }
     .storyBlock {
         margin-top: 100px;
         margin-left: 413px;
@@ -463,6 +553,49 @@
     }
 }
 @media (max-width: 1336px) {
+    .personal-page .info-block h1 {
+        font-size: 72px;
+        font-weight: 450;
+    }
+    .personal-page .info-block {
+        padding: 90px 120px;
+    }
+    .personal-page .contactBTNMY {
+        top: 120px;
+        right: 120px;
+    }
+    .personal-page .pos6 {
+        top: 129px;
+        right: 129px;
+    }
+    .personal-page .line-block div p {
+        font-size: 25px;
+        color: #edf5fc;
+        text-transform: uppercase;
+    }
+    .personal-page .big-block p:nth-child(1) {
+        font-size: 38px !important;
+    }
+    .personal-page .contact-block {
+        width: 100% !important;
+        background-color: #071013;
+        padding: 120px;
+        position: relative;
+    }
+    .personal-page .text-block p:nth-child(1) {
+        margin-right: calc(28%);
+        font-weight: normal;
+        text-transform: uppercase;
+    }
+    .personal-page .text-block {
+        padding: 100px 120px;
+    }
+    .header-title {
+        padding: 60px 0 0 60px;
+        font-size: 60px;
+        color: #edf5fc;
+        font-weight: normal;
+    }
     .storyBlock {
         margin-top: 100px;
         margin-left: 295px;
@@ -472,6 +605,114 @@
     }
 }
 @media (max-width: 1200px) {
+    .personal-page .pos5 {
+        top: auto !important;
+        bottom: 54px !important;
+        right: 69px !important;
+        width: 90px !important;
+        height: 90px !important;
+      }
+    .personal-page .next-project .storyBtn {
+        position: absolute;
+        top: auto !important;
+        bottom: 45px;
+        right: 60px;
+    }
+    .personal-page .info-block p {
+        font-size: 20px !important;
+    }
+    .personal-page .info-block h1 {
+        font-size: 65px;
+        font-weight: 450;
+    }
+    .personal-page .info-block {
+        padding: 45px 60px !important;
+    }
+    .personal-page .contactBTNMY {
+        top: 60px;
+        right: 60px;
+        width: 110px !important;
+        height: 110px !important;
+    }
+    .personal-page .pos6 {
+        top: 69px;
+        right: 69px;
+        width: 90px !important;
+        height: 90px !important;
+    }
+    .personal-page .line-block div p {
+        font-size: 19px !important;
+        color: #edf5fc;
+        text-transform: uppercase;
+    }
+    .line-block {
+        margin-bottom: 30px !important;
+        display: flex;
+    }
+    .personal-page .big-block p:nth-child(1) {
+        font-size: 31px !important;
+    }
+    .big-block {
+        margin-top: 45px !important;
+    }
+    .personal-page .contact-block {
+        width: 100% !important;
+        background-color: #071013;
+        padding: 60px !important;
+        position: relative;
+    }
+    .mt100 {
+        margin-bottom: 50px !important;
+    }
+    .main-contact {
+        font-size: 31px !important;
+        color: #edf5fc;
+        text-transform: uppercase;
+    }
+    .PreviewImages img {
+        width: 100%;
+        height: 70vh !important;
+        object-fit: cover;
+        object-position: center;
+    }
+    .personal-page .text-block p:nth-child(1) {
+        margin-right: calc(35%) !important;
+        font-weight: normal;
+        text-transform: uppercase;
+    }
+    .personal-page .text-block-p {
+        width: auto !important;
+        font-size: 18px !important;
+    }
+    .personal-page .text-block {
+        padding: 50px 60px !important;
+    }
+    .video-text {
+        font-size: 13px !important;
+        text-transform: uppercase;
+        color: #edf5fc !important;
+    }
+    .header-title {
+        padding: 40px 60px 0 60px;
+        font-size: 52px !important;
+        color: #edf5fc;
+        font-weight: normal;
+    }
+    .header-desc {
+        padding: 0 60px 45px 60px;
+        font-size: 18px !important;
+        font-weight: lighter;
+        color: #edf5fc;
+    }
+    .personal-left div:nth-child(1) h1, .link {
+        font-weight: normal;
+        color: #edf5fc;
+        font-size: 15px !important;
+        line-height: 23.04px;
+    }
+    .personal-left div:first-child {
+        margin-right: 180px;
+    }
     .storyBtn {
         width: 110px !important;
         height: 110px !important;
@@ -500,6 +741,142 @@
     }
 }
 @media (max-width: 1024px) {
+    .personal-page .pos5 {
+        top: auto !important;
+        bottom: 31px !important;
+        right: 39px !important;
+        width: 90px !important;
+        height: 90px !important;
+      }
+    .personal-page .next-project .storyBtn {
+        position: absolute;
+        top: auto !important;
+        bottom: 22px;
+        right: 30px;
+    }
+    .personal-page .info-block p {
+        font-size: 15px !important;
+    }
+    .personal-page .info-block h1 {
+        font-size: 45px;
+        font-weight: 450;
+    }
+    .personal-page .info-block {
+        padding: 22px 30px !important;
+    }
+    .personal-page .contactBTNMY {
+        top: 30px;
+        right: 30px;
+        width: 110px !important;
+        height: 110px !important;
+    }
+    .personal-page .pos6 {
+        top: 39px;
+        right: 39px;
+        width: 90px !important;
+        height: 90px !important;
+    }
+    .personal-page .line-block div p {
+        font-size: 16px !important;
+        color: #edf5fc;
+        text-transform: uppercase;
+    }
+    .line-block {
+        margin-bottom: 30px !important;
+        display: flex;
+    }
+    .personal-page .big-block p:nth-child(1) {
+        font-size: 28px !important;
+    }
+    .big-block {
+        margin-top: 45px !important;
+    }
+    .personal-page .contact-block {
+        width: 100% !important;
+        background-color: #071013;
+        padding: 30px !important;
+        position: relative;
+    }
+    .mt100 {
+        margin-bottom: 50px !important;
+    }
+    .main-contact {
+        font-size: 27px !important;
+        color: #edf5fc;
+        text-transform: uppercase;
+    }
+    .PreviewImages img {
+        width: 100%;
+        height: 50vh !important;
+        object-fit: cover;
+        object-position: center;
+    }
+    .personal-page .text-block p:nth-child(1) {
+        margin-right: calc(35%) !important;
+        font-weight: normal;
+        text-transform: uppercase;
+    }
+    .personal-page .text-block-p {
+        width: auto !important;
+        font-size: 14px !important;
+    }
+    .hide-controls {
+        padding-bottom: 7px !important;
+        font-size: 14px !important;
+    }
+    .play-btn, .muted-btn {
+        font-size: 15px !important;
+        width: 60px !important;
+        margin-right: 10px !important;
+    }
+    .personal-page .text-block {
+        padding: 25px 30px !important;
+    }
+    .animated-logo-X {
+        top: 26px !important;
+    }
+    .personal-page .prev-slider {
+        background-position-y: bottom;
+        left: 30px !important;
+    }
+    .personal-page .next-slider {
+        right: 30px !important;
+    }
+    .video-text {
+        font-size: 11px !important;
+        text-transform: uppercase;
+        color: #edf5fc !important;
+    }
+    .header-title {
+        padding: 30px 0 0 30px !important;
+        font-size: 40px !important;
+        color: #edf5fc;
+        font-weight: normal;
+    }
+    .video-toner, .video-object, .video-video, .video-toner-special, .video-object-special {
+        height: 70vh !important;
+    }
+    .header-desc {
+        padding: 0 0 40px 30px !important;
+        font-size: 15px !important;
+        font-weight: lighter;
+        color: #edf5fc;
+    }
+    .personal-left div:nth-child(1) h1, .link {
+        font-weight: normal;
+        color: #edf5fc;
+        font-size: 15px !important;
+        line-height: 23.04px;
+    }
+    .personal-left div:first-child {
+        margin-right: 120px !important;
+    }
+    .personal-header {
+        display: flex;
+        padding: 30px 30px 0 !important;
+        justify-content: space-between;
+    }
+
     .fhd {
         display: block !important;
     }
@@ -580,6 +957,165 @@
     }
 }
 @media (max-width: 768px) {
+    .personal-page .pos5 {
+        top: auto !important;
+        bottom: 31px !important;
+        right: 39px !important;
+        width: 60px !important;
+        height: 60px !important;
+      }
+    .personal-page .next-project .storyBtn {
+        position: absolute;
+        top: auto !important;
+        bottom: 22px;
+        right: 30px;
+    }
+    .personal-page .info-block p {
+        font-size: 15px !important;
+    }
+    .personal-page .info-block h1 {
+        font-size: 45px;
+        font-weight: 450;
+    }
+    .personal-page .info-block {
+        padding: 22px 30px !important;
+    }
+    .personal-page .storyBtn {
+        width: 80px !important;
+        height: 80px !important;
+        font-size: 11px !important;
+    }
+    .personal-page .contactBTNMY {
+        top: 30px;
+        right: 30px;
+        width: 80px !important;
+        height: 80px !important;
+        font-size: 11px !important;
+    }
+    .personal-page .pos6 {
+        top: 39px;
+        right: 39px;
+        width: 60px !important;
+        height: 60px !important;
+    }
+    .personal-page .line-block div p {
+        font-size: 16px !important;
+        color: #edf5fc;
+        text-transform: uppercase;
+    }
+    .line-block {
+        margin-bottom: 30px !important;
+        display: flex;
+    }
+    .personal-page .big-block p:nth-child(1) {
+        font-size: 28px !important;
+    }
+    .big-block {
+        margin-top: 45px !important;
+    }
+    .personal-page .contact-block {
+        width: 100% !important;
+        background-color: #071013;
+        padding: 30px !important;
+        position: relative;
+    }
+    .mt100 {
+        margin-bottom: 50px !important;
+    }
+    .main-contact {
+        font-size: 27px !important;
+        color: #edf5fc;
+        text-transform: uppercase;
+    }
+    .PreviewImages img {
+        width: 100%;
+        height: 50vh !important;
+        object-fit: cover;
+        object-position: center;
+    }
+    .personal-page .next-proj {
+        padding-top: 100px !important;
+        color: #dae0f279;
+    }
+    .video-controls-special {
+        justify-content: center;
+        bottom: 65px !important;
+    }
+    .personal-page .next-project {
+        background-size: cover !important;
+    }
+    .personal-page .text-block p:nth-child(1) {
+        margin-right: calc(35%) !important;
+        font-weight: normal;
+        text-transform: uppercase;
+    }
+    .personal-page .text-block-p {
+        width: auto !important;
+        font-size: 12px !important;
+    }
+    .hide-controls {
+        padding-bottom: 7px !important;
+        font-size: 14px !important;
+    }
+    .play-btn, .muted-btn {
+        font-size: 15px !important;
+        width: 60px !important;
+        margin-right: 10px !important;
+    }
+    .personal-page .text-block {
+        padding: 25px 30px !important;
+    }
+    .animated-logo-X {
+        top: 26px !important;
+    }
+    .personal-page .prev-slider {
+        background-position-y: bottom;
+        left: 30px !important;
+    }
+    .personal-page .next-slider {
+        right: 30px !important;
+    }
+    .video-text {
+        font-size: 11px !important;
+        text-transform: uppercase;
+        color: #edf5fc !important;
+        display: none !important;
+    }
+    .header-title {
+        padding: 30px 0 0 30px !important;
+        font-size: 30px !important;
+        color: #edf5fc;
+        font-weight: normal;
+    }
+    .video-toner, .video-object, .video-video, .video-toner-special, .video-object-special {
+        height: 70vh !important;
+    }
+    .header-desc {
+        padding: 0 0 40px 30px !important;
+        font-size: 15px !important;
+        font-weight: lighter;
+        color: #edf5fc;
+    }
+    .personal-page .desc {
+        margin-top: 5px !important;
+    }
+    .personal-left div:nth-child(1) h1, .link {
+        font-weight: normal;
+        color: #edf5fc;
+        font-size: 15px !important;
+        line-height: 23.04px;
+    }
+    .personal-left div:first-child {
+        margin-right: 35px !important;
+    }
+    .personal-header {
+        display: flex;
+        padding: 30px 30px 0 !important;
+        justify-content: space-between;
+    }
+
+
+
     .fhd {
         display: block !important;
     }
@@ -723,6 +1259,31 @@
     .hireBtn, .pos1 {
         display: none;
     }
+    .personal-left {
+        justify-content: flex-start !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+    .personal-page .hide-controls {
+        display: none !important;
+    }
+    .personal-page .video-center {
+        display: flex;
+        width: 100% !important;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+    .personal-page .main-contact {
+        font-size: 20px !important;
+        color: #edf5fc;
+        text-transform: uppercase;
+    }
+    .personal-page .line-block {
+        margin-bottom: 50px;
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 @media (max-width: 480px) {
     .casesTextBlock .casesArrow {
@@ -757,8 +1318,10 @@
         right: auto !important;
         transform: translateX(-50%);
     }
-    .firstCircle {
-        
+    .casesBtnPage {
+        right: 6px !important;
+        bottom: 60px !important;
+        left: auto !important;
     }
 }
 @media (max-width: 425px) {

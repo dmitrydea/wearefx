@@ -4,18 +4,16 @@ import './CasesPagePersonal.css'
 const ContactBlock = () => {
     return (
         <div className="contact-block">
-            <div className="posStickBtn">
-                <span className="shape pos4" />
-                <div className="gradientBtnContact">
-                    <p>
-                        We’re
-                        <br />
-                        ready
-                        <br />
-                        Hire us
-                    </p>
-                </div>
-            </div>
+            <span className="shape pos6" />
+                    <div className="pStoryBtn gradientBtn contactBTNMY">
+                        <p>
+                            We’re
+                            <br />
+                            ready
+                            <br />
+                            Hire us
+                        </p>
+                    </div>
             <div className="mt100 main-contact">
                 <p>@natus_vincere_official</p>
                 <p>@pumaukraine</p>

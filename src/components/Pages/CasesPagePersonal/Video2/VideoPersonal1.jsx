@@ -70,12 +70,12 @@ export const VideoPersonal1 = ({
             id="player"
             ref={refPlayerScreenfull}
             className={
-                fullscreen ? 'visibleCursor video-object' : 'video-object'
+                fullscreen ? 'visibleCursor video-object video-object-special' : 'video-object video-object-special'
             }
         >
             <div
                 className={
-                    fullscreen ? 'visibleCursor video-toner' : 'video-toner'
+                    fullscreen ? 'visibleCursor video-toner video-toner-special' : 'video-toner video-toner-special'
                 }
             />
             <ReactPlayer

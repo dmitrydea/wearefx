@@ -42,7 +42,10 @@ const CasesPagePersonal = () => {
                 <TextBlock
                 heightClass={'heightClass3'}
                     text={
-                        'we wanted to show the duality of the life that a child with kidney disease faces everyday. We came up with a technique commonly used in photography, but not as often used in films.'
+                        'we wanted to show the duality of<br />the life that a child with kidney<br />disease faces everyday. We came up<br />with a technique commonly used in<br />photography, but not as often used<br />in films.'
+                    }
+                    approachTxt={
+                        'Approach'
                     }
                 />
                 <VideoPersonal1
@@ -54,18 +57,33 @@ const CasesPagePersonal = () => {
                 <TextBlock
                     heightClass={'heightClass'}
                     text={
-                        'The key to pulling of the multiplicity effect was a piece of camera equipment know as a Technodolly. This computer controlled camera crane, can be pre-programmed to make the same camera movement over and over again. As it follows the same predefined path we shoot the kids in different positions. This allows to overlay and stitch the shots so we end up with the same child twice in one shot'
+                        'The key to pulling of the multiplicity<br />effect was a piece of camera<br />equipment know as a Technodolly.<br />This computer controlled camera<br />crane, can be pre-programmed to<br />make the same camera movement<br />over and over again. As it follows<br />the same predefined path we shoot<br />the kids in different positions. This<br />allows to overlay and stitch the<br />shots so we end up with the same<br />child twice in one shot'
+                    }
+                    approachTxt={
+                        'Technique'
                     }
                 />
                 <PersonalSlider />
                 <TextBlock
-                heightClass={'heightClass2'}
+                heightClass={'heightClass2 text-block-special-bg'}
                     firstTxt={'Kees Albers - creative director'}
                     secondTxt={'Bureauloos'}
                     text={
-                        '“It was a real pleasure working together with this team. WeareFX, they really took the concept of the film to the next level! The result is really great and even better than we imagined."'
+                        '“It was a real pleasure working<br />together with this team. WeareFX,<br />they really took the concept of the<br />film to the next level! The result is<br />really great and even better than<br />we imagined."'
+                    }
+                    approachTxt={
+                        'Testimonial'
                     }
                 />
+                <div className='PreviewImages'>
+                    <img src="/wearefx/static/media/image 8.61e3dc47.svg" alt="" />
+                </div>
+                <div className='PreviewImages'>
+                    <img src="/wearefx/static/media/image 9.742ed35d.svg" alt="" />
+                </div>
+                <div className='PreviewImages'>
+                    <img src="/wearefx/static/media/image 10.9b4af571.svg" alt="" />
+                </div>
                 <ContactBlock />
                 <div className="next-project">
                     <span className="shape pos5" />
@@ -77,7 +95,7 @@ const CasesPagePersonal = () => {
                         </p>
                     </div>
                     <div className="info-block">
-                        <h1>McDonald's</h1>
+                        <h1>McDonald<span className='schar__'>'</span>s</h1>
                         <p>Granding, VFX, motion</p>
                         <p className="next-proj">Next project</p>
                     </div>

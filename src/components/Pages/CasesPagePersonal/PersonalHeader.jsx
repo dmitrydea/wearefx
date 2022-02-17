@@ -14,10 +14,10 @@ export const PersonalHeader = () => {
                         </Link>
                     </div>
                     <div>
-                        <Link className="link" to="/story">
+                        <Link className="link hover__special__menu" to="/story">
                             our story
                         </Link>
-                        <Link className="link" to="/hire">
+                        <Link className="link hover__special__menu" to="/hire">
                             hire us
                         </Link>
                     </div>
@@ -27,7 +27,7 @@ export const PersonalHeader = () => {
                     <div className="animated-logo personal-right"></div>
                 </Link>
             </div>
-            <h1 className="header-title">NAVI X PUMA. OBSESSED WE.</h1>
+            <h1 className="header-title">NAVI X PUMA<span className='schar__'>.</span> OBSESSED WE<span className='schar__'>.</span></h1>
             <h6 className="header-desc">Granding, VFX, motion, production</h6>
         </div>
     )
