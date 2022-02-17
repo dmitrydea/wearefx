@@ -197,10 +197,10 @@
     position: absolute;
     border-radius: 0px;
     z-index: 2;
-    left: 0px;
-    top: 6px;
+    left: 0;
+    top: 12px;
+    height: 5px;
     width: 95%;
-    height: 10px;
     background-color: transparent;
     overflow: hidden;
 
@@ -231,21 +231,33 @@
     -webkit-background-color: #e4b50b;
     -webkit-transition: all 1s linear !important;
 }
-.inputProgress::-webkit-slider-thumb {
-    height: 10px;
-    width: 1px;
+input[type=range].inputProgress::-webkit-slider-thumb {
     -webkit-appearance: none;
-    background-color: #ffffff00;
-    outline: none;
-    box-shadow: 0 0 0 0 rgba(238, 245, 252, 0.24);
-    transition: 0.3s ease-in-out;
-
-    -webkit-height: 10px;
-    -webkit-width: 1px;
-    -webkit-background-color: #ffffff00;
-    -webkit-outline: none;
-    -webkit-box-shadow: 0 0 0 0 rgba(238, 245, 252, 0.24);
-    -webkit-transition: 0.3s ease-in-out;
+    width: 0 !important;
+    height: 0 !important;
+    background: transparent !important;
+    border: none !important;
+}
+input[type=range].inputProgress::-moz-slider-thumb {
+    -moz-appearance: none;
+    width: 0 !important;
+    height: 0 !important;
+    background: transparent !important;
+    border: none !important;
+}
+input[type=range].inputProgress::-moz-range-thumb {
+    -moz-appearance: none;
+    width: 0 !important;
+    height: 0 !important;
+    background: transparent !important;
+    border: none !important;
+}
+input[type=range].inputProgress::slider-thumb {
+    appearance: none;
+    width: 0 !important;
+    height: 0 !important;
+    background: transparent !important;
+    border: none !important;
 }
 .hide-controls-show {
     background-color: #071013 !important;
