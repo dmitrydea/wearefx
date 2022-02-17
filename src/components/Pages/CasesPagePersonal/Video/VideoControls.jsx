@@ -60,7 +60,7 @@ const VideoControls = ({
                             }
                         />
                     </div>
-                    <div className="play-mute">
+                    <div className={showElements ? 'play-mute' : 'play-mute displayNoneMain' }>
                         <button
                             className={
                                 showElements ? `play-btn` : 'fadeIn play-btn'
@@ -100,10 +100,10 @@ const VideoControls = ({
                     </div>
                 </div>
                 <div
-                    className="hide-controls"
+                    className={showElements ? 'hide-controls' : 'hide-controls hide-controls-show'}
                     onClick={() => setShowElements(!showElements)}
                 >
-                    Hide elements
+                    {showElements ? 'Hide elements' : 'Show'}
                 </div>
             </div>
         </>
