@@ -46,7 +46,7 @@ const HirePage = () => {
                     <div className="hireBLock__right">
                         <div className="hireBLock__right__top">
                             <p>
-                                Wearefx © 2021 by
+                                Wearefx © 2022 by
                                 <Link className="violet_on_hover" to="/wearefx">
                                     {' '}
                                     Brāh lab
@@ -61,7 +61,7 @@ const HirePage = () => {
                             <h3>contact@wearefx<span className='span__special__color'>.</span>xyz</h3>
                         </div>
                         <div className="hireBLock__right__bottom">
-                            <div className="contact">
+                            <div className="contact contactss">
                                 <p>Studio manager</p>
                                 <p>Alex Dysenko</p>
                                 <div className="contact__tel">
@@ -71,9 +71,9 @@ const HirePage = () => {
                                     </a>
                                 </div>
                             </div>
-                            <div className="contact">
+                            <div className="contact contactss">
                                 <p>Studio manager</p>
-                                <p>Stas Ravsyi</p>
+                                <p>Stas Ravskyi</p>
                                 <div className="contact__tel">
                                     <p>s@wearefx<span className='span__special__color'>.</span>xyz</p>
                                     <a href="tel:+380636312065">

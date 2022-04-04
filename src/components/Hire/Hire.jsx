@@ -145,7 +145,7 @@ export const Hire = ({
                         <h3>contact@wearefx<span className='span__special__color'>.</span>xyz</h3>
                     </div>
                     <div className="hireBLock__right__bottom">
-                        <div className="contact">
+                        <div className="contact contactss">
                             <p>Studio manager</p>
                             <p>Alex Dysenko</p>
                             <div className="contact__tel">
@@ -155,9 +155,9 @@ export const Hire = ({
                                 </Link>
                             </div>
                         </div>
-                        <div className="contact">
+                        <div className="contact contactss">
                             <p>Studio manager</p>
-                            <p>Stas Ravsyi</p>
+                            <p>Stas Ravskyi</p>
                             <div className="contact__tel">
                                 <p>s@wearefx<span className='span__special__color'>.</span>xyz</p>
                                 <a href="tel:+380636312065">+380636312065</a>

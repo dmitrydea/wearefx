@@ -248,6 +248,12 @@
     padding-bottom: 24px;
     text-transform: uppercase;
 }
+.contactss p:nth-child(1) {
+    opacity: 1 !important;
+}
+.contactss p:nth-child(2) {
+    opacity: 1 !important;
+}
 .contact__tel p {
     color: #fff;
     opacity: 1 !important;

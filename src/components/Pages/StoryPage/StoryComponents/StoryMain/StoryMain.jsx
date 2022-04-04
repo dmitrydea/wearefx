@@ -34,9 +34,7 @@ const StoryMain = () => {
                     Wearefx’s fully equipped and growing Ukraine based<br />studio is
                     accompanied with a host of talents, including<br />experienced
                     lead 3D Project Managers, 3D VFX<br />artists, animators, lead
-                    lighting and 3D renderers.<br />Their dedicated compositing teams
-                    include specialized<br />Flame Artists, Shoot Supervisors and a
-                    host of in<br />house, and After Effects compositors.{' '}
+                    lighting and 3D renderers.{' '}
                 </p>
                 <p className='margin__special'>
                     Our’s services include Autodesk Smoke, Flame,<br />DaVinci

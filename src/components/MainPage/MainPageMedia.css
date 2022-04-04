@@ -485,6 +485,17 @@
     .hireBLock__right__middle h3 {
         font-size: 30px !important;
     }
+    .next-project .storyBtn {
+        position: absolute;
+        top: auto !important;
+        bottom: 96px !important;
+        right: 120px !important;
+    }
+    .pos5 {
+        top: auto !important;
+        bottom: 108px;
+        right: 129px !important;
+      }
 }
 @media (max-width: 1440px) {
     .clickedStory {
@@ -615,8 +626,8 @@
     .personal-page .next-project .storyBtn {
         position: absolute;
         top: auto !important;
-        bottom: 45px;
-        right: 60px;
+        bottom: 45px !important;
+        right: 60px !important;
     }
     .personal-page .info-block p {
         font-size: 20px !important;
@@ -751,8 +762,8 @@
     .personal-page .next-project .storyBtn {
         position: absolute;
         top: auto !important;
-        bottom: 22px;
-        right: 30px;
+        bottom: 22px !important;
+        right: 30px !important;
     }
     .personal-page .info-block p {
         font-size: 15px !important;
@@ -967,8 +978,8 @@
     .personal-page .next-project .storyBtn {
         position: absolute;
         top: auto !important;
-        bottom: 22px;
-        right: 30px;
+        bottom: 22px !important;
+        right: 30px !important;
     }
     .personal-page .info-block p {
         font-size: 15px !important;

@@ -17,7 +17,8 @@ const VideoControls = ({
 
 
     useEffect(() => {
-        const fillBar = document.getElementById('fill')
+        const fillBar = document.getElementById('fill');
+        console.log(fillBar.style.width);
         fillBar.style.width = `${(playedSeconds / loadedSeconds) * 100}%`
     }, [playedSeconds, loadedSeconds])
     return (
@@ -25,11 +26,15 @@ const VideoControls = ({
             <div
                 className={
                     fullscreen
-                        ? 'visibleCursor video-controls'
-                        : 'video-controls'
+                        ? (showElements ? 'visibleCursor video-controls' : 'visibleCursor video-controls video-controls-hide')
+                        : (showElements ? 'video-controls' : 'video-controls video-controls-hide')
                 }
             >
-                <div className="video-text">
+                <div className={
+                            showElements
+                                ? 'video-text'
+                                : 'video-text displayNone'
+                        }>
                     <div className="casesArrow" />
                     <p>Scroll<br />down<br />to view<br />details</p>
                 </div>

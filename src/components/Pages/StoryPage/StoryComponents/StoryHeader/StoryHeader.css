@@ -24,11 +24,13 @@
     font-weight: 300;
     padding-right: 15px;
     font-size: 36px !important;
+    line-height: 1;
 }
 .header-left div:nth-child(1) h1:nth-child(2) {
     color: #eebf1b;
     font-weight: 400;
     font-size: 36px !important;
+    line-height: 1;
 }
 .header-left div:nth-child(2) {
     display: flex;

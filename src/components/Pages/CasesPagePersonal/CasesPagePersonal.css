@@ -200,6 +200,14 @@
     right: 60px;
     background-image: url('../../../images/elipse_r.png');
 }
+.prev-slider-video {
+
+    background-image: url('../../../images/elipse_w.png') !important;
+}
+
+.next-slider-video {
+    background-image: url('../../../images/elipse_r_w.png') !important;
+}
 .activeBtn {
     transform: scale(1.5);
     transition: transform ease 0.2s;

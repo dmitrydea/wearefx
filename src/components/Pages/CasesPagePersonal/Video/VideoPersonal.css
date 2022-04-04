@@ -34,6 +34,15 @@
     width: 100%;
     background-color: transparent;
 }
+.video-controls-hide {
+    align-items: center !important;
+}
+.video-controls-hide .video-center {
+    width: 87% !important;
+}
+.video-controls-hide .bar {
+    width: 100% !important;
+}
 .video-video video {
     height: 100vh;
     object-fit: cover;
@@ -263,4 +272,22 @@ input[type=range].inputProgress::slider-thumb {
     background-color: #071013 !important;
     padding: 6px 18px !important;
     height: auto !important;
+}
+
+.paginationSliders {
+    position: absolute;
+    top: 69px;
+    left: 60px;
+    font-family: 'Futura PT';
+    font-style: normal;
+    font-weight: 450;
+    font-size: 18px;
+    line-height: 100%;
+    text-transform: uppercase; 
+    color: #DAE0F2;
+    z-index: 11;
+}
+
+.paginationSliders-current {
+    color: #edf5fc !important;
 }

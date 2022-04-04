@@ -31,6 +31,9 @@ export const VideoPersonal1 = ({
     const handleProgressTrack = (e) => {
         refPlayer.current.seekTo(Number(e))
     }
+    const handleEnded = (e) => {
+        setVideoState({ ...videoState, playing: !videoState.playing })
+    }
     const handleFullScreen = () => {
         setFullscreen(true)
 
@@ -77,6 +80,7 @@ export const VideoPersonal1 = ({
                 className={
                     fullscreen ? 'visibleCursor video-toner video-toner-special' : 'video-toner video-toner-special'
                 }
+                onClick={() => handlePlay()}
             />
             <ReactPlayer
                 className="video-video"
@@ -87,6 +91,7 @@ export const VideoPersonal1 = ({
                 muted={muted}
                 ref={refPlayer}
                 onProgress={handleProgress}
+                onEnded={handleEnded}
             />
             <VideoControls1
                 playing={playing}

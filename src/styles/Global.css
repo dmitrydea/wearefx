@@ -119,4 +119,20 @@ html {
     display: none !important;
 }
 
+#prevBtnSlider_video {
+    top: 60px !important;
+    right: 168px !important;
+    left: auto !important;
+    animation: none !important;
+    background-color: rgba(237, 245, 252, 0.12);
+}
+
+#nextBtnSlider_video {
+    top: 60px !important;
+    right: 60px !important;
+    left: auto !important;
+    animation: none !important;
+    background-color: rgba(237, 245, 252, 0.12);
+}
+
 
