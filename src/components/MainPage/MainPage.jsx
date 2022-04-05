@@ -72,6 +72,10 @@ const MainPage = ({
     const canvas1 = document.getElementById('overlay1')
     const canvas2 = document.getElementById('overlay2')
     const canvas3 = document.getElementById('overlay3')
+    const canvas_lar_1 = document.getElementById('lineanimationrightfirst')
+    const canvas_lar_2 = document.getElementById('lineanimationrightsecond')
+    const canvas_lal_1 = document.getElementById('lineanimationleftfirst')
+    const canvas_lal_2 = document.getElementById('lineanimationleftsecond')
 
     const polyline = document.getElementById('polyline')
     const polyline1 = document.getElementById('polyline1')
@@ -190,6 +194,10 @@ const MainPage = ({
         drawAnimLine(canvas1, { x: e.clientX, y: e.clientY }, buttonsCoords[0])
         drawAnimLine(canvas2, { x: e.clientX, y: e.clientY }, buttonsCoords[1])
         drawAnimLine(canvas3, { x: e.clientX, y: e.clientY }, buttonsCoords[2])
+        if(isCasesClicked) {
+            redrawLines();
+        }
+        
     }
 
     const resizeEvent = (e) => {
@@ -208,6 +216,7 @@ const MainPage = ({
 
             b3.x = b3.x + 50;
             b3.y = b3.y + 50;
+            redrawLines();
         } catch(e) {
 
         }
@@ -272,8 +281,19 @@ const MainPage = ({
     ])
 
     const casesClicked = () => {
+        if (isCasesClicked) {
+            var ctx_lar_1 = canvas_lar_1.getContext("2d");
+            var ctx_lar_2 = canvas_lar_2.getContext("2d");
+            var ctx_lal_1 = canvas_lal_1.getContext("2d");
+            var ctx_lal_2 = canvas_lal_2.getContext("2d");
+            ctx_lar_1.clearRect(0, 0, canvas_lar_1.width, canvas_lar_1.height);
+            ctx_lar_2.clearRect(0, 0, canvas_lar_2.width, canvas_lar_2.height);
+            ctx_lal_1.clearRect(0, 0, canvas_lal_1.width, canvas_lal_1.height);
+            ctx_lal_2.clearRect(0, 0, canvas_lal_2.width, canvas_lal_2.height);
+        }
         setIsCanvasesHidded(!isCanvasesHidded)
         setIsCasesClicked((isCasesClicked) => !isCasesClicked)
+        redrawLines();
     }
     const storyClicked = () => {
         setIsCanvasesHidded(!isCanvasesHidded)
@@ -285,6 +305,108 @@ const MainPage = ({
     }
     const HoveredArrays = (status) => {
         setIsCasesArrayHover((isCasesArrayHover) => status)
+    }
+    function redrawLines() {
+        var width = document.body.clientWidth/2;
+        var client_height = window.innerHeight;
+        var height = 300;
+        if(client_height > 980) {
+            height = 500;
+        }
+        var ctx_lar_1 = canvas_lar_1.getContext("2d");
+        var ctx_lar_2 = canvas_lar_2.getContext("2d");
+        var ctx_lal_1 = canvas_lal_1.getContext("2d");
+        var ctx_lal_2 = canvas_lal_2.getContext("2d");
+        canvas_lar_1.width = width;
+        canvas_lar_1.height = height;
+        canvas_lar_2.width = width;
+        canvas_lar_2.height = height;
+        canvas_lal_1.width = width;
+        canvas_lal_1.height = height;
+        canvas_lal_2.width = width;
+        canvas_lal_2.height = height;
+        var time = 0;
+        var time_framerate = 1000; //in milliseconds
+        function draw22(timestamp) {
+            if(timestamp > time + time_framerate) {
+                ctx_lar_1.clearRect(0, 0, canvas_lar_1.width, canvas_lar_1.height)
+                ctx_lar_2.clearRect(0, 0, canvas_lar_2.width, canvas_lar_2.height)
+                ctx_lal_1.clearRect(0, 0, canvas_lal_1.width, canvas_lal_1.height)
+                ctx_lal_2.clearRect(0, 0, canvas_lal_2.width, canvas_lal_2.height)
+                var dxStart = 0;
+                var dyStart = 30;
+                var dxEnd = width;
+                var dyEnd = 130;
+                var dyEnd_2 = 240;
+                if(client_height <= 980) {
+                    dyStart = 30;   
+                } else if(client_height <= 2000) {
+                    dyStart = ((client_height * 8) / 100) - 50;   
+                }
+                dyEnd = (client_height * 18.4) / 100;
+                dyEnd_2 = (client_height * 32.64) / 100;
+                drawLines(ctx_lar_1,generateLines(dxStart,dyStart,dxEnd + 30,dyEnd,30,80,0,7),"#7344F4");
+                drawLines(ctx_lar_2,generateLines(dxStart,dyStart,dxEnd + 30,dyEnd,30,80,0,15),"#EEBF1B");  
+                
+                drawLines(ctx_lal_1,generateLines(dxStart - 30,dyEnd_2,dxEnd,dyStart,30,80,0,7),"#7344F4");
+                drawLines(ctx_lal_2,generateLines(dxStart - 30,dyEnd_2,dxEnd,dyStart,30,80,0,15),"#EEBF1B"); 
+            }
+        }
+        requestAnimationFrame(draw22)
+    }
+    
+    //нарисовать линии
+    function drawLines(ctx_,arr,color){
+        ctx_.fillStyle = color;
+        ctx_.lineWidth = 3;
+        ctx_.beginPath();
+        ctx_.moveTo(arr[0][0],arr[0][1]);
+        for(var i  = 1; i < arr.length;i++)
+        ctx_.lineTo(arr[i][0],arr[i][1]);
+        ctx_.strokeStyle = color;
+        ctx_.stroke();
+        ctx_.closePath();
+    }
+    //Генерировать кривую
+    function generateLines(xStart,yStart,xEnd,yEnd, lenRandMin,lenRandMax,angleDeviationMin, angleDeviationMax ) {
+        var arrayPos = [[xStart,yStart]];
+        var xCur = xStart;
+        var yCur = yStart;
+        angleDeviationMin = (angleDeviationMin * Math.PI)/180;//в радианы
+        angleDeviationMax = (angleDeviationMax * Math.PI)/180;//в радианы
+    
+        var deviationPos = false;
+        do {
+            if(getDist(xCur,yCur,xEnd,yEnd) <= lenRandMax) {
+                xCur = xEnd;
+                yCur = yEnd;
+            }
+            else {
+                var len = rand(lenRandMin,lenRandMax);
+                var angle = getAngle(xCur,yCur,xEnd,yEnd) + (deviationPos?rand(angleDeviationMin,angleDeviationMax):-rand(angleDeviationMin,angleDeviationMax));
+                xCur += Math.cos(angle) * len;
+                yCur += Math.sin(angle) * len;
+            }
+            arrayPos.push([xCur,yCur]);
+            deviationPos = !deviationPos;
+        } while (!(xCur == xEnd && yCur == yEnd));
+        return arrayPos;
+    }
+    //Получить рандомное от min до max
+    function rand(min, max) {
+        return min + Math.random() * (max - min)
+    }
+    //Радианы в градусы
+    function toDeg(rad){
+        return rad * 180/Math.PI;
+    }
+    //Получить угол между двумя точками
+    function getAngle(dx,dy,dx1,dy1){
+        return Math.atan2(dy - dy1,dx - dx1) + Math.PI;
+    }
+    ///Получить растояние между двумя точками
+    function getDist(x,y,x1,y1){
+        return Math.sqrt(Math.pow(x1 - x,2)+Math.pow(y1-y,2));
     }
     // useEffect(() => {
     //     if (
@@ -311,6 +433,26 @@ const MainPage = ({
                 <div className="showreel__mobile" />
                 <div className="toner " />
                 <div className="no_overflow">
+                    <div className={isCasesClicked ? 'line-animation-wrapper' : 'line-animation-wrapper displayNoneMain'}>
+                        <div className='line-animation-right'>
+                            <canvas id="lineanimationrightfirst"></canvas>
+                        </div>
+                    </div>
+                    <div className={isCasesClicked ? 'line-animation-wrapper' : 'line-animation-wrapper displayNoneMain'}>
+                        <div className='line-animation-right'>
+                            <canvas id="lineanimationrightsecond"></canvas>
+                        </div>
+                    </div>
+                    <div className={isCasesClicked ? 'line-animation-wrapper line-animation-wrapper-left' : 'line-animation-wrapper line-animation-wrapper-left displayNoneMain'}>
+                        <div className='line-animation-left'>
+                            <canvas id="lineanimationleftfirst"></canvas>
+                        </div>
+                    </div>
+                    <div className={isCasesClicked ? 'line-animation-wrapper line-animation-wrapper-left' : 'line-animation-wrapper line-animation-wrapper-left displayNoneMain'}>
+                        <div className='line-animation-left'>
+                            <canvas id="lineanimationleftsecond"></canvas>
+                        </div>
+                    </div>
                     <MainPageButton
                         canvas={canvas1}
                         onClick={casesClicked}

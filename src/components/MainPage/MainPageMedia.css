@@ -204,7 +204,7 @@
     }
     .firstCircle {
         top: 70px;
-        left: calc(48%);
+        left: 50%;
         background-size: 50%;
         width: 120px;
         height: 120px;

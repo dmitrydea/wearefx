@@ -241,3 +241,19 @@
         width: 0%;
     }
 }
+
+.line-animation-wrapper {
+    position: absolute;
+    top: 6%;
+    left: 50%;
+    z-index: 9999;
+    color: #fff;
+}
+
+#lineanimationrightfirst, #lineanimationrightsecond {
+    transition: all 11s ease-in-out;
+}
+
+.line-animation-wrapper-left {
+    left: 0 !important;
+}
