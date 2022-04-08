@@ -64,7 +64,7 @@ const MainPage = ({
     ]
 
     const [buttonsCoords, setButtonsCoords] = useState([])
-
+    const intervalRef = useRef(null)
     const btn1Ref = useRef(null)
     const btn2Ref = useRef(null)
     const btn3Ref = useRef(null)
@@ -193,11 +193,7 @@ const MainPage = ({
         if (!buttonsCoords.length) return
         drawAnimLine(canvas1, { x: e.clientX, y: e.clientY }, buttonsCoords[0])
         drawAnimLine(canvas2, { x: e.clientX, y: e.clientY }, buttonsCoords[1])
-        drawAnimLine(canvas3, { x: e.clientX, y: e.clientY }, buttonsCoords[2])
-        if(isCasesClicked) {
-            redrawLines();
-        }
-        
+        drawAnimLine(canvas3, { x: e.clientX, y: e.clientY }, buttonsCoords[2])        
     }
 
     const resizeEvent = (e) => {
@@ -294,6 +290,33 @@ const MainPage = ({
         setIsCanvasesHidded(!isCanvasesHidded)
         setIsCasesClicked((isCasesClicked) => !isCasesClicked)
         redrawLines();
+        if (!isCasesClicked) {
+            setTimeout(function() {
+                var elem_r = document.getElementById('lineanimationrightfirst');
+                var elem_l = document.getElementById('lineanimationleftfirst');
+                var elem_r_ = document.getElementsByClassName('line-animation-right');
+                var elem_l_ = document.getElementsByClassName('line-animation-left');
+                for (let index = 0; index < elem_r_.length; index++) {
+                    elem_r_[index].style.height = elem_r.height + "px";
+                }
+                for (let index = 0; index < elem_l_.length; index++) {
+                    elem_l_[index].style.height = elem_l.height + "px";
+                }
+                intervalRef.current = setInterval(function() {
+                    redrawLines();
+                },500);
+            },700);
+        } else {
+            var elem_r_ = document.getElementsByClassName('line-animation-right');
+            var elem_l_ = document.getElementsByClassName('line-animation-left');
+            for (let index = 0; index < elem_r_.length; index++) {
+                elem_r_[index].style.height = 0 + "px";
+            }
+            for (let index = 0; index < elem_l_.length; index++) {
+                elem_l_[index].style.height = 0 + "px";
+            }
+            clearInterval(intervalRef.current);
+        }
     }
     const storyClicked = () => {
         setIsCanvasesHidded(!isCanvasesHidded)
@@ -347,9 +370,12 @@ const MainPage = ({
                 dyEnd_2 = (client_height * 32.64) / 100;
                 drawLines(ctx_lar_1,generateLines(dxStart,dyStart,dxEnd + 30,dyEnd,30,80,0,7),"#7344F4");
                 drawLines(ctx_lar_2,generateLines(dxStart,dyStart,dxEnd + 30,dyEnd,30,80,0,15),"#EEBF1B");  
-                
-                drawLines(ctx_lal_1,generateLines(dxStart - 30,dyEnd_2,dxEnd,dyStart,30,80,0,7),"#7344F4");
-                drawLines(ctx_lal_2,generateLines(dxStart - 30,dyEnd_2,dxEnd,dyStart,30,80,0,15),"#EEBF1B"); 
+             
+                drawLines(ctx_lal_1,generateLines(dxStart,dyStart,dxEnd + 30,dyEnd_2,30,80,0,7),"#7344F4");
+                drawLines(ctx_lal_1,generateLines(dxStart,dyStart,dxEnd + 30,dyEnd_2,30,80,0,15),"#EEBF1B");  
+
+                //drawLines(ctx_lal_1,generateLines(dxStart - 30,dyEnd_2,dxEnd,dyStart,30,80,0,7),"#7344F4");
+                //drawLines(ctx_lal_2,generateLines(dxStart - 30,dyEnd_2,dxEnd,dyStart,30,80,0,15),"#EEBF1B"); 
             }
         }
         requestAnimationFrame(draw22)
@@ -433,24 +459,24 @@ const MainPage = ({
                 <div className="showreel__mobile" />
                 <div className="toner " />
                 <div className="no_overflow">
-                    <div className={isCasesClicked ? 'line-animation-wrapper' : 'line-animation-wrapper displayNoneMain'}>
-                        <div className='line-animation-right'>
-                            <canvas id="lineanimationrightfirst"></canvas>
+                    <div className={isCasesClicked ? 'line-animation-wrapper line-animation-wrapper-right' : 'line-animation-wrapper line-animation-wrapper-right displayNoneMain'}>
+                        <div className='line-animation-right canvas-line-animation'>
+                            <canvas id="lineanimationrightfirst" className=''></canvas>
                         </div>
                     </div>
-                    <div className={isCasesClicked ? 'line-animation-wrapper' : 'line-animation-wrapper displayNoneMain'}>
-                        <div className='line-animation-right'>
-                            <canvas id="lineanimationrightsecond"></canvas>
-                        </div>
-                    </div>
-                    <div className={isCasesClicked ? 'line-animation-wrapper line-animation-wrapper-left' : 'line-animation-wrapper line-animation-wrapper-left displayNoneMain'}>
-                        <div className='line-animation-left'>
-                            <canvas id="lineanimationleftfirst"></canvas>
+                    <div className={isCasesClicked ? 'line-animation-wrapper line-animation-wrapper-right' : 'line-animation-wrapper line-animation-wrapper-right displayNoneMain'}>
+                        <div className='line-animation-right canvas-line-animation'>
+                            <canvas id="lineanimationrightsecond" className=''></canvas>
                         </div>
                     </div>
                     <div className={isCasesClicked ? 'line-animation-wrapper line-animation-wrapper-left' : 'line-animation-wrapper line-animation-wrapper-left displayNoneMain'}>
-                        <div className='line-animation-left'>
-                            <canvas id="lineanimationleftsecond"></canvas>
+                        <div className='line-animation-left canvas-line-animation'>
+                            <canvas id="lineanimationleftfirst" className=''></canvas>
+                        </div>
+                    </div>
+                    <div className={isCasesClicked ? 'line-animation-wrapper line-animation-wrapper-left' : 'line-animation-wrapper line-animation-wrapper-left displayNoneMain'}>
+                        <div className='line-animation-left canvas-line-animation'>
+                            <canvas id="lineanimationleftsecond" className=''></canvas>
                         </div>
                     </div>
                     <MainPageButton

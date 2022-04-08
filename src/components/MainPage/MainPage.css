@@ -255,5 +255,27 @@
 }
 
 .line-animation-wrapper-left {
+    overflow: hidden;
     left: 0 !important;
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);  
+}
+
+.line-animation-right {
+    transition: all 4s ease-in-out;
+}
+
+.line-animation-left {
+    transition: all 3s ease-in-out;
+}
+
+.line-animation-wrapper-right {
+    overflow: hidden;
+}
+
+.canvas-line-animation {
+    height: 0;
 }
