@@ -250,10 +250,6 @@
     color: #fff;
 }
 
-#lineanimationrightfirst, #lineanimationrightsecond {
-    transition: all 11s ease-in-out;
-}
-
 .line-animation-wrapper-left {
     overflow: hidden;
     left: 0 !important;
@@ -265,17 +261,24 @@
 }
 
 .line-animation-right {
-    transition: all 4s ease-in-out;
+    transition: height 4s ease-in-out;
 }
 
 .line-animation-left {
-    transition: all 3s ease-in-out;
+    transition: height 3s ease-in-out;
 }
 
 .line-animation-wrapper-right {
     overflow: hidden;
 }
 
+#lineanimationrightfirst, #lineanimationrightsecond, #lineanimationleftfirst, #lineanimationleftsecond {
+    -webkit-transition: d 0.7s linear;
+    -moz-transition: d 0.7s linear;
+    transition: d 0.7s linear;
+}
+
 .canvas-line-animation {
     height: 0;
 }
+

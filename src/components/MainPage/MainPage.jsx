@@ -81,7 +81,14 @@ const MainPage = ({
     const polyline1 = document.getElementById('polyline1')
     const polyline2 = document.getElementById('polyline2')
 
+
+    const [dAttributeRightOne, setAttributeRightOne] = useState(null)
+    const [dAttributeRightTwo, setAttributeRightTwo] = useState(null)
+    const [dAttributeLeftOne, setAttributeLeftOne] = useState(null)
+    const [dAttributeLeftTwo, setAttributeLeftTwo] = useState(null)
+
     const [isCasesArrayHover, setIsCasesArrayHover] = useState(false)
+    const [isMouseMove, setIsMouseMove] = useState(false)
 
     const [isCasesClicked, setIsCasesClicked] = useState(false)
     const [isCasesEntered, setIsCasesEntered] = useState(false)
@@ -190,6 +197,7 @@ const MainPage = ({
     }
 
     const onMove = (e) => {
+        
         if (!buttonsCoords.length) return
         drawAnimLine(canvas1, { x: e.clientX, y: e.clientY }, buttonsCoords[0])
         drawAnimLine(canvas2, { x: e.clientX, y: e.clientY }, buttonsCoords[1])
@@ -277,35 +285,25 @@ const MainPage = ({
     ])
 
     const casesClicked = () => {
-        if (isCasesClicked) {
-            var ctx_lar_1 = canvas_lar_1.getContext("2d");
-            var ctx_lar_2 = canvas_lar_2.getContext("2d");
-            var ctx_lal_1 = canvas_lal_1.getContext("2d");
-            var ctx_lal_2 = canvas_lal_2.getContext("2d");
-            ctx_lar_1.clearRect(0, 0, canvas_lar_1.width, canvas_lar_1.height);
-            ctx_lar_2.clearRect(0, 0, canvas_lar_2.width, canvas_lar_2.height);
-            ctx_lal_1.clearRect(0, 0, canvas_lal_1.width, canvas_lal_1.height);
-            ctx_lal_2.clearRect(0, 0, canvas_lal_2.width, canvas_lal_2.height);
-        }
         setIsCanvasesHidded(!isCanvasesHidded)
         setIsCasesClicked((isCasesClicked) => !isCasesClicked)
         redrawLines();
         if (!isCasesClicked) {
-            setTimeout(function() {
-                var elem_r = document.getElementById('lineanimationrightfirst');
-                var elem_l = document.getElementById('lineanimationleftfirst');
+            setTimeout(() => {
+                var elem_r = document.getElementById('lineanimationrightfirst_svg');
+                var elem_l = document.getElementById('lineanimationleftfirst_svg');
                 var elem_r_ = document.getElementsByClassName('line-animation-right');
                 var elem_l_ = document.getElementsByClassName('line-animation-left');
                 for (let index = 0; index < elem_r_.length; index++) {
-                    elem_r_[index].style.height = elem_r.height + "px";
+                    elem_r_[index].style.height = elem_r.getAttribute("height") + "px";
                 }
                 for (let index = 0; index < elem_l_.length; index++) {
-                    elem_l_[index].style.height = elem_l.height + "px";
-                }
+                    elem_l_[index].style.height = elem_l.getAttribute("height") + "px";
+                } 
                 intervalRef.current = setInterval(function() {
                     redrawLines();
-                },500);
-            },700);
+                },700);
+            }, 500);
         } else {
             var elem_r_ = document.getElementsByClassName('line-animation-right');
             var elem_l_ = document.getElementsByClassName('line-animation-left');
@@ -336,62 +334,55 @@ const MainPage = ({
         if(client_height > 980) {
             height = 500;
         }
-        var ctx_lar_1 = canvas_lar_1.getContext("2d");
-        var ctx_lar_2 = canvas_lar_2.getContext("2d");
-        var ctx_lal_1 = canvas_lal_1.getContext("2d");
-        var ctx_lal_2 = canvas_lal_2.getContext("2d");
-        canvas_lar_1.width = width;
-        canvas_lar_1.height = height;
-        canvas_lar_2.width = width;
-        canvas_lar_2.height = height;
-        canvas_lal_1.width = width;
-        canvas_lal_1.height = height;
-        canvas_lal_2.width = width;
-        canvas_lal_2.height = height;
-        var time = 0;
-        var time_framerate = 1000; //in milliseconds
-        function draw22(timestamp) {
-            if(timestamp > time + time_framerate) {
-                ctx_lar_1.clearRect(0, 0, canvas_lar_1.width, canvas_lar_1.height)
-                ctx_lar_2.clearRect(0, 0, canvas_lar_2.width, canvas_lar_2.height)
-                ctx_lal_1.clearRect(0, 0, canvas_lal_1.width, canvas_lal_1.height)
-                ctx_lal_2.clearRect(0, 0, canvas_lal_2.width, canvas_lal_2.height)
-                var dxStart = 0;
-                var dyStart = 30;
-                var dxEnd = width;
-                var dyEnd = 130;
-                var dyEnd_2 = 240;
-                if(client_height <= 980) {
-                    dyStart = 30;   
-                } else if(client_height <= 2000) {
-                    dyStart = ((client_height * 8) / 100) - 50;   
-                }
-                dyEnd = (client_height * 18.4) / 100;
-                dyEnd_2 = (client_height * 32.64) / 100;
-                drawLines(ctx_lar_1,generateLines(dxStart,dyStart,dxEnd + 30,dyEnd,30,80,0,7),"#7344F4");
-                drawLines(ctx_lar_2,generateLines(dxStart,dyStart,dxEnd + 30,dyEnd,30,80,0,15),"#EEBF1B");  
-             
-                drawLines(ctx_lal_1,generateLines(dxStart,dyStart,dxEnd + 30,dyEnd_2,30,80,0,7),"#7344F4");
-                drawLines(ctx_lal_1,generateLines(dxStart,dyStart,dxEnd + 30,dyEnd_2,30,80,0,15),"#EEBF1B");  
-
-                //drawLines(ctx_lal_1,generateLines(dxStart - 30,dyEnd_2,dxEnd,dyStart,30,80,0,7),"#7344F4");
-                //drawLines(ctx_lal_2,generateLines(dxStart - 30,dyEnd_2,dxEnd,dyStart,30,80,0,15),"#EEBF1B"); 
-            }
+        var dxStart = 0;
+        var dyStart = 30;
+        var dxEnd = width;
+        var dyEnd = 130;
+        var dyEnd_2 = 240;
+        if(client_height <= 980) {
+            dyStart = 30;   
+        } else if(client_height <= 2000) {
+            dyStart = ((client_height * 8) / 100) - 50;   
         }
-        requestAnimationFrame(draw22)
+        dyEnd = (client_height * 18.4) / 100;
+        dyEnd_2 = (client_height * 32.64) / 100;
+        // svg
+        var ctx_lines = document.getElementsByClassName("svg_lines");
+        for (let index = 0; index < ctx_lines.length; index++) {
+            ctx_lines[index].setAttribute("width", width);  
+            ctx_lines[index].setAttribute("height", height);  
+        }
+        // path
+        var ctx_lar_1 = document.getElementById("lineanimationrightfirst");
+        var ctx_lar_2 = document.getElementById("lineanimationrightsecond");
+        var ctx_lal_1 = document.getElementById("lineanimationleftfirst");
+        var ctx_lal_2 = document.getElementById("lineanimationleftsecond");
+        drawLines(ctx_lar_1,"r1",generateLines(dxStart,dyStart,dxEnd + 30,dyEnd,30,80,0,7),"#7344F4");
+        drawLines(ctx_lar_2,"r2",generateLines(dxStart,dyStart,dxEnd + 30,dyEnd,30,80,0,15),"#EEBF1B");       
+        drawLines(ctx_lal_1,"l1",generateLines(dxStart,dyStart,dxEnd + 30,dyEnd_2,30,80,0,7),"#7344F4");
+        drawLines(ctx_lal_2,"l2",generateLines(dxStart,dyStart,dxEnd + 30,dyEnd_2,30,80,0,15),"#EEBF1B");  
     }
     
     //нарисовать линии
-    function drawLines(ctx_,arr,color){
-        ctx_.fillStyle = color;
-        ctx_.lineWidth = 3;
-        ctx_.beginPath();
-        ctx_.moveTo(arr[0][0],arr[0][1]);
+    function drawLines(ctx_,type,arr,color){
+        var d_str = "M" + arr[0][0] + " " + arr[0][1] + " ";
+        ctx_.setAttribute("stroke", color);
+        ctx_.setAttribute("stroke-width", "3");
         for(var i  = 1; i < arr.length;i++)
-        ctx_.lineTo(arr[i][0],arr[i][1]);
-        ctx_.strokeStyle = color;
-        ctx_.stroke();
-        ctx_.closePath();
+        {
+            d_str = d_str + "L" + Math.round(arr[i][0]) + " " + Math.round(arr[i][1]) + " ";
+        }
+        if(type == "r1") {
+            setAttributeRightOne(d_str);
+        } else if (type == "r2") {
+            setAttributeRightTwo(d_str);
+        } else if (type == "l1") {
+            setAttributeLeftOne(d_str);
+        } else if (type == "l2") {
+            setAttributeLeftTwo(d_str);
+        }
+        //ctx_.setAttribute("d", d_str);
+        
     }
     //Генерировать кривую
     function generateLines(xStart,yStart,xEnd,yEnd, lenRandMin,lenRandMax,angleDeviationMin, angleDeviationMax ) {
@@ -461,22 +452,18 @@ const MainPage = ({
                 <div className="no_overflow">
                     <div className={isCasesClicked ? 'line-animation-wrapper line-animation-wrapper-right' : 'line-animation-wrapper line-animation-wrapper-right displayNoneMain'}>
                         <div className='line-animation-right canvas-line-animation'>
-                            <canvas id="lineanimationrightfirst" className=''></canvas>
-                        </div>
-                    </div>
-                    <div className={isCasesClicked ? 'line-animation-wrapper line-animation-wrapper-right' : 'line-animation-wrapper line-animation-wrapper-right displayNoneMain'}>
-                        <div className='line-animation-right canvas-line-animation'>
-                            <canvas id="lineanimationrightsecond" className=''></canvas>
-                        </div>
-                    </div>
-                    <div className={isCasesClicked ? 'line-animation-wrapper line-animation-wrapper-left' : 'line-animation-wrapper line-animation-wrapper-left displayNoneMain'}>
-                        <div className='line-animation-left canvas-line-animation'>
-                            <canvas id="lineanimationleftfirst" className=''></canvas>
+                            <svg id="lineanimationrightfirst_svg" className='svg_lines' width="0" height="0">
+                                <path id="lineanimationrightfirst" fill="none" stroke="" d={dAttributeRightOne} />
+                                <path id="lineanimationrightsecond" fill="none" stroke="" d={dAttributeRightTwo} />
+                            </svg>
                         </div>
                     </div>
                     <div className={isCasesClicked ? 'line-animation-wrapper line-animation-wrapper-left' : 'line-animation-wrapper line-animation-wrapper-left displayNoneMain'}>
                         <div className='line-animation-left canvas-line-animation'>
-                            <canvas id="lineanimationleftsecond" className=''></canvas>
+                            <svg id="lineanimationleftfirst_svg" className='svg_lines' width="0" height="0">
+                                <path id="lineanimationleftfirst" fill="none" stroke="" d={dAttributeLeftOne} />
+                                <path id="lineanimationleftsecond" fill="none" stroke="" d={dAttributeLeftTwo} />
+                            </svg>
                         </div>
                     </div>
                     <MainPageButton
