@@ -273,9 +273,9 @@
 }
 
 svg path {
-    -webkit-transition: d 1s ease-in-out;
-    -moz-transition: d 1s ease-in-out;
-    transition: d 1s ease-in-out;
+    -webkit-transition: d 0.5s ease-in-out;
+    -moz-transition: d 0.5s ease-in-out;
+    transition: d 0.5s ease-in-out;
 }
 
 .canvas-line-animation {

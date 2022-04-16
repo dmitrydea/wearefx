@@ -203,7 +203,8 @@ const MainPage = ({
         if (!buttonsCoords.length) return
         drawAnimLine(canvas1, { x: e.clientX, y: e.clientY }, buttonsCoords[0])
         drawAnimLine(canvas2, { x: e.clientX, y: e.clientY }, buttonsCoords[1])
-        drawAnimLine(canvas3, { x: e.clientX, y: e.clientY }, buttonsCoords[2])        
+        drawAnimLine(canvas3, { x: e.clientX, y: e.clientY }, buttonsCoords[2])      
+        redrawLines();  
     }
 
     const resizeEvent = (e) => {
@@ -303,7 +304,7 @@ const MainPage = ({
                     elem_l_[index].style.height = elem_l.getAttribute("height") + "px";
                 } 
                 intervalRef.current = setInterval(function() {
-                   redrawLines();
+                   
                 },1000);
             }, 500);
         } else {
