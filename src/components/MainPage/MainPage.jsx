@@ -72,15 +72,17 @@ const MainPage = ({
     const canvas1 = document.getElementById('overlay1')
     const canvas2 = document.getElementById('overlay2')
     const canvas3 = document.getElementById('overlay3')
-    const canvas_lar_1 = document.getElementById('lineanimationrightfirst')
-    const canvas_lar_2 = document.getElementById('lineanimationrightsecond')
-    const canvas_lal_1 = document.getElementById('lineanimationleftfirst')
-    const canvas_lal_2 = document.getElementById('lineanimationleftsecond')
+
+    const ctx_lar_1 = document.getElementById("lineanimationrightfirst")
+    const ctx_lar_2 = document.getElementById("lineanimationrightsecond")
+    const ctx_lal_1 = document.getElementById("lineanimationleftfirst")
+    const ctx_lal_2 = document.getElementById("lineanimationleftsecond")
 
     const polyline = document.getElementById('polyline')
     const polyline1 = document.getElementById('polyline1')
     const polyline2 = document.getElementById('polyline2')
 
+    const [changePositionLine, setChangePositionLine] = useState(0)
 
     const [dAttributeRightOne, setAttributeRightOne] = useState(null)
     const [dAttributeRightTwo, setAttributeRightTwo] = useState(null)
@@ -301,8 +303,8 @@ const MainPage = ({
                     elem_l_[index].style.height = elem_l.getAttribute("height") + "px";
                 } 
                 intervalRef.current = setInterval(function() {
-                    redrawLines();
-                },700);
+                   redrawLines();
+                },1000);
             }, 500);
         } else {
             var elem_r_ = document.getElementsByClassName('line-animation-right');
@@ -353,14 +355,10 @@ const MainPage = ({
             ctx_lines[index].setAttribute("height", height);  
         }
         // path
-        var ctx_lar_1 = document.getElementById("lineanimationrightfirst");
-        var ctx_lar_2 = document.getElementById("lineanimationrightsecond");
-        var ctx_lal_1 = document.getElementById("lineanimationleftfirst");
-        var ctx_lal_2 = document.getElementById("lineanimationleftsecond");
-        drawLines(ctx_lar_1,"r1",generateLines(dxStart,dyStart,dxEnd + 30,dyEnd,30,80,0,7),"#7344F4");
-        drawLines(ctx_lar_2,"r2",generateLines(dxStart,dyStart,dxEnd + 30,dyEnd,30,80,0,15),"#EEBF1B");       
-        drawLines(ctx_lal_1,"l1",generateLines(dxStart,dyStart,dxEnd + 30,dyEnd_2,30,80,0,7),"#7344F4");
-        drawLines(ctx_lal_2,"l2",generateLines(dxStart,dyStart,dxEnd + 30,dyEnd_2,30,80,0,15),"#EEBF1B");  
+        drawLines(ctx_lar_1,"r1",generateLines(dxStart,dyStart,dxEnd + 60,dyEnd,30,80,0,7),"#7344F4");
+        drawLines(ctx_lar_2,"r2",generateLines(dxStart,dyStart,dxEnd + 60,dyEnd,30,80,0,15),"#EEBF1B");       
+        drawLines(ctx_lal_1,"l1",generateLines(dxStart,dyStart,dxEnd + 60,dyEnd_2,30,80,0,7),"#7344F4");
+        drawLines(ctx_lal_2,"l2",generateLines(dxStart,dyStart,dxEnd + 60,dyEnd_2,30,80,0,15),"#EEBF1B");  
     }
     
     //нарисовать линии
@@ -393,8 +391,9 @@ const MainPage = ({
         angleDeviationMax = (angleDeviationMax * Math.PI)/180;//в радианы
     
         var deviationPos = false;
+        var counter = 0;
         do {
-            if(getDist(xCur,yCur,xEnd,yEnd) <= lenRandMax) {
+            if(counter == 13) {
                 xCur = xEnd;
                 yCur = yEnd;
             }
@@ -406,7 +405,9 @@ const MainPage = ({
             }
             arrayPos.push([xCur,yCur]);
             deviationPos = !deviationPos;
+            counter++;
         } while (!(xCur == xEnd && yCur == yEnd));
+        console.log(arrayPos.length);
         return arrayPos;
     }
     //Получить рандомное от min до max
@@ -454,7 +455,9 @@ const MainPage = ({
                         <div className='line-animation-right canvas-line-animation'>
                             <svg id="lineanimationrightfirst_svg" className='svg_lines' width="0" height="0">
                                 <path id="lineanimationrightfirst" fill="none" stroke="" d={dAttributeRightOne} />
-                                <path id="lineanimationrightsecond" fill="none" stroke="" d={dAttributeRightTwo} />
+                                <path id="lineanimationrightsecond" fill="none" stroke="" d={dAttributeRightTwo}>
+                                </path>
+                                
                             </svg>
                         </div>
                     </div>
