@@ -24,7 +24,7 @@ export const MainPageButton = forwardRef(
                     ref={ref}
                     className={`${className} MainPageButton`}
                 >
-                    {isClicked ? ' ' : title}
+                    <span id={title.replace(/ /g, '') + "_movedHoveredButton"} className={isHovered ? "movedHoveredButton" : ""}>{isClicked ? ' ' : title}</span>
                 </div>
             </div>
         )

@@ -20,18 +20,8 @@
     .fhd {
         display: block !important;
     }
-    .secondCircle:hover {
-        bottom: 60px !important;
-        left: 99px !important;
-    }
     .thirdCircle{
         right: 95px;
-    }
-    .thirdCircle:hover {
-        bottom: 60px !important;
-        right: 85px !important;
-        -webkit-bottom: 85px !important;
-        -webkit-right: 90px !important;
     }
     .mobile__btns {
         display: none;
@@ -320,18 +310,6 @@
     }
     .hireBLock__right__bottom {
         font-size: 25px;
-    }
-    .secondCircle:hover {
-        bottom: 75px !important;
-        left: 129px !important;
-        -webkit-bottom: 75px !important;
-        -webkit-left: 129px !important;
-    }
-    .thirdCircle:hover {
-        bottom: 80px !important;
-        right: 120px !important;
-        -webkit-bottom: 80px !important;
-        -webkit-right: 120px !important;
     }
     .gradientBtnContact {
         width: 144px !important;

@@ -78,6 +78,10 @@ const MainPage = ({
     const ctx_lal_1 = document.getElementById("lineanimationleftfirst")
     const ctx_lal_2 = document.getElementById("lineanimationleftsecond")
 
+    const btn1_moved = document.getElementById("cases_movedHoveredButton")
+    const btn2_moved = document.getElementById("story_movedHoveredButton")
+    const btn3_moved = document.getElementById("hireus_movedHoveredButton")
+
     const polyline = document.getElementById('polyline')
     const polyline1 = document.getElementById('polyline1')
     const polyline2 = document.getElementById('polyline2')
@@ -182,7 +186,7 @@ const MainPage = ({
             (Math.abs(buttonsCoords[2].y - e.clientY) < 130 &&
                 Math.abs(buttonsCoords[2].x - e.clientX) < 130)
         ) {
-            PlaceCursor.style.transform = 'scale(2.5) translate(-20%, -10%)'
+            PlaceCursor.style.transform = 'scale(2.5) translate(-20%, -10%)';
         } else if (
             (Math.abs(buttonsCoords[0].y - e.clientY) < 200 &&
                 Math.abs(buttonsCoords[0].x - e.clientX) < 200) ||
@@ -191,7 +195,7 @@ const MainPage = ({
             (Math.abs(buttonsCoords[2].y - e.clientY) < 200 &&
                 Math.abs(buttonsCoords[2].x - e.clientX) < 200)
         ) {
-            PlaceCursor.style.transform = 'scale(1.7) translate(-30%, -20%)'
+            PlaceCursor.style.transform = 'scale(1.7) translate(-30%, -20%)';
         } else {
             PlaceCursor.style.transition = 'background 0.5s ease-in-out'
             PlaceCursor.style.transform = 'scale(1) translate(-50%, -40%)'
@@ -199,6 +203,21 @@ const MainPage = ({
     }
 
     const onMove = (e) => {
+        if(is1BtnHovered && !isCasesClicked) {
+            btn1_moved.style = "left:" + e.clientX + "px;top:" + e.clientY + "px";
+        } else {
+            btn1_moved.style = "";
+        }
+        if(is2BtnHovered) {
+            btn2_moved.style = "left:" + e.clientX + "px;top:" + e.clientY + "px";
+        } else {
+            btn2_moved.style = "";
+        }
+        if(is3BtnHovered) {
+            btn3_moved.style = "left:" + e.clientX + "px;top:" + e.clientY + "px";
+        } else {
+            btn3_moved.style = "";
+        }
         if (isCasesClicked && !isMouseMove) {
             setIsMouseMove(true);
             redrawLines();
@@ -297,6 +316,7 @@ const MainPage = ({
         setIsCasesClicked((isCasesClicked) => !isCasesClicked)
         redrawLines();
         if (!isCasesClicked) {
+            btn1_moved.style = "";
             setTimeout(() => {
                 var elem_r = document.getElementById('lineanimationrightfirst_svg');
                 var elem_l = document.getElementById('lineanimationleftfirst_svg');
