@@ -199,12 +199,17 @@ const MainPage = ({
     }
 
     const onMove = (e) => {
-        
+        if (isCasesClicked && !isMouseMove) {
+            setIsMouseMove(true);
+            redrawLines();
+            setTimeout(function() {
+                setIsMouseMove(false);
+            },500);
+        }
         if (!buttonsCoords.length) return
         drawAnimLine(canvas1, { x: e.clientX, y: e.clientY }, buttonsCoords[0])
         drawAnimLine(canvas2, { x: e.clientX, y: e.clientY }, buttonsCoords[1])
-        drawAnimLine(canvas3, { x: e.clientX, y: e.clientY }, buttonsCoords[2])      
-        redrawLines();  
+        drawAnimLine(canvas3, { x: e.clientX, y: e.clientY }, buttonsCoords[2])        
     }
 
     const resizeEvent = (e) => {
@@ -303,9 +308,9 @@ const MainPage = ({
                 for (let index = 0; index < elem_l_.length; index++) {
                     elem_l_[index].style.height = elem_l.getAttribute("height") + "px";
                 } 
-                intervalRef.current = setInterval(function() {
-                   
-                },1000);
+                //intervalRef.current = setInterval(function() {
+                   //redrawLines();
+                //},1000);
             }, 500);
         } else {
             var elem_r_ = document.getElementsByClassName('line-animation-right');
@@ -316,7 +321,7 @@ const MainPage = ({
             for (let index = 0; index < elem_l_.length; index++) {
                 elem_l_[index].style.height = 0 + "px";
             }
-            clearInterval(intervalRef.current);
+            //clearInterval(intervalRef.current);
         }
     }
     const storyClicked = () => {
@@ -333,12 +338,19 @@ const MainPage = ({
     function redrawLines() {
         var width = document.body.clientWidth/2;
         var client_height = window.innerHeight;
+        var client_width = window.innerWidth;
         var height = 300;
         if(client_height > 980) {
             height = 500;
         }
+        var line_min = 30;
+        var line_max = 80;
+        var angle_min_1 = 0;
+        var angle_max_1 = 7;
+        var angle_max_2 = 15;
         var dxStart = 0;
         var dyStart = 30;
+        var conterLimit = 30;
         var dxEnd = width;
         var dyEnd = 130;
         var dyEnd_2 = 240;
@@ -356,10 +368,19 @@ const MainPage = ({
             ctx_lines[index].setAttribute("height", height);  
         }
         // path
-        drawLines(ctx_lar_1,"r1",generateLines(dxStart,dyStart,dxEnd + 60,dyEnd,30,80,0,7),"#7344F4");
-        drawLines(ctx_lar_2,"r2",generateLines(dxStart,dyStart,dxEnd + 60,dyEnd,30,80,0,15),"#EEBF1B");       
-        drawLines(ctx_lal_1,"l1",generateLines(dxStart,dyStart,dxEnd + 60,dyEnd_2,30,80,0,7),"#7344F4");
-        drawLines(ctx_lal_2,"l2",generateLines(dxStart,dyStart,dxEnd + 60,dyEnd_2,30,80,0,15),"#EEBF1B");  
+        if(client_width > 1919) {
+            conterLimit = 30;
+        }
+        if(client_width <= 1919) {
+            conterLimit = 20;
+        }
+        if(client_width <= 1720) {
+            conterLimit = 15;
+        }
+        drawLines(ctx_lar_1,"r1",generateLines(dxStart,dyStart,dxEnd + 60,dyEnd,line_min,line_max,angle_min_1,angle_max_1,conterLimit),"#7344F4");
+        drawLines(ctx_lar_2,"r2",generateLines(dxStart,dyStart,dxEnd + 60,dyEnd,line_min,line_max,angle_min_1,angle_max_2,conterLimit),"#EEBF1B");       
+        drawLines(ctx_lal_1,"l1",generateLines(dxStart,dyStart,dxEnd + 60,dyEnd_2,line_min,line_max,angle_min_1,angle_max_1,conterLimit),"#7344F4");
+        drawLines(ctx_lal_2,"l2",generateLines(dxStart,dyStart,dxEnd + 60,dyEnd_2,line_min,line_max,angle_min_1,angle_max_2,conterLimit),"#EEBF1B");  
     }
     
     //нарисовать линии
@@ -384,7 +405,7 @@ const MainPage = ({
         
     }
     //Генерировать кривую
-    function generateLines(xStart,yStart,xEnd,yEnd, lenRandMin,lenRandMax,angleDeviationMin, angleDeviationMax ) {
+    function generateLines(xStart,yStart,xEnd,yEnd, lenRandMin,lenRandMax,angleDeviationMin, angleDeviationMax, conterLimit ) {
         var arrayPos = [[xStart,yStart]];
         var xCur = xStart;
         var yCur = yStart;
@@ -394,7 +415,7 @@ const MainPage = ({
         var deviationPos = false;
         var counter = 0;
         do {
-            if(counter == 13) {
+            if(counter == conterLimit) {
                 xCur = xEnd;
                 yCur = yEnd;
             }
