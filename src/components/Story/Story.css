@@ -2,19 +2,18 @@
     overflow-y: auto;
     position: absolute;
     bottom: 0;
-    width: calc(100vw + 35px);
+    width: calc(100vw);
     height: 100vh;
     z-index: 2000;
     top: 0;
     opacity: 1 !important;
-    left: -35px;
     transition: clip-path 0.3s ease;
     animation: storyShow;
     animation-timing-function: cubic-bezier(0.67, 0.51, 0.51, 0.91);
     animation-duration: 0.4s;
     animation-fill-mode: forwards;
     transition: clip-path 0.4s;
-    clip-path: polygon(94% 0, 100% 0, 100% 4%, 7% 92%);
+    clip-path: polygon(84% 0, 100% 0, 100% 4%, 7% 92%);
 }
 .storyFullScreen {
     z-index: 2000;
@@ -71,7 +70,7 @@
     }
     100% {
         opacity: 1 !important;
-        clip-path: polygon(18% 0, 100% 0, 100% 100%, 7% 92%);
+        clip-path: polygon(15% 0, 100% 0, 100% 100%, 4% 95%);
     }
 }
 @media (max-width: 1920px) {
@@ -124,4 +123,21 @@
 
 .storyBlock a:first-child {
     margin-top: 0 !important;
+}
+
+@media (max-width: 1900px) {
+    @keyframes storyShow {
+        0% {
+            opacity: 1 !important;
+            clip-path: polygon(100% 0, 100% 0, 100% 0, 7% 92%);
+        }
+        35% {
+            opacity: 1 !important;
+            clip-path: polygon(84% 0, 100% 0, 100% 14%, 7% 92%);
+        }
+        100% {
+            opacity: 1 !important;
+            clip-path: polygon(15% 0, 100% 0, 100% 100%, 5% 92%);
+        }
+    }
 }

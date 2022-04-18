@@ -204,17 +204,17 @@ const MainPage = ({
 
     const onMove = (e) => {
         if(is1BtnHovered && !isCasesClicked) {
-            btn1_moved.style = "left:" + e.clientX + "px !important;top:" + e.clientY + "px !important;bottom: auto !important;";
+            btn1_moved.style = "left:" + e.clientX + "px !important;top:" + e.clientY + "px !important;";
         } else {
             btn1_moved.style = "";
         }
-        if(is2BtnHovered) {
-            btn2_moved.style = "left:" + e.clientX + "px !important;top:" + e.clientY + "px !important;bottom: auto !important;";
+        if(is2BtnHovered && !isStoryClicked) {
+            btn2_moved.style = "left:" + e.clientX + "px !important;top:" + e.clientY + "px !important;";
         } else {
             btn2_moved.style = "";
         }
-        if(is3BtnHovered) {
-            btn3_moved.style = "left:" + e.clientX + "px !important;top:" + e.clientY + "px !important;bottom: auto !important;";
+        if(is3BtnHovered && !isHireClicked) {
+            btn3_moved.style = "left:" + e.clientX + "px !important;top:" + e.clientY + "px !important;";
         } else {
             btn3_moved.style = "";
         }
@@ -315,8 +315,8 @@ const MainPage = ({
         setIsCanvasesHidded(!isCanvasesHidded)
         setIsCasesClicked((isCasesClicked) => !isCasesClicked)
         redrawLines();
-        if (!isCasesClicked) {
-            btn1_moved.style = "";
+        if (!isCasesClicked) {   
+            btn1_moved.style = "transition: none !important;";
             setTimeout(() => {
                 var elem_r = document.getElementById('lineanimationrightfirst_svg');
                 var elem_l = document.getElementById('lineanimationleftfirst_svg');
@@ -328,9 +328,6 @@ const MainPage = ({
                 for (let index = 0; index < elem_l_.length; index++) {
                     elem_l_[index].style.height = elem_l.getAttribute("height") + "px";
                 } 
-                //intervalRef.current = setInterval(function() {
-                   //redrawLines();
-                //},1000);
             }, 500);
         } else {
             var elem_r_ = document.getElementsByClassName('line-animation-right');

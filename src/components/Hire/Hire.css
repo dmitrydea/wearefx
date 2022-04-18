@@ -68,9 +68,10 @@
     }
     100% {
         /* opacity: 1; */
-        clip-path: polygon(0% 0%, 85% 0%, 94% 92%, 0% 100%);
+        clip-path: polygon(0% 0%, 85% 0%, 95% 95%, 0% 100%);
     }
 }
+
 .hireBtnPage p {
     padding-top: 9% !important;
 }
@@ -278,4 +279,21 @@
 .special__hire_2 {
     color: #EDF5FC !important;
     font-weight: 300 !important;
+}
+
+@media (max-width: 1900px) {
+    @keyframes hireShow {
+        0% {
+            /* opacity: 0; */
+            clip-path: polygon(0 0, 0 0, 94% 92%, 0 0);
+        }
+        35% {
+            clip-path: polygon(0 0, 16% 0, 94% 92%, 0 15%);
+            /* opacity: 0.8; */
+        }
+        100% {
+            /* opacity: 1; */
+            clip-path: polygon(0% 0%, 85% 0%, 95% 92%, 0% 100%);
+        }
+    }
 }
