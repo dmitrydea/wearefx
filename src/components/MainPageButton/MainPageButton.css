@@ -158,11 +158,36 @@
 }
 
 .movedHoveredButton {
-    -webkit-transition: all 0.3s linear;
-    -moz-transition: all 0.3s linear;
-    transition: all 0.3s linear;
-    transform: translateX(-43%) translateY(-43%);
+    transform: translateX(-43%) translateY(-43%) !important;
     position: fixed;
-    left: auto;
-    right: auto;
+}
+
+#cases_movedHoveredButton {
+    -webkit-transition: all 0.3s cubic-bezier(.63,.54,.69,.73);
+    -moz-transition: all 0.3s cubic-bezier(.63,.54,.69,.73);
+    transition: all 0.3s cubic-bezier(.63,.54,.69,.73);
+    position: fixed;
+    transform: translateX(-50%);
+    top: 10%;
+    left: 50%;
+}
+
+#story_movedHoveredButton {
+    -webkit-transition: all 0.3s cubic-bezier(.63,.54,.69,.73);
+    -moz-transition: all 0.3s cubic-bezier(.63,.54,.69,.73);
+    transition: all 0.3s cubic-bezier(.63,.54,.69,.73);
+    position: fixed;
+    transform: translateX(-50%) translateY(-50%);
+    top: calc(100% - 90px);
+    left: 90px;
+}
+
+#hireus_movedHoveredButton {
+    -webkit-transition: all 0.3s cubic-bezier(.63,.54,.69,.73);
+    -moz-transition: all 0.3s cubic-bezier(.63,.54,.69,.73);
+    transition: all 0.3s cubic-bezier(.63,.54,.69,.73);
+    position: fixed;
+    transform: translateX(-50%) translateY(-50%);
+    top: calc(100% - 90px);
+    left: calc(100% - 110px);
 }

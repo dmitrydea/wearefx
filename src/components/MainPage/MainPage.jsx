@@ -204,17 +204,17 @@ const MainPage = ({
 
     const onMove = (e) => {
         if(is1BtnHovered && !isCasesClicked) {
-            btn1_moved.style = "left:" + e.clientX + "px;top:" + e.clientY + "px";
+            btn1_moved.style = "left:" + e.clientX + "px !important;top:" + e.clientY + "px !important;bottom: auto !important;";
         } else {
             btn1_moved.style = "";
         }
         if(is2BtnHovered) {
-            btn2_moved.style = "left:" + e.clientX + "px;top:" + e.clientY + "px";
+            btn2_moved.style = "left:" + e.clientX + "px !important;top:" + e.clientY + "px !important;bottom: auto !important;";
         } else {
             btn2_moved.style = "";
         }
         if(is3BtnHovered) {
-            btn3_moved.style = "left:" + e.clientX + "px;top:" + e.clientY + "px";
+            btn3_moved.style = "left:" + e.clientX + "px !important;top:" + e.clientY + "px !important;bottom: auto !important;";
         } else {
             btn3_moved.style = "";
         }
@@ -331,7 +331,7 @@ const MainPage = ({
                 //intervalRef.current = setInterval(function() {
                    //redrawLines();
                 //},1000);
-            }, 0);
+            }, 500);
         } else {
             var elem_r_ = document.getElementsByClassName('line-animation-right');
             var elem_l_ = document.getElementsByClassName('line-animation-left');
