@@ -331,7 +331,7 @@ const MainPage = ({
                 //intervalRef.current = setInterval(function() {
                    //redrawLines();
                 //},1000);
-            }, 500);
+            }, 0);
         } else {
             var elem_r_ = document.getElementsByClassName('line-animation-right');
             var elem_l_ = document.getElementsByClassName('line-animation-left');

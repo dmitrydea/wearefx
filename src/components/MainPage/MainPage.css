@@ -261,11 +261,11 @@
 }
 
 .line-animation-right {
-    transition: height 4s ease-in-out;
+    transition: height 3s ease-in-out;
 }
 
 .line-animation-left {
-    transition: height 3s ease-in-out;
+    transition: height 2s ease-in-out;
 }
 
 .line-animation-wrapper-right {
