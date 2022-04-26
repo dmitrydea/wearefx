@@ -268,7 +268,9 @@
     transition: height 2s ease-in-out;
 }
 
-.line-animation-wrapper-right {
+.line-animation-wrapper-right, .line-animation-wrapper-right_story, .line-animation-wrapper-left_story, 
+.line-animation-wrapper-right_hire, 
+.line-animation-wrapper-left_hire {
     overflow: hidden;
 }
 
@@ -282,3 +284,69 @@ svg path {
     height: 0;
 }
 
+.canvas-line-animation_story {
+    height: 0;
+}
+
+.canvas-line-animation_story_vertical {
+    width: 0;
+}
+
+.canvas-line-animation_hire {
+    height: 0;
+}
+
+.canvas-line-animation_hire_vertical {
+    width: 0;
+}
+
+.line-animation-wrapper_story {
+    position: fixed;
+    z-index: 9999;
+    color: #fff;
+}
+
+.line-animation-wrapper_hire {
+    position: fixed;
+    z-index: 9999;
+    color: #fff;
+}
+
+.line-animation-right_story {
+    transition: height 2s ease-in-out;
+}
+
+.line-animation-left_story {
+    transition: width 1.3s ease-in-out;
+}
+
+.line-animation-right_hire {
+    transition: height 2s ease-in-out;
+}
+
+.line-animation-left_hire {
+    transition: width 1.3s ease-in-out;
+}
+
+.line-animation-wrapper-right_story {
+    bottom: 90px;
+    transform: translateY(100%);
+    left: 90px;
+}
+
+.line-animation-wrapper-left_story {
+    bottom: 110px;
+    left: 62px;
+}
+
+.line-animation-wrapper-right_hire {
+    bottom: 90px;
+    transform: translateY(100%) scale(-1, 1);
+    right: 90px;
+}
+
+.line-animation-wrapper-left_hire {
+    bottom: 80px;
+    right: 62px;
+    transform: scale(-1, 1);
+}

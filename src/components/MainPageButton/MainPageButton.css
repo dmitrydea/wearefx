@@ -127,6 +127,7 @@
     bottom: 40px;
     right: 60px;
     border: none;
+    animation: pulsebackground 2s ease;
 }
 .clickedHire:hover {
     border: none;
@@ -163,9 +164,9 @@
 }
 
 #cases_movedHoveredButton {
-    -webkit-transition: all 0.3s cubic-bezier(.63,.54,.69,.73);
-    -moz-transition: all 0.3s cubic-bezier(.63,.54,.69,.73);
-    transition: all 0.3s cubic-bezier(.63,.54,.69,.73);
+    -webkit-transition: all 0.3s cubic-bezier(.23,.49,.37,.77);
+    -moz-transition: all 0.3s cubic-bezier(.23,.49,.37,.77);
+    transition: all 0.3s cubic-bezier(.23,.49,.37,.77);
     position: fixed;
     z-index: 8;
     transform: translateX(-50%);
@@ -178,9 +179,9 @@
 }
 
 #story_movedHoveredButton {
-    -webkit-transition: all 0.3s cubic-bezier(.63,.54,.69,.73);
-    -moz-transition: all 0.3s cubic-bezier(.63,.54,.69,.73);
-    transition: all 0.3s cubic-bezier(.63,.54,.69,.73);
+    -webkit-transition: all 0.3s cubic-bezier(.23,.49,.37,.77);
+    -moz-transition: all 0.3s cubic-bezier(.23,.49,.37,.77);
+    transition: all 0.3s cubic-bezier(.23,.49,.37,.77);
     position: fixed;
     z-index: 8;
     transform: translateX(-50%) translateY(-50%);
@@ -193,9 +194,9 @@
 }
 
 #hireus_movedHoveredButton {
-    -webkit-transition: all 0.3s cubic-bezier(.63,.54,.69,.73);
-    -moz-transition: all 0.3s cubic-bezier(.63,.54,.69,.73);
-    transition: all 0.3s cubic-bezier(.63,.54,.69,.73);
+    -webkit-transition: all 0.3s cubic-bezier(.23,.49,.37,.77);
+    -moz-transition: all 0.3s cubic-bezier(.23,.49,.37,.77);
+    transition: all 0.3s cubic-bezier(.23,.49,.37,.77);
     position: fixed;
     z-index: 8;
     transform: translateX(-50%) translateY(-50%);

@@ -78,6 +78,16 @@ const MainPage = ({
     const ctx_lal_1 = document.getElementById("lineanimationleftfirst")
     const ctx_lal_2 = document.getElementById("lineanimationleftsecond")
 
+    const ctx_lar_1_story = document.getElementById("lineanimationrightfirst_story")
+    const ctx_lar_2_story = document.getElementById("lineanimationrightsecond_story")
+    const ctx_lal_1_story = document.getElementById("lineanimationleftfirst_story")
+    const ctx_lal_2_story = document.getElementById("lineanimationleftsecond_story")
+
+    const ctx_lar_1_hire = document.getElementById("lineanimationrightfirst_hire")
+    const ctx_lar_2_hire = document.getElementById("lineanimationrightsecond_hire")
+    const ctx_lal_1_hire = document.getElementById("lineanimationleftfirst_hire")
+    const ctx_lal_2_hire = document.getElementById("lineanimationleftsecond_hire")
+
     const btn1_moved = document.getElementById("cases_movedHoveredButton")
     const btn2_moved = document.getElementById("story_movedHoveredButton")
     const btn3_moved = document.getElementById("hireus_movedHoveredButton")
@@ -92,6 +102,16 @@ const MainPage = ({
     const [dAttributeRightTwo, setAttributeRightTwo] = useState(null)
     const [dAttributeLeftOne, setAttributeLeftOne] = useState(null)
     const [dAttributeLeftTwo, setAttributeLeftTwo] = useState(null)
+
+    const [dAttributeRightOneStory, setAttributeRightOneStory] = useState(null)
+    const [dAttributeRightTwoStory, setAttributeRightTwoStory] = useState(null)
+    const [dAttributeLeftOneStory, setAttributeLeftOneStory] = useState(null)
+    const [dAttributeLeftTwoStory, setAttributeLeftTwoStory] = useState(null)
+
+    const [dAttributeRightOneHire, setAttributeRightOneHire] = useState(null)
+    const [dAttributeRightTwoHire, setAttributeRightTwoHire] = useState(null)
+    const [dAttributeLeftOneHire, setAttributeLeftOneHire] = useState(null)
+    const [dAttributeLeftTwoHire, setAttributeLeftTwoHire] = useState(null)
 
     const [isCasesArrayHover, setIsCasesArrayHover] = useState(false)
     const [isMouseMove, setIsMouseMove] = useState(false)
@@ -220,7 +240,21 @@ const MainPage = ({
         }
         if (isCasesClicked && !isMouseMove) {
             setIsMouseMove(true);
-            redrawLines();
+            redrawLines("cases");
+            setTimeout(function() {
+                setIsMouseMove(false);
+            },500);
+        }
+        if (isStoryClicked && !isMouseMove) {
+            setIsMouseMove(true);
+            redrawLines("story");
+            setTimeout(function() {
+                setIsMouseMove(false);
+            },500);
+        }
+        if (isHireClicked && !isMouseMove) {
+            setIsMouseMove(true);
+            redrawLines("hire");
             setTimeout(function() {
                 setIsMouseMove(false);
             },500);
@@ -247,7 +281,7 @@ const MainPage = ({
 
             b3.x = b3.x + 50;
             b3.y = b3.y + 50;
-            redrawLines();
+            //redrawLines();
         } catch(e) {
 
         }
@@ -314,7 +348,7 @@ const MainPage = ({
     const casesClicked = () => {
         setIsCanvasesHidded(!isCanvasesHidded)
         setIsCasesClicked((isCasesClicked) => !isCasesClicked)
-        redrawLines();
+        redrawLines("cases");
         if (!isCasesClicked) {   
             btn1_moved.style = "transition: none !important;";
             setTimeout(() => {
@@ -338,21 +372,68 @@ const MainPage = ({
             for (let index = 0; index < elem_l_.length; index++) {
                 elem_l_[index].style.height = 0 + "px";
             }
-            //clearInterval(intervalRef.current);
         }
     }
     const storyClicked = () => {
         setIsCanvasesHidded(!isCanvasesHidded)
         setIsStoryClicked((isStoryClicked) => !isStoryClicked)
+        redrawLines("story");
+        if (!isStoryClicked) {   
+            setTimeout(() => {
+                var elem_r = document.getElementById('lineanimationrightfirst_svg_story');
+                var elem_l = document.getElementById('lineanimationleftfirst_svg_story');
+                var elem_r_ = document.getElementsByClassName('line-animation-right_story');
+                var elem_l_ = document.getElementsByClassName('line-animation-left_story');
+                for (let index = 0; index < elem_r_.length; index++) {
+                    elem_r_[index].style.height = elem_r.getAttribute("height") + "px";
+                }
+                for (let index = 0; index < elem_l_.length; index++) {
+                    elem_l_[index].style.width = elem_l.getAttribute("width") + "px";
+                } 
+            }, 0);
+        } else {
+            var elem_r_ = document.getElementsByClassName('line-animation-right_story');
+            var elem_l_ = document.getElementsByClassName('line-animation-left_story');
+            for (let index = 0; index < elem_r_.length; index++) {
+                elem_r_[index].style.height = 0 + "px";
+            }
+            for (let index = 0; index < elem_l_.length; index++) {
+                elem_l_[index].style.width = 0 + "px";
+            }
+        }
     }
     const hireClicked = () => {
         setIsCanvasesHidded(!isCanvasesHidded)
         setIsHireClicked((isHireClicked) => !isHireClicked)
+        redrawLines("hire");
+        if (!isHireClicked) {   
+            setTimeout(() => {
+                var elem_r = document.getElementById('lineanimationrightfirst_svg_hire');
+                var elem_l = document.getElementById('lineanimationleftfirst_svg_hire');
+                var elem_r_ = document.getElementsByClassName('line-animation-right_hire');
+                var elem_l_ = document.getElementsByClassName('line-animation-left_hire');
+                for (let index = 0; index < elem_r_.length; index++) {
+                    elem_r_[index].style.height = elem_r.getAttribute("height") + "px";
+                }
+                for (let index = 0; index < elem_l_.length; index++) {
+                    elem_l_[index].style.width = elem_l.getAttribute("width") + "px";
+                } 
+            }, 0);
+        } else {
+            var elem_r_ = document.getElementsByClassName('line-animation-right_hire');
+            var elem_l_ = document.getElementsByClassName('line-animation-left_hire');
+            for (let index = 0; index < elem_r_.length; index++) {
+                elem_r_[index].style.height = 0 + "px";
+            }
+            for (let index = 0; index < elem_l_.length; index++) {
+                elem_l_[index].style.width = 0 + "px";
+            }
+        }
     }
     const HoveredArrays = (status) => {
         setIsCasesArrayHover((isCasesArrayHover) => status)
     }
-    function redrawLines() {
+    function redrawLines(lay) {
         var width = document.body.clientWidth/2;
         var client_height = window.innerHeight;
         var client_width = window.innerWidth;
@@ -371,6 +452,10 @@ const MainPage = ({
         var dxEnd = width;
         var dyEnd = 130;
         var dyEnd_2 = 240;
+        if(lay=="story" || lay=="hire") {
+            width = document.body.clientWidth;
+            dxEnd = width;
+        }   
         if(client_height <= 980) {
             dyStart = 30;   
         } else if(client_height <= 2000) {
@@ -379,7 +464,25 @@ const MainPage = ({
         dyEnd = (client_height * 18.4) / 100;
         dyEnd_2 = (client_height * 32.64) / 100;
         // svg
-        var ctx_lines = document.getElementsByClassName("svg_lines");
+        var ctx_lines = null;
+        var ctx_lines_vertical = null;
+        if(lay=="story") {
+            ctx_lines = document.getElementsByClassName("svg_lines_story");
+            ctx_lines_vertical = document.getElementsByClassName("svg_lines_story_vertical");
+            for (let index = 0; index < ctx_lines_vertical.length; index++) {
+                ctx_lines_vertical[index].setAttribute("width", height);  
+                ctx_lines_vertical[index].setAttribute("height", client_height);  
+            }
+        }  else if(lay=="hire") {
+            ctx_lines = document.getElementsByClassName("svg_lines_hire");
+            ctx_lines_vertical = document.getElementsByClassName("svg_lines_hire_vertical");
+            for (let index = 0; index < ctx_lines_vertical.length; index++) {
+                ctx_lines_vertical[index].setAttribute("width", height);  
+                ctx_lines_vertical[index].setAttribute("height", client_height);  
+            }
+        } else if(lay=="cases") {
+            ctx_lines = document.getElementsByClassName("svg_lines");
+        }
         for (let index = 0; index < ctx_lines.length; index++) {
             ctx_lines[index].setAttribute("width", width);  
             ctx_lines[index].setAttribute("height", height);  
@@ -394,14 +497,29 @@ const MainPage = ({
         if(client_width <= 1720) {
             conterLimit = 15;
         }
-        drawLines(ctx_lar_1,"r1",generateLines(dxStart,dyStart,dxEnd + 60,dyEnd,line_min,line_max,angle_min_1,angle_max_1,conterLimit),"#7344F4");
-        drawLines(ctx_lar_2,"r2",generateLines(dxStart,dyStart,dxEnd + 60,dyEnd,line_min,line_max,angle_min_1,angle_max_2,conterLimit),"#EEBF1B");       
-        drawLines(ctx_lal_1,"l1",generateLines(dxStart,dyStart,dxEnd + 60,dyEnd_2,line_min,line_max,angle_min_1,angle_max_1,conterLimit),"#7344F4");
-        drawLines(ctx_lal_2,"l2",generateLines(dxStart,dyStart,dxEnd + 60,dyEnd_2,line_min,line_max,angle_min_1,angle_max_2,conterLimit),"#EEBF1B");  
-    }
-    
+        if (lay=="story") {
+            conterLimit = conterLimit * 2;
+            var dxEnd_vertical = (document.body.clientWidth * 15) / 100;
+            drawLines(lay,ctx_lar_1_story,"r1",generateLines(30,30,dxEnd + 60,90,line_min,line_max,angle_min_1,angle_max_1,conterLimit),"#7344F4");
+            drawLines(lay,ctx_lar_2_story,"r2",generateLines(30,30,dxEnd + 60,90,line_min,line_max,angle_min_1,angle_max_1 + 3,conterLimit),"#EEBF1B");       
+            drawLines(lay,ctx_lal_1_story,"l1",generateLines(30,client_height,dxEnd_vertical-30,0,line_min,line_max,angle_min_1,angle_max_1,conterLimit),"#7344F4");
+            drawLines(lay,ctx_lal_2_story,"l2",generateLines(30,client_height,dxEnd_vertical-30,0,line_min,line_max,angle_min_1,angle_max_1 + 3,conterLimit),"#EEBF1B");  
+        } else if (lay=="hire") {
+            conterLimit = conterLimit * 2;
+            var dxEnd_vertical = (document.body.clientWidth * 15) / 100;
+            drawLines(lay,ctx_lar_1_hire,"r1",generateLines(30,30,dxEnd + 60,90,line_min,line_max,angle_min_1,angle_max_1,conterLimit),"#7344F4");
+            drawLines(lay,ctx_lar_2_hire,"r2",generateLines(30,30,dxEnd + 60,90,line_min,line_max,angle_min_1,angle_max_1 + 3,conterLimit),"#EEBF1B");       
+            drawLines(lay,ctx_lal_1_hire,"l1",generateLines(30,client_height,dxEnd_vertical-30,0,line_min,line_max,angle_min_1,angle_max_1,conterLimit),"#7344F4");
+            drawLines(lay,ctx_lal_2_hire,"l2",generateLines(30,client_height,dxEnd_vertical-30,0,line_min,line_max,angle_min_1,angle_max_1 + 3,conterLimit),"#EEBF1B");  
+        } else if (lay=="cases") {
+            drawLines(lay,ctx_lar_1,"r1",generateLines(dxStart,dyStart,dxEnd + 60,dyEnd,line_min,line_max,angle_min_1,angle_max_1,conterLimit),"#7344F4");
+            drawLines(lay,ctx_lar_2,"r2",generateLines(dxStart,dyStart,dxEnd + 60,dyEnd,line_min,line_max,angle_min_1,angle_max_2,conterLimit),"#EEBF1B");       
+            drawLines(lay,ctx_lal_1,"l1",generateLines(dxStart,dyStart,dxEnd + 60,dyEnd_2,line_min,line_max,angle_min_1,angle_max_1,conterLimit),"#7344F4");
+            drawLines(lay,ctx_lal_2,"l2",generateLines(dxStart,dyStart,dxEnd + 60,dyEnd_2,line_min,line_max,angle_min_1,angle_max_2,conterLimit),"#EEBF1B");  
+        }  
+    } 
     //нарисовать линии
-    function drawLines(ctx_,type,arr,color){
+    function drawLines(lay,ctx_,type,arr,color){
         var d_str = "M" + arr[0][0] + " " + arr[0][1] + " ";
         ctx_.setAttribute("stroke", color);
         ctx_.setAttribute("stroke-width", "3");
@@ -409,17 +527,37 @@ const MainPage = ({
         {
             d_str = d_str + "L" + Math.round(arr[i][0]) + " " + Math.round(arr[i][1]) + " ";
         }
-        if(type == "r1") {
-            setAttributeRightOne(d_str);
-        } else if (type == "r2") {
-            setAttributeRightTwo(d_str);
-        } else if (type == "l1") {
-            setAttributeLeftOne(d_str);
-        } else if (type == "l2") {
-            setAttributeLeftTwo(d_str);
+        if (lay=="cases") {
+            if(type == "r1") {
+                setAttributeRightOne(d_str);
+            } else if (type == "r2") {
+                setAttributeRightTwo(d_str);
+            } else if (type == "l1") {
+                setAttributeLeftOne(d_str);
+            } else if (type == "l2") {
+                setAttributeLeftTwo(d_str);
+            }
+        } else if(lay=="story") {
+            if(type == "r1") {
+                setAttributeRightOneStory(d_str);
+            } else if (type == "r2") {
+                setAttributeRightTwoStory(d_str);
+            } else if (type == "l1") {
+                setAttributeLeftOneStory(d_str);
+            } else if (type == "l2") {
+                setAttributeLeftTwoStory(d_str);
+            }
+        } else if(lay=="hire") {
+            if(type == "r1") {
+                setAttributeRightOneHire(d_str);
+            } else if (type == "r2") {
+                setAttributeRightTwoHire(d_str);
+            } else if (type == "l1") {
+                setAttributeLeftOneHire(d_str);
+            } else if (type == "l2") {
+                setAttributeLeftTwoHire(d_str);
+            }
         }
-        //ctx_.setAttribute("d", d_str);
-        
     }
     //Генерировать кривую
     function generateLines(xStart,yStart,xEnd,yEnd, lenRandMin,lenRandMax,angleDeviationMin, angleDeviationMax, conterLimit ) {
@@ -508,6 +646,44 @@ const MainPage = ({
                             </svg>
                         </div>
                     </div>
+                    <div className={isStoryClicked ? 'line-animation-wrapper_story line-animation-wrapper-right_story' : 'line-animation-wrapper_story line-animation-wrapper-right_story displayNoneMain'}>
+                        <div className='line-animation-right_story canvas-line-animation_story'>
+                            <svg id="lineanimationrightfirst_svg_story" className='svg_lines_story' width="0" height="0">
+                                <path id="lineanimationrightfirst_story" fill="none" stroke="" d={dAttributeRightOneStory} />
+                                <path id="lineanimationrightsecond_story" fill="none" stroke="" d={dAttributeRightTwoStory}>
+                                </path> 
+                            </svg>
+                        </div>
+                    </div>
+                    <div className={isStoryClicked ? 'line-animation-wrapper_story line-animation-wrapper-left_story' : 'line-animation-wrapper_story line-animation-wrapper-left displayNoneMain'}>
+                        <div className='line-animation-left_story canvas-line-animation_story_vertical'>
+                            <svg id="lineanimationleftfirst_svg_story" className='svg_lines_story_vertical' width="0" height="0">
+                                <path id="lineanimationleftfirst_story" fill="none" stroke="" d={dAttributeLeftOneStory} />
+                                <path id="lineanimationleftsecond_story" fill="none" stroke="" d={dAttributeLeftTwoStory} />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div className={isHireClicked ? 'line-animation-wrapper_hire line-animation-wrapper-right_hire' : 'line-animation-wrapper_hire line-animation-wrapper-right_hire displayNoneMain'}>
+                        <div className='line-animation-right_hire canvas-line-animation_hire'>
+                            <svg id="lineanimationrightfirst_svg_hire" className='svg_lines_hire' width="0" height="0">
+                                <path id="lineanimationrightfirst_hire" fill="none" stroke="" d={dAttributeRightOneHire} />
+                                <path id="lineanimationrightsecond_hire" fill="none" stroke="" d={dAttributeRightTwoHire}>
+                                </path> 
+                            </svg>
+                        </div>
+                    </div>
+                    <div className={isHireClicked ? 'line-animation-wrapper_hire line-animation-wrapper-left_hire' : 'line-animation-wrapper_hire line-animation-wrapper-left displayNoneMain'}>
+                        <div className='line-animation-left_hire canvas-line-animation_hire_vertical'>
+                            <svg id="lineanimationleftfirst_svg_hire" className='svg_lines_hire_vertical' width="0" height="0">
+                                <path id="lineanimationleftfirst_hire" fill="none" stroke="" d={dAttributeLeftOneHire} />
+                                <path id="lineanimationleftsecond_hire" fill="none" stroke="" d={dAttributeLeftTwoHire} />
+                            </svg>
+                        </div>
+                    </div>
+
+
+
                     <MainPageButton
                         canvas={canvas1}
                         onClick={casesClicked}

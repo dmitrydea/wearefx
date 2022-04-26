@@ -21,7 +21,7 @@
         display: block !important;
     }
     .thirdCircle{
-        right: 95px;
+        
     }
     .mobile__btns {
         display: none;
@@ -358,6 +358,14 @@
         margin-right: calc(40%);
         font-weight: normal;
         text-transform: uppercase;
+    }
+    .hireBLock {
+        margin-left: 280px;
+    }
+}
+@media (max-width: 1660px) {
+    .hireBLock {
+        margin-left: 140px;
     }
 }
 @media (max-width: 1550px) {
