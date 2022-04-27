@@ -69,9 +69,6 @@
         filter: blur(0px);
     }
 }
-.mainPageSelector * {
-    /*overflow-y: hidden !important;*/
-}
 .toner {
     background: rgb(255, 255, 255, 0);
     background: radial-gradient(

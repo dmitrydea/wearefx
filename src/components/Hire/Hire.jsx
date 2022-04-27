@@ -46,12 +46,23 @@ export const Hire = ({
     }
 
     const [visible, setVisible] = useState(false)
+    const [visibleBB, setVisibleBB] = useState(false)
     const visRef = useRef(null)
+    const visRef2 = useRef(null)
     useEffect(() => {
         (async () => {
-            if (isClicked) setVisible(true)
+            if (isClicked) {
+                setVisible(true)
+                visRef2.current = setInterval(function() {
+                    try {
+                        setVisibleBB(true);
+                    } catch (error) {}
+                },100);
+            }
             else {
+                setVisibleBB(false);
                 if (visRef.current) clearTimeout(visRef.current)
+                if (visRef2.current) clearInterval(visRef2.current)
                 await new Promise((r) => {
                     visRef.current = setTimeout(() => setVisible(false), 2000)
                 })
@@ -95,7 +106,7 @@ export const Hire = ({
                 }}
                 amount={7}
             />
-            <div className="hireBLock hirePageVk">
+            <div className={visibleBB ? "hireBLock hirePageVk" : "displayNone"}>
                 <div className="hireBLock__left">
                     <div className="hireBLock__left__top">
                         <Link to="/wearefx">Instagram</Link>

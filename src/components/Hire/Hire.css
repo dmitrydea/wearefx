@@ -1,5 +1,5 @@
 .hireLayout {
-    overflow-y: auto;
+    overflow: visible !important;
     position: absolute;
     bottom: 0;
     width: 100vw;
@@ -12,10 +12,14 @@
     animation-timing-function: cubic-bezier(.67,.51,.51,.91);
     animation-fill-mode: forwards;
     clip-path: polygon(0 0, 0 0, 94% 92%, 0 0);
+    -webkit-clip-path: polygon(0 0, 0 0, 94% 92%, 0 0);
 }
-
+.hireBLock div {
+    overflow: visible !important;
+}
 .hireFullScreen {
     z-index: 2000;
+    -webkit-clip-path: polygon(0% 0%, 85% 0%, 94% 92%, 0% 100%);
     clip-path: polygon(0% 0%, 85% 0%, 94% 92%, 0% 100%);
     transition: clip-path 0.3s;
     animation: toFullScreenHire 0.3s cubic-bezier(.67,.51,.51,.91)
@@ -24,9 +28,11 @@
 }
 @keyframes toFullScreenHire {
     0% {
+        -webkit-clip-path: polygon(0% 0%, 85% 0%, 94% 92%, 0% 100%);
         clip-path: polygon(0% 0%, 85% 0%, 94% 92%, 0% 100%);
     }
     100% {
+        -webkit-clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
         clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
     }
 }
@@ -45,30 +51,36 @@
 @keyframes hireShowBack {
     0% {
         /* opacity: 1; */
+        -webkit-clip-path: polygon(0% 0%, 85% 0%, 94% 92%, 0% 100%);
         clip-path: polygon(0% 0%, 85% 0%, 94% 92%, 0% 100%);
     }
     35% {
+        -webkit-clip-path: polygon(0 0, 15% 0, 94% 92%, 0 15%);
         clip-path: polygon(0 0, 15% 0, 94% 92%, 0 15%);
         /* opacity: 0.5; */
     }
     100% {
         /* opacity: 0; */
         display: none;
+        -webkit-clip-path: polygon(0 0, 0 0, 94% 92%, 0 0);
         clip-path: polygon(0 0, 0 0, 94% 92%, 0 0);
     }
 }
 @keyframes hireShow {
     0% {
         /* opacity: 0; */
+        -webkit-clip-path: polygon(0 0, 0 0, 94% 92%, 0 0);
         clip-path: polygon(0 0, 0 0, 94% 92%, 0 0);
     }
     35% {
+        -webkit-clip-path: polygon(0 0, 16% 0, 94% 92%, 0 15%);
         clip-path: polygon(0 0, 16% 0, 94% 92%, 0 15%);
         /* opacity: 0.8; */
     }
     100% {
-        /* opacity: 1; */
-        clip-path: polygon(0% 0%, 85% 0%, 95% 95%, 0% 100%);
+        opacity: 1 !important;
+        -webkit-clip-path: polygon(0% 0%, 84.5% 0%, 97% 96%, 0% 100%);
+        clip-path: polygon(0% 0%, 84.5% 0%, 97% 96%, 0% 100%);
     }
 }
 
@@ -195,8 +207,12 @@
 }
 .hireBLock__right {
     z-index: 2000;
+    overflow: hidden !important;
     display: flex;
     flex-direction: column;
+}
+.hireBLock__right div {
+    overflow: hidden !important;
 }
 .hireBLock__right__top {
     display: flex;
@@ -285,14 +301,17 @@
     @keyframes hireShow {
         0% {
             /* opacity: 0; */
+            -webkit-clip-path: polygon(0 0, 0 0, 94% 92%, 0 0);
             clip-path: polygon(0 0, 0 0, 94% 92%, 0 0);
         }
         35% {
+            -webkit-clip-path: polygon(0 0, 16% 0, 94% 92%, 0 15%);
             clip-path: polygon(0 0, 16% 0, 94% 92%, 0 15%);
             /* opacity: 0.8; */
         }
         100% {
             /* opacity: 1; */
+            -webkit-clip-path: polygon(0% 0%, 85% 0%, 95% 92%, 0% 100%);
             clip-path: polygon(0% 0%, 85% 0%, 95% 92%, 0% 100%);
         }
     }

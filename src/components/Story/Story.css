@@ -13,10 +13,12 @@
     animation-duration: 0.4s;
     animation-fill-mode: forwards;
     transition: clip-path 0.4s;
-    clip-path: polygon(84% 0, 100% 0, 100% 4%, 7% 92%);
+    -webkit-clip-path: polygon(15% 0, 100% 0, 100% 100%, 3% 95.5%);
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 3% 95.5%);
 }
 .storyFullScreen {
     z-index: 2000;
+    -webkit-clip-path: polygon(18% 0, 100% 0, 100% 100%, 7% 92%);
     clip-path: polygon(18% 0, 100% 0, 100% 100%, 7% 92%);
     transition: clip-path 0.3s;
     animation: toFullScreenStory 0.3s cubic-bezier(0.67, 0.51, 0.51, 0.91)
@@ -25,9 +27,11 @@
 }
 @keyframes toFullScreenStory {
     0% {
+        -webkit-clip-path: polygon(18% 0, 100% 0, 100% 100%, 7% 92%);
         clip-path: polygon(18% 0, 100% 0, 100% 100%, 7% 92%);
     }
     100% {
+        -webkit-clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
         clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
     }
 }
@@ -48,29 +52,35 @@
 @keyframes storyShowBack {
     0% {
         opacity: 1 !important;
+        -webkit-clip-path: polygon(18% 0, 100% 0, 100% 100%, 7% 92%);
         clip-path: polygon(18% 0, 100% 0, 100% 100%, 7% 92%);
     }
     35% {
         opacity: 1 !important;
+        -webkit-clip-path: polygon(84% 0, 100% 0, 100% 14%, 7% 92%);
         clip-path: polygon(84% 0, 100% 0, 100% 14%, 7% 92%);
     }
     100% {
         opacity: 1 !important;
+        -webkit-clip-path: polygon(100% 0, 100% 0, 100% 0, 7% 92%);
         clip-path: polygon(100% 0, 100% 0, 100% 0, 7% 92%);
     }
 }
 @keyframes storyShow {
     0% {
         opacity: 1 !important;
+        -webkit-clip-path: polygon(100% 0, 100% 0, 100% 0, 7% 92%);
         clip-path: polygon(100% 0, 100% 0, 100% 0, 7% 92%);
     }
     35% {
         opacity: 1 !important;
+        -webkit-clip-path: polygon(84% 0, 100% 0, 100% 14%, 7% 92%);
         clip-path: polygon(84% 0, 100% 0, 100% 14%, 7% 92%);
     }
     100% {
         opacity: 1 !important;
-        clip-path: polygon(15% 0, 100% 0, 100% 100%, 4% 95%);
+        -webkit-clip-path: polygon(15% 0, 100% 0, 100% 100%, 3% 95.5%);
+        clip-path: polygon(15% 0, 100% 0, 100% 100%, 3% 95.5%);
     }
 }
 @media (max-width: 1920px) {
@@ -90,6 +100,7 @@
     transition: 0.3s ease;
     z-index: 2000;
     color: #fff;
+    overflow: visible !important;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -110,7 +121,7 @@
     text-transform: uppercase;
 }
 .storyBlock div {
-    z-index: 2000;
+    z-index: 3000;
     display: flex;
     flex-direction: column;
 }
@@ -129,14 +140,17 @@
     @keyframes storyShow {
         0% {
             opacity: 1 !important;
+            -webkit-clip-path: polygon(100% 0, 100% 0, 100% 0, 7% 92%);
             clip-path: polygon(100% 0, 100% 0, 100% 0, 7% 92%);
         }
         35% {
             opacity: 1 !important;
+            -webkit-clip-path: polygon(84% 0, 100% 0, 100% 14%, 7% 92%);
             clip-path: polygon(84% 0, 100% 0, 100% 14%, 7% 92%);
         }
         100% {
             opacity: 1 !important;
+            -webkit-clip-path: polygon(15% 0, 100% 0, 100% 100%, 5% 92%);
             clip-path: polygon(15% 0, 100% 0, 100% 100%, 5% 92%);
         }
     }

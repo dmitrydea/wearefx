@@ -47,12 +47,23 @@ export const Story = ({
     }
 
     const [visible, setVisible] = useState(false)
+    const [visibleBB, setVisibleBB] = useState(false)
     const visRef = useRef(null)
+    const visRef2 = useRef(null)
     useEffect(() => {
         (async () => {
-            if (isClicked) setVisible(true)
+            if (isClicked) {
+                setVisible(true)
+                visRef2.current = setInterval(function() {
+                    try {
+                        setVisibleBB(true);
+                    } catch (error) {}
+                },250);
+            }
             else {
+                setVisibleBB(false);
                 if (visRef.current) clearTimeout(visRef.current)
+                if (visRef2.current) clearInterval(visRef2.current)
                 await new Promise((r) => {
                     visRef.current = setTimeout(() => setVisible(false), 2000)
                 })
@@ -96,20 +107,20 @@ export const Story = ({
                 }}
                 amount={7}
             />
-            <div className="storyBlock">
+            <div className={visibleBB ? "storyBlock" : "displayNone"}>
                 <h3>
                     We are full-service <br />experiential VFX <br />production studio based
                     in <br />Ukraine inspired by the <br />creative potential of <br />emerging
                     technologies. 😎
                 </h3>
-                <div>
+                <div className='storyBlock_info'>
                     <Link to="/cases" onClick={() => ToFullScreen()}>
                         our cases ﹤
                     </Link>
                     <Link to="/hire" onClick={() => ToFullScreen()}>
                         hire us ﹤
                     </Link>
-                    <div className="casesArrow casesArrPadding" />
+                    <div className="casesArrow casesArrPadding"></div>
                     <p>
                         As a wide collective of highly <br />skilled creatives, we
                         vizualize <br />any content on any screen <br />and any space.
