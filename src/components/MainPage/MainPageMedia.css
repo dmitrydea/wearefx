@@ -1326,6 +1326,9 @@
         cursor: none !important;
         pointer-events: none !important;
     }
+    .movable, .hoveredCursorClass {
+        display: none !important;
+    }
     .sliderWrapper, .sliderWrapper .slick-slider {
         height: 22vh !important;
         min-height: 158px !important;

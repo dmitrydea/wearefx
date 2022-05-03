@@ -42,7 +42,12 @@ function App({ setShowOneTime, showOneTime }) {
         return (
             <div className={'App'}>
                 <div>
-                <MainPage
+                    <CursorProvider
+                        hoveredCursor={is1BtnHovered}
+                        hoveredCursor1={is2BtnHovered}
+                        hoveredCursor2={is3BtnHovered}
+                    >
+                        <MainPage
                             setIs1BtnHovered={setIs1BtnHovered}
                             setIs2BtnHovered={setIs2BtnHovered}
                             setIs3BtnHovered={setIs3BtnHovered}
@@ -50,6 +55,7 @@ function App({ setShowOneTime, showOneTime }) {
                             is2BtnHovered={is2BtnHovered}
                             is3BtnHovered={is3BtnHovered}
                         />
+                    </CursorProvider>
                 </div>
             </div>
         )
