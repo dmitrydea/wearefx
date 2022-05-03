@@ -27,12 +27,14 @@ const CursorProvider = ({
     const [scrollTop, setScrollTop] = useState(0)
 
     useEffect(() => {
-        const scrollHandler = () => setScrollTop(window.pageYOffset)
+        const scrollHandler = () =>  {
+            alert("OK");
+            setScrollTop(window.pageYOffset) 
+        }
 
         window.addEventListener('scroll', scrollHandler)
         return () => {
             window.removeEventListener('scroll', scrollHandler)
-            alert("OK");
         }
     }, [])
     const { width, height } = useWindowDimensions()
