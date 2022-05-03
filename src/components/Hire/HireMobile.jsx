@@ -66,7 +66,7 @@ const HireMobile = () => {
                     </div>
                 </Link>
             </div>
-            <Link to="/hire">
+            <Link to="/wearefx">
                 <div className="violetBtn">
                     <p>
                         chat with us
