@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from 'react-router-dom'
 import App from './App'
 import CasesFullMobile from './components/Cases/CasesFullMobile'
 import CasesMobile from './components/Cases/CasesMobile'
+import CasesPersonalMobile from './components/Cases/CasesPersonalMobile'
 import HireMobile from './components/Hire/HireMobile'
 import { CasesPage } from './components/Pages/CasesPage/CasesPage'
 import CasesPagePersonal from './components/Pages/CasesPagePersonal/CasesPagePersonal'
@@ -87,6 +88,11 @@ const Routerelement = () => {
                 <Route exact path="/hireMobile" element={<HireMobile />} />
                 <Route exact path="/casesMobile" element={<CasesMobile />} />
                 <Route
+                    exact
+                    path="/casesPersonalMobile/:id"
+                    element={<CasesPersonalMobile />}
+                />
+                 <Route
                     exact
                     path="/cases/:id"
                     element={<CasesPagePersonal />}

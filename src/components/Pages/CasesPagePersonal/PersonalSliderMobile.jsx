@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react'
 import Slider from 'react-slick'
 
-export const PersonalSlider = () => {
+export const PersonalSliderMobile = () => {
     const refSlider = useRef(null)
 
     const nextSlide = () => {
@@ -25,11 +25,8 @@ export const PersonalSlider = () => {
     const settings = {
         infinite: true,
         speed: 500,
-        swipeToSlide: true,
-        slidesToShow: 5,
+        slidesToShow: 1,
         slidesToScroll: 1,
-        variableWidth: true,
-        rtl: true,
     }
     const slidesArray = [
         {
@@ -92,7 +89,7 @@ export const PersonalSlider = () => {
         setTrackSlider('')
     }
     return (
-        <div id="personalSlider" className={`${trackSlider} personalSlider`}>
+        <div className={`${trackSlider} personalSlider`}>
             <Slider
                 ref={refSlider}
                 className={`personal-slider`}
@@ -102,7 +99,6 @@ export const PersonalSlider = () => {
                     <div
                         onMouseEnter={() => onMouseEnter()}
                         onMouseLeave={() => onMouseLeave()}
-                        style={{ width: '20vw' }}
                         key={item.id}
                         className={`${item.className} `}
                     />

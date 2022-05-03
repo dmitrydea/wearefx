@@ -93,7 +93,7 @@
 .desc {
     width: 100%;
     text-transform: none !important;
-    margin-top: 60px !important;
+    margin-top: 60px;
 }
 .desc p {
     text-transform: none !important;
@@ -232,9 +232,9 @@
 }
 .position {
     color: #dae0f270 !important;
-    font-size: 20px !important;
+    font-size: 20px;
     text-transform: none !important;
-    font-weight: lighter !important;
+    font-weight: lighter;
 }
 .line-block {
     margin-bottom: 50px;
@@ -383,7 +383,7 @@
         padding-right: -50px;
     }
 }
-.personalSlider .slick-slide:hover {
+#personal-slider .personalSlider .slick-slide:hover {
     position: relative;
     width: 30vw !important;
     overflow:hidden;

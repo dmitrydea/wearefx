@@ -134,5 +134,8 @@ html {
     animation: none !important;
     background-color: rgba(237, 245, 252, 0.12);
 }
+.story-footer-left-mobile {
+    display: none !important;
+}
 
 

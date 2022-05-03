@@ -15,32 +15,42 @@ const CasesFullMobile = () => {
                 <Link to="/hireMobile" className="link">
                     hire us
                 </Link>
-            </div>
+            </div>           
             <div className="cases-full-array">
                 <div>
-                    <div>
-                        <p>Bond Delivery</p>
-                    </div>
+                    <Link to="/casesPersonalMobile/1">
+                        <div>
+                            <p>Bond Delivery</p>
+                        </div>
+                    </Link>
                 </div>
                 <div>
-                    <div>
-                        <p>Tvorchi</p>
-                    </div>
+                    <Link to="/casesPersonalMobile/1">
+                        <div>
+                            <p>Tvorchi</p>
+                        </div>
+                    </Link>
                 </div>
                 <div>
-                    <div>
-                        <p>McDonald's</p>
-                    </div>
+                    <Link to="/casesPersonalMobile/1">
+                        <div>
+                            <p>McDonald's</p>
+                        </div>
+                    </Link>
                 </div>
                 <div>
-                    <div>
-                        <p>Chipsters</p>
-                    </div>
+                    <Link to="/casesPersonalMobile/1">
+                        <div>
+                            <p>Chipsters</p>
+                        </div>
+                    </Link>
                 </div>
                 <div>
-                    <div>
-                        <p>Puma Ukraine</p>
-                    </div>
+                    <Link to="/casesPersonalMobile/1">
+                        <div>
+                            <p>Puma Ukraine</p>
+                        </div>
+                    </Link>
                 </div>
                 <div
                     className={isClicked ? 'displayNone' : ''}
@@ -50,15 +60,21 @@ const CasesFullMobile = () => {
                         <p>LOAD MORE</p>
                     </div>
                 </div>
-                <div className={isClicked ? '' : 'displayNone'}>
-                    <p>McDonald's</p>
-                </div>
-                <div className={isClicked ? '' : 'displayNone'}>
-                    <p>Chipsters</p>
-                </div>
-                <div className={isClicked ? '' : 'displayNone'}>
-                    <p>Puma Ukraine</p>
-                </div>
+                <Link to="/casesPersonalMobile/1">
+                    <div className={isClicked ? '' : 'displayNone'}>
+                        <p>McDonald's</p>
+                    </div>
+                </Link>
+                <Link to="/casesPersonalMobile/1">
+                    <div className={isClicked ? '' : 'displayNone'}>
+                        <p>Chipsters</p>
+                    </div>
+                </Link>
+                <Link to="/casesPersonalMobile/1">
+                    <div className={isClicked ? '' : 'displayNone'}>
+                        <p>Puma Ukraine</p>
+                    </div>
+                </Link>
             </div>
             <div className={isClicked ? 'mar70' : ''}>
                 <Link to="/storyMobileFull">

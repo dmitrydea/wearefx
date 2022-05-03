@@ -19,7 +19,7 @@ const SwiperItem = ({ linkTo, title, paragraph, current }) => {
                     </div>
                 </div>
                 <div className="caseLinkIMP">
-                    <Link to="/casesfullmobile">
+                    <Link to="/casesPersonalMobile/1">
                         <div className="casesBtn gradientBtn btm0">
                             <span className="swiper-item-p">
                                 Explore
