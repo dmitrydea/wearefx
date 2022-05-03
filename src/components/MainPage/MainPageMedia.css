@@ -1325,6 +1325,9 @@
     * {
         cursor: none !important;
     }
+    .animated-logo-X {
+        filter: none !important;
+     }
     .mainPageSelector {
         animation: unFocusFocusMobile 2s forwards !important;
     }
