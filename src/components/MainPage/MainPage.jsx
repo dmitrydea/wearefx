@@ -207,7 +207,6 @@ const MainPage = ({
             (Math.abs(buttonsCoords[2].y - e.clientY) < 130 &&
                 Math.abs(buttonsCoords[2].x - e.clientX) < 130)
         ) {
-            alert("b1");
             PlaceCursor.style.transform = 'scale(2.5) translate(-20%, -10%)';
         } else if (
             (Math.abs(buttonsCoords[0].y - e.clientY) < 200 &&
@@ -217,17 +216,14 @@ const MainPage = ({
             (Math.abs(buttonsCoords[2].y - e.clientY) < 200 &&
                 Math.abs(buttonsCoords[2].x - e.clientX) < 200)
         ) {
-            alert("b2");
             PlaceCursor.style.transform = 'scale(1.7) translate(-30%, -20%)';
         } else {
-            alert("b3");
             PlaceCursor.style.transition = 'background 0.5s ease-in-out'
             PlaceCursor.style.transform = 'scale(1) translate(-50%, -40%)'
         }
     }
 
     const onMove = (e) => {
-        console.log("a");
         if(is1BtnHovered && !isCasesClicked) {
             btn1_moved.style = "left:" + e.clientX + "px !important;top:" + e.clientY + "px !important;";
         } else {
