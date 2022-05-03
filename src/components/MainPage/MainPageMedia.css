@@ -1324,6 +1324,7 @@
 @media (max-width: 811px) {
     * {
         cursor: none !important;
+        pointer-events: none !important;
     }
     .sliderWrapper, .sliderWrapper .slick-slider {
         height: 22vh !important;
