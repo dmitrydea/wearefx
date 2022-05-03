@@ -9,6 +9,7 @@ import './MainPage.css'
 import './MainPageMedia.css'
 
 import videoPower from './video/videoPower.webm'
+import videoPower_m from './video/videoPower.mp4'
 
 const applyLayout = (canvas) => {
     canvas.width = canvas.clientWidth
@@ -626,7 +627,8 @@ const MainPage = ({
     return (
         <div className="mainPageSelector unselectable">
             <div className="no_overflow unselectable">
-                <video className={(isCasesClicked || isHireClicked || isStoryClicked) && !isCasesArrayHover ? 'showreel no_overflow video__filter unselectable' : 'showreel no_overflow unselectable'} autoPlay loop muted>
+                <video className={(isCasesClicked || isHireClicked || isStoryClicked) && !isCasesArrayHover ? 'showreel no_overflow video__filter unselectable' : 'showreel no_overflow unselectable'} autoPlay loop muted playsInline>
+                    <source src={videoPower_m} type="video/mp4" />
                     <source src={videoPower} type="video/webm" />
                 </video>
                 <div className="showreel__mobile unselectable" />
