@@ -197,6 +197,7 @@ const MainPage = ({
     }
 
     const btnMove1 = (e) => {
+        return;
         if (!buttonsCoords.length) return
         if (
             (Math.abs(buttonsCoords[0].y - e.clientY) < 130 &&
@@ -223,6 +224,7 @@ const MainPage = ({
     }
 
     const onMove = (e) => {
+        return;
         if(is1BtnHovered && !isCasesClicked) {
             btn1_moved.style = "left:" + e.clientX + "px !important;top:" + e.clientY + "px !important;";
         } else {
