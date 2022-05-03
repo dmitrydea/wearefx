@@ -32,7 +32,14 @@ const Routerelement = () => {
     }
     const sleep = (t) => new Promise((res) => setTimeout(res, t))
     const transitions = useTransition(location, {
-        from: {
+        from: window.innerWidth > 811 ?  {
+            position: 'absolute',
+            width: '100vw',
+            heigth: '100vh',
+            opacity: 0,
+            transform: 'translatesY(0%)',
+            filter: 'blur(1.2rem)',
+        } : {
             position: 'absolute',
             width: '100vw',
             heigth: '100vh',
@@ -41,7 +48,14 @@ const Routerelement = () => {
         },
         enter: (i) => async (next) => {
             await sleep(500)
-            await next({
+            await next( window.innerWidth > 811 ? {
+                position: 'absolute',
+                width: '100vw',
+                heigth: '100vh',
+                opacity: 1,
+                transform: 'translatesY(0%)',
+                filter: 'blur(0rem)',
+            } : {
                 position: 'absolute',
                 width: '100vw',
                 heigth: '100vh',
@@ -49,7 +63,15 @@ const Routerelement = () => {
                 transform: 'translatesY(0%)'
             })
         },
-        leave: {
+        leave: window.innerWidth > 811 ? {
+            position: 'absolute',
+            width: '100vw',
+            heigth: '100vh',
+            opacity: 0,
+            transition: 'ease',
+            transform: 'translatesY(100%)',
+            filter: 'blur(0.6rem)',
+        } : {
             position: 'absolute',
             width: '100vw',
             heigth: '100vh',
