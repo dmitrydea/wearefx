@@ -1325,6 +1325,9 @@
     * {
         cursor: none !important;
     }
+    .mainPageSelector {
+        animation: unFocusFocusMobile 2s forwards !important;
+    }
     .video__filter {
         filter: none !important;
     }
