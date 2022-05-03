@@ -11,6 +11,9 @@ import { StoryPage } from './components/Pages/StoryPage/StoryPage'
 import StoryMobile from './components/Story/StoryMobile'
 import StoryMobileFull from './components/Story/StoryMobileFull'
 import { useTransition, animated } from 'react-spring'
+import ScrollTop from './components/ScrollTop/ScrollTop'
+
+
 
 const Routerelement = () => {
     var check_html_hid = ["wearefx","cases"];
@@ -94,6 +97,7 @@ const Routerelement = () => {
                     element={<CasesFullMobile />}
                 />
             </Routes>
+            <ScrollTop />
         </animated.div>
     ))
 }
