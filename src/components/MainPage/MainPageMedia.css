@@ -1325,6 +1325,9 @@
     * {
         cursor: none !important;
     }
+    .video__filter {
+        filter: none !important;
+    }
     .movable, .hoveredCursorClass {
         display: none !important;
     }
