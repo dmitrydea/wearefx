@@ -1324,7 +1324,6 @@
 @media (max-width: 811px) {
     * {
         cursor: none !important;
-        pointer-events: none !important;
     }
     .movable, .hoveredCursorClass {
         display: none !important;
@@ -1924,7 +1923,6 @@
         position: absolute !important;
         content: '';
         z-index: -9;
-        pointer-events: none !important;
         background-image: url('../MainPage/video/videoPower.gif');
     }
     .swiper__mobile {
