@@ -1899,7 +1899,6 @@
     }
     .mobile__btns a:hover {
         background: rgba(237, 245, 252, 0.24);
-        backdrop-filter: blur(4px);
     }
     .mobile__btns a:nth-child(2) {
         margin-bottom: 220px !important;
