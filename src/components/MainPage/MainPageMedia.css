@@ -1322,6 +1322,9 @@
     }
 }
 @media (max-width: 811px) {
+    .sliderWrapper, .sliderWrapper .slick-slider {
+        height: 22vh !important;
+    }
     .cpm_next_project_block_text p:last-child {
         font-style: normal;
         font-weight: 400;
@@ -1534,6 +1537,7 @@
     .sl-itm {
         display: block !important;
         position: relative;
+        margin-bottom: -5px !important;
     }
     .cpm_ .header-title {
         padding: 0px 25px 18px 25px !important;
