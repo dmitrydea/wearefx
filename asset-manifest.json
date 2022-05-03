@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/wearefx/static/css/main.4fa843cb.chunk.css",
-    "main.js": "/wearefx/static/js/main.759b3122.chunk.js",
-    "main.js.map": "/wearefx/static/js/main.759b3122.chunk.js.map",
+    "main.css": "/wearefx/static/css/main.ebb5e407.chunk.css",
+    "main.js": "/wearefx/static/js/main.20be925b.chunk.js",
+    "main.js.map": "/wearefx/static/js/main.20be925b.chunk.js.map",
     "runtime-main.js": "/wearefx/static/js/runtime-main.a95c827a.js",
     "runtime-main.js.map": "/wearefx/static/js/runtime-main.a95c827a.js.map",
     "static/css/2.8182d9c8.chunk.css": "/wearefx/static/css/2.8182d9c8.chunk.css",
@@ -10,7 +10,7 @@
     "static/js/2.1d15bbcd.chunk.js.map": "/wearefx/static/js/2.1d15bbcd.chunk.js.map",
     "index.html": "/wearefx/index.html",
     "static/css/2.8182d9c8.chunk.css.map": "/wearefx/static/css/2.8182d9c8.chunk.css.map",
-    "static/css/main.4fa843cb.chunk.css.map": "/wearefx/static/css/main.4fa843cb.chunk.css.map",
+    "static/css/main.ebb5e407.chunk.css.map": "/wearefx/static/css/main.ebb5e407.chunk.css.map",
     "static/js/2.1d15bbcd.chunk.js.LICENSE.txt": "/wearefx/static/js/2.1d15bbcd.chunk.js.LICENSE.txt",
     "static/media/StoryBottom.css": "/wearefx/static/media/Uberglovo.63103c6c.svg",
     "static/media/HirePage.css": "/wearefx/static/media/CloseWhite.049dfdf0.svg",
@@ -22,18 +22,17 @@
     "static/media/CasesPage.css": "/wearefx/static/media/pumaback.6ae33412.svg",
     "static/media/X_A2.bb26e539.webm": "/wearefx/static/media/X_A2.bb26e539.webm",
     "static/media/HireMobile.css": "/wearefx/static/media/instagram.a61f3cfb.svg",
-    "static/media/MainPage.css": "/wearefx/static/media/bg-noise.1087c988.gif",
+    "static/media/MainPageMedia.css": "/wearefx/static/media/videoPower.4577a6fd.gif",
     "static/media/CasesPagePersonal.css": "/wearefx/static/media/personal.9b816d6c.svg",
     "static/media/slick-theme.css": "/wearefx/static/media/slick.c94f7671.ttf",
     "static/media/videoPower.173bd456.webm": "/wearefx/static/media/videoPower.173bd456.webm",
-    "static/media/MainPageMedia.css": "/wearefx/static/media/videoPower.4577a6fd.gif",
     "static/media/videoPower.46fefcbf.mp4": "/wearefx/static/media/videoPower.46fefcbf.mp4"
   },
   "entrypoints": [
     "static/js/runtime-main.a95c827a.js",
     "static/css/2.8182d9c8.chunk.css",
     "static/js/2.1d15bbcd.chunk.js",
-    "static/css/main.4fa843cb.chunk.css",
-    "static/js/main.759b3122.chunk.js"
+    "static/css/main.ebb5e407.chunk.css",
+    "static/js/main.20be925b.chunk.js"
   ]
 }
