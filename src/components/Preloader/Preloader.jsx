@@ -7,8 +7,8 @@ const Preloader = ({ isLoading }) => {
         return (
             <div>
                 <video className="preloader" autoPlay muted>
-                    <source src={preloader} type="video/webm" />
                     <source src={preloader_mp} type="video/mp4" />
+                    <source src={preloader} type="video/webm" />
                 </video>
             </div>
         )
