@@ -39,7 +39,8 @@ function App({ setShowOneTime, showOneTime }) {
     if (isLoading && showOneTime) {
         return <Preloader />
     } else {
-        return (
+        var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        return width > 811 ? (
             <div className={'App'}>
                 <div>
                     <CursorProvider
@@ -56,6 +57,19 @@ function App({ setShowOneTime, showOneTime }) {
                             is3BtnHovered={is3BtnHovered}
                         />
                     </CursorProvider>
+                </div>
+            </div>
+        ) : (
+            <div className={'App'}>
+                <div>
+                    <MainPage
+                        setIs1BtnHovered={setIs1BtnHovered}
+                        setIs2BtnHovered={setIs2BtnHovered}
+                        setIs3BtnHovered={setIs3BtnHovered}
+                        is1BtnHovered={is1BtnHovered}
+                        is2BtnHovered={is2BtnHovered}
+                        is3BtnHovered={is3BtnHovered}
+                    />
                 </div>
             </div>
         )

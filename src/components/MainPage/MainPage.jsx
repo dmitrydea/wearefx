@@ -207,6 +207,7 @@ const MainPage = ({
             (Math.abs(buttonsCoords[2].y - e.clientY) < 130 &&
                 Math.abs(buttonsCoords[2].x - e.clientX) < 130)
         ) {
+            if (!PlaceCursor) return;
             PlaceCursor.style.transform = 'scale(2.5) translate(-20%, -10%)';
         } else if (
             (Math.abs(buttonsCoords[0].y - e.clientY) < 200 &&
@@ -216,8 +217,10 @@ const MainPage = ({
             (Math.abs(buttonsCoords[2].y - e.clientY) < 200 &&
                 Math.abs(buttonsCoords[2].x - e.clientX) < 200)
         ) {
+            if (!PlaceCursor) return;
             PlaceCursor.style.transform = 'scale(1.7) translate(-30%, -20%)';
         } else {
+            if (!PlaceCursor) return;
             PlaceCursor.style.transition = 'background 0.5s ease-in-out'
             PlaceCursor.style.transform = 'scale(1) translate(-50%, -40%)'
         }
