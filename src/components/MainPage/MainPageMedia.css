@@ -1322,6 +1322,9 @@
     }
 }
 @media (max-width: 811px) {
+    * {
+        cursor: none !important;
+    }
     .sliderWrapper, .sliderWrapper .slick-slider {
         height: 22vh !important;
         min-height: 158px !important;
@@ -1918,7 +1921,7 @@
         content: '';
         z-index: -9;
         pointer-events: none !important;
-        
+        background-image: url('../MainPage/video/videoPower.gif');
     }
     .swiper__mobile {
         display: flex;
