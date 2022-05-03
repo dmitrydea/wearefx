@@ -383,7 +383,7 @@
         padding-right: -50px;
     }
 }
-.slick-slide:hover {
+.personalSlider .slick-slide:hover {
     position: relative;
     width: 30vw !important;
     overflow:hidden;

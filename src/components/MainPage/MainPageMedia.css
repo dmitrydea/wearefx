@@ -1322,6 +1322,9 @@
     }
 }
 @media (max-width: 811px) {
+    .violet_on_hover {
+        width: max-content !important;
+    }
     .marquee-img, .marquee-img-reverse {
         height: 130px !important;
         background-size: contain !important;
@@ -1511,6 +1514,7 @@
         order: 3;
         font-size: 15px !important;
         flex-direction: column !important;
+        align-items: center !important;
     }
     .story-footer-left a {
         width: max-content;
