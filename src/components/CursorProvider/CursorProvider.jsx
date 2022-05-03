@@ -28,7 +28,6 @@ const CursorProvider = ({
 
     useEffect(() => {
         const scrollHandler = () =>  {
-            alert("OK");
             setScrollTop(window.pageYOffset) 
         }
 
