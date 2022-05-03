@@ -1917,7 +1917,8 @@
         position: absolute !important;
         content: '';
         z-index: -9;
-        background-image: url('../MainPage/video/videoPower.gif');
+        pointer-events: none !important;
+        
     }
     .swiper__mobile {
         display: flex;
