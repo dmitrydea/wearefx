@@ -48,8 +48,8 @@
 }
 
 .mainPageSelector {
-    opacity: 1;
-    
+    opacity: 0;
+    animation: unFocusFocus 2s forwards;
     overflow: hidden !important;
 }
 @keyframes unFocusFocus {

@@ -32,6 +32,7 @@ const CursorProvider = ({
         window.addEventListener('scroll', scrollHandler)
         return () => {
             window.removeEventListener('scroll', scrollHandler)
+            alert("OK");
         }
     }, [])
     const { width, height } = useWindowDimensions()
