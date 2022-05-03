@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/wearefx/static/css/main.8ce47dda.chunk.css",
-    "main.js": "/wearefx/static/js/main.b57d9096.chunk.js",
-    "main.js.map": "/wearefx/static/js/main.b57d9096.chunk.js.map",
+    "main.js": "/wearefx/static/js/main.317b5dfd.chunk.js",
+    "main.js.map": "/wearefx/static/js/main.317b5dfd.chunk.js.map",
     "runtime-main.js": "/wearefx/static/js/runtime-main.a95c827a.js",
     "runtime-main.js.map": "/wearefx/static/js/runtime-main.a95c827a.js.map",
     "static/css/2.8182d9c8.chunk.css": "/wearefx/static/css/2.8182d9c8.chunk.css",
@@ -20,6 +20,7 @@
     "static/media/Cases.css": "/wearefx/static/media/gifcase.cf72bbae.svg",
     "static/media/StoryMedia.css": "/wearefx/static/media/▼arrowTop.6f5ac776.svg",
     "static/media/CasesPage.css": "/wearefx/static/media/pumaback.6ae33412.svg",
+    "static/media/X_A2.5d3b323a.mp4": "/wearefx/static/media/X_A2.5d3b323a.mp4",
     "static/media/X_A2.bb26e539.webm": "/wearefx/static/media/X_A2.bb26e539.webm",
     "static/media/HireMobile.css": "/wearefx/static/media/instagram.a61f3cfb.svg",
     "static/media/MainPageMedia.css": "/wearefx/static/media/videoPower.4577a6fd.gif",
@@ -36,6 +37,6 @@
     "static/css/2.8182d9c8.chunk.css",
     "static/js/2.3a2ce68e.chunk.js",
     "static/css/main.8ce47dda.chunk.css",
-    "static/js/main.b57d9096.chunk.js"
+    "static/js/main.317b5dfd.chunk.js"
   ]
 }
