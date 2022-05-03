@@ -5,22 +5,10 @@ export const PersonalSliderMobile = () => {
     const refSlider = useRef(null)
 
     const nextSlide = () => {
-        document.getElementById('nextBtnSlider').classList.add('activeBtn')
         refSlider.current.slickNext()
-        setTimeout(() => {
-            document
-                .getElementById('nextBtnSlider')
-                .classList.remove('activeBtn')
-        }, 500)
     }
     const prevSlide = () => {
-        document.getElementById('prevBtnSlider').classList.add('activeBtn')
         refSlider.current.slickPrev()
-        setTimeout(() => {
-            document
-                .getElementById('prevBtnSlider')
-                .classList.remove('activeBtn')
-        }, 500)
     }
     const settings = {
         infinite: true,

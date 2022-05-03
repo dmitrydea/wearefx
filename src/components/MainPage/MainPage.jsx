@@ -620,14 +620,14 @@ const MainPage = ({
     // ])
 
     return (
-        <div className="mainPageSelector">
-            <div className="no_overflow ">
-                <video className={(isCasesClicked || isHireClicked || isStoryClicked) && !isCasesArrayHover ? 'showreel no_overflow video__filter' : 'showreel no_overflow'} autoPlay loop muted>
+        <div className="mainPageSelector unselectable">
+            <div className="no_overflow unselectable">
+                <video className={(isCasesClicked || isHireClicked || isStoryClicked) && !isCasesArrayHover ? 'showreel no_overflow video__filter unselectable' : 'showreel no_overflow unselectable'} autoPlay loop muted>
                     <source src={videoPower} type="video/webm" />
                 </video>
-                <div className="showreel__mobile" />
-                <div className="toner " />
-                <div className="no_overflow">
+                <div className="showreel__mobile unselectable" />
+                <div className="toner unselectable" />
+                <div className="no_overflow unselectable">
                     <div className={isCasesClicked ? 'line-animation-wrapper line-animation-wrapper-right' : 'line-animation-wrapper line-animation-wrapper-right displayNoneMain'}>
                         <div className='line-animation-right canvas-line-animation'>
                             <svg id="lineanimationrightfirst_svg" className='svg_lines' width="0" height="0">
@@ -692,8 +692,8 @@ const MainPage = ({
                         isClicked={isCasesClicked}
                         className={
                             isCasesClicked
-                                ? 'clickedCases firstCircle '
-                                : 'firstCircle'
+                                ? 'clickedCases firstCircle unselectable'
+                                : 'firstCircle unselectable'
                         }
                         ref={btn1Ref}
                     />
@@ -707,8 +707,8 @@ const MainPage = ({
                         isClicked={isStoryClicked}
                         className={
                             isStoryClicked
-                                ? 'clickedStory secondCircle'
-                                : 'secondCircle'
+                                ? 'clickedStory secondCircle unselectable'
+                                : 'secondCircle unselectable'
                         }
                     />
                     <MainPageButton
@@ -720,8 +720,8 @@ const MainPage = ({
                         isClicked={isHireClicked}
                         className={
                             isHireClicked
-                                ? 'clickedHire thirdCircle'
-                                : 'thirdCircle'
+                                ? 'clickedHire thirdCircle unselectable'
+                                : 'thirdCircle unselectable'
                         }
                         x
                     />
@@ -755,7 +755,7 @@ const MainPage = ({
                         isClicked={isHireClicked}
                         setIsClicked={setIsHireClicked}
                     />
-                    <div className={` main no_overflow`}>
+                    <div className={` main no_overflow unselectable`}>
                         {(isCasesClicked || isHireClicked || isStoryClicked) && !isCasesArrayHover ? <div className="special__noise"></div> : ""}
                         {(isCasesClicked || isHireClicked || isStoryClicked) && !isCasesArrayHover ? <div className="special__noise__overlay"></div> : "" }
                         {isCasesArrayHover ? <div className="special__overlay__x"></div> : ""}
