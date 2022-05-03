@@ -15,9 +15,9 @@ const StoryMobileFull = () => {
                 </Link>
             </div>
             <Link to="/storyMobile" className="backHref">
-                Back to story
+                &#60; Back to story
             </Link>
-            <div className="story-full-text">
+            <div className="sftf story-full-text">
                 We pushing the boundaries of visual effects and work with our
                 clients to innovate in the real world.
             </div>
@@ -70,35 +70,36 @@ const StoryMobileFull = () => {
             <div className="story-bottom-marquee">
                 <div className="marquee-div">
                     <span>
-                        <div className="marquee-img marquee-1" />
-                        <div className="marquee-img marquee-2" />
-                        <div className="marquee-img marquee-3" />
-                        <div className="marquee-img marquee-4" />
-                        <div className="marquee-img marquee-5" />
-                        <div className="marquee-img marquee-6" />
-                        <div className="marquee-img marquee-7" />
                         <div className="marquee-img marquee-8" />
+                        <div className="marquee-img marquee-7" />
+                        <div className="marquee-img marquee-6" />
+                        <div className="marquee-img marquee-5" />
+                        <div className="marquee-img marquee-4" />
+                        <div className="marquee-img marquee-3" />
+                        <div className="marquee-img marquee-2" />
+                        <div className="marquee-img marquee-1" />
+                        
                     </span>
                     <span>
-                        <div className="marquee-img marquee-1" />
-                        <div className="marquee-img marquee-2" />
-                        <div className="marquee-img marquee-3" />
-                        <div className="marquee-img marquee-4" />
-                        <div className="marquee-img marquee-5" />
-                        <div className="marquee-img marquee-6" />
-                        <div className="marquee-img marquee-7" />
                         <div className="marquee-img marquee-8" />
+                        <div className="marquee-img marquee-7" />
+                        <div className="marquee-img marquee-6" />
+                        <div className="marquee-img marquee-5" />
+                        <div className="marquee-img marquee-4" />
+                        <div className="marquee-img marquee-3" />
+                        <div className="marquee-img marquee-2" />
+                        <div className="marquee-img marquee-1" /> 
                     </span>
                 </div>
             </div>
-            <div className="story-full-text">
+            <div className="stftf2 story-full-text ">
                 Specialized in high end CG and VFX for Advertising, TV, Print,
                 digital, series, short and now long format films since its
                 launch, WeareFX has consistently evolved their processes as VFX
                 specialists with a strong emphasis on art direction, design and
                 technique development.
             </div>
-            <div className="story-p-text">
+            <div className="story-p-text spt2">
                 Wearefx’s fully equipped and growing Ukraine based studio is
                 accompanied with a host of talents, including experienced lead
                 3D Project Managers, 3D VFX artists, animators, lead lighting
@@ -106,23 +107,23 @@ const StoryMobileFull = () => {
                 specialized Flame Artists, Shoot Supervisors and a host of in
                 house, and After Effects compositors.
             </div>
-            <div className="story-p-text">
+            <div className="story-p-text spt2">
                 Our’s services include Autodesk Smoke, Flame, DaVinci Resolve,
                 Adobe Premiere Pro and Avid Media Composer suites.
             </div>
-            <div className="story-mobile-ellipse"/>
-            <Link to="/storyMobileFull">
-                <div className="casesBtn gradientBtn violetMobileMarg">
-                    <p>
-                        View our
-                        <br />
-                        expertise &<br />
-                        tech.
-                    </p>
-                </div>
-            </Link>
-            <Link to="/hire">
-                <div className="violetBtn mt150px">
+            <div className="story-mobile-ellipse">
+                <Link to="/casesMobile">
+                    <div className="violetMobileMargStoryFull casesBtn gradientBtn violetMobileMarg">
+                        <p>
+                            View our
+                            <br />
+                            works
+                        </p>
+                    </div>
+                </Link>
+            </div>
+            <Link to="/hireMobile">
+                <div className="violetBtn">
                     <p>
                         we’re ready
                         <br />

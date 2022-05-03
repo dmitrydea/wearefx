@@ -18,25 +18,37 @@ const CasesFullMobile = () => {
             </div>
             <div className="cases-full-array">
                 <div>
-                    <p>Bond Delivery</p>
+                    <div>
+                        <p>Bond Delivery</p>
+                    </div>
                 </div>
                 <div>
-                    <p>Tvorchi</p>
+                    <div>
+                        <p>Tvorchi</p>
+                    </div>
                 </div>
                 <div>
-                    <p>McDonald's</p>
+                    <div>
+                        <p>McDonald's</p>
+                    </div>
                 </div>
                 <div>
-                    <p>Chipsters</p>
+                    <div>
+                        <p>Chipsters</p>
+                    </div>
                 </div>
                 <div>
-                    <p>Puma Ukraine</p>
+                    <div>
+                        <p>Puma Ukraine</p>
+                    </div>
                 </div>
                 <div
-                    className={isClicked ? 'displayNone' : 'mb100'}
+                    className={isClicked ? 'displayNone' : ''}
                     onClick={() => setIsClicked(!isClicked)}
                 >
-                    <p>LOAD MORE</p>
+                    <div>
+                        <p>LOAD MORE</p>
+                    </div>
                 </div>
                 <div className={isClicked ? '' : 'displayNone'}>
                     <p>McDonald's</p>
@@ -44,21 +56,21 @@ const CasesFullMobile = () => {
                 <div className={isClicked ? '' : 'displayNone'}>
                     <p>Chipsters</p>
                 </div>
-                <div className={isClicked ? 'mb100' : 'displayNone'}>
+                <div className={isClicked ? '' : 'displayNone'}>
                     <p>Puma Ukraine</p>
                 </div>
             </div>
-            <Link to="/storyMobileFull">
-
-            <span className="shape posMob4" />
-                <div className="full-mobile casesBtn gradientBtn">
-                    <p>
-                        Explore<br />
-                        case<br />
-                        details
-                    </p>
-                </div>
-            </Link>
+            <div className={isClicked ? 'mar70' : ''}>
+                <Link to="/storyMobileFull">
+                    <div className="casesBtn gradientBtn mb02">
+                        <p>
+                            WE'RE<br />
+                            READY<br />
+                            HIRE US
+                        </p>
+                    </div>
+                </Link>
+            </div>
             <div>
                 <StoryFooter />
             </div>

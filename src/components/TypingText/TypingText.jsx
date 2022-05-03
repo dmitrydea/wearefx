@@ -25,7 +25,7 @@ const TypingText = ({ isClicked }) => {
     }, [isClicked])
 
         return (
-            <div className="typing__text">
+            <div id="typing__text_mobile" className="typing__text">
                 <span className="typing__text" ref={element}></span>
             </div>
         )

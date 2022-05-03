@@ -379,40 +379,67 @@
     height: 158px !important;
 }
 .cases-full-array p {
-    padding-top: calc(10%);
+    display: block;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
-.cases-full-array div:nth-child(1) {
+.cases-full-array > div > div {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.cases-full-array > div:nth-child(1) {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-image: url('../../images/gifcase.svg');
 }
-.cases-full-array div:nth-child(2) {
+.cases-full-array > div:nth-child(2) {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-image: url('../../images/gifcase\ \(1\).svg');
 }
-.cases-full-array div:nth-child(3) {
+.cases-full-array > div:nth-child(3) {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-image: url('../../images/gifcase\ \(2\).svg');
 }
-.cases-full-array div:nth-child(4) {
+.cases-full-array > div:nth-child(4) {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-image: url('../../images/gifcase\ \(3\).svg');
 }
-.cases-full-array div:nth-child(5) {
+.cases-full-array > div:nth-child(5) {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-image: url('../../images/gifcase\ \(4\).svg');
 }
-.cases-full-array div:nth-child(6) {
+.cases-full-array > div:nth-child(6) {
     font-size: 20px;
+}
+.cases-full-array > div:nth-child(7) {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../../images/gifcase\ \(2\).svg');
+}
+.cases-full-array > div:nth-child(8) {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../../images/gifcase\ \(3\).svg');
+}
+.cases-full-array > div:nth-child(9) {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../../images/gifcase\ \(4\).svg');
 }
 .mb100 {
     margin-bottom: 100px !important;
@@ -434,9 +461,10 @@
     font-size: 12px;
 }
 .caseBtnSlider p {
-    height: 100%;
-    width: 100%;
-    padding: 20px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
 }
 @keyframes destroyBack {
     0% {

@@ -18,6 +18,11 @@ const CasesMobile = () => {
                 </div>
             </Link>
             <SwiperSLider />
+            <div className="main__top">
+                <Link to="/wearefx">
+                    <div className="main__logo" />
+                </Link>
+            </div>
         </div>
     )
 }

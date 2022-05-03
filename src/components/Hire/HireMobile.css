@@ -13,10 +13,7 @@
 }
 .norm {
     text-transform: lowercase !important;
-    font-size: 24px !important;
-    padding-top: 30px !important;
-    padding-bottom: 10px !important;
-    padding-left: 20px !important;
+    font-size: 24px;
 }
 .hire-social {
     display: flex;
@@ -74,7 +71,7 @@
     margin-top: 150px !important;
 }
 .violetMobileMarg {
-    bottom: 463px !important;
+    bottom: 463px;
 }
 .posMob3{
     right: 30px;

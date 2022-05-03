@@ -16,23 +16,23 @@ const HireMobile = () => {
                 </Link>
             </div>
             <div className="story-full-text">
-                We’re curious how we can help, get in touch 👋
+                We’re curious how we can help<span className='schar__'>,</span> get in touch 👋
             </div>
             <div className="story-p-text">
                 For general inquiries & new projects
             </div>
-            <div className="story-full-text norm">contact@wearefx.xyz</div>
+            <div className="story-full-text norm">contact@wearefx<span className='schar__'>.</span>xyz</div>
             <div className="story-contact">
                 <p>Studio manager</p>
                 <p>Alex Dysenko</p>
-                <div className="story-full-text norm">a@wearefx.xyz</div>
-                <div className="story-full-text norm">+380935925000</div>
+                <div className="story-full-text-mail">a@wearefx<span className='schar__'>.</span>xyz</div>
+                <div className="story-full-text-phone">+380935925000</div>
             </div>
             <div className="story-contact">
                 <p>Studio manager</p>
                 <p>Alex Dysenko</p>
-                <div className="story-full-text norm">a@wearefx.xyz</div>
-                <div className="story-full-text norm">+380935925000</div>
+                <div className="story-full-text-mail">a@wearefx.xyz</div>
+                <div className="story-full-text-phone">+380935925000</div>
             </div>
             <div className="hire-social">
                 <div></div>
@@ -55,25 +55,23 @@ const HireMobile = () => {
                     <p>Wearefx © 2021 by </p>
                     <p className="violet_on_hover fw_norm"> Brāh lab ﹤</p>
                 </div>
-                <p className="violet_on_hove fw_norm">Privacy Policy ﹤</p>
+                <p className="violet_on_hover fw_norm">Privacy Policy ﹤</p>
+                <Link to="/storyMobileFull">
+                    <div className="casesBtn gradientBtn violetMobileMarg">
+                        <p>
+                            View our
+                            <br />
+                            cases
+                        </p>
+                    </div>
+                </Link>
             </div>
-            <Link to="/storyMobileFull">
-                <span className="shape posMob3" />
-                <div className="casesBtn gradientBtn violetMobileMarg">
-                    <p>
-                        View our
-                        <br />
-                        expertise &<br />
-                        tech.
-                    </p>
-                </div>
-            </Link>
             <Link to="/hire">
-                <div className="violetBtn mt150px">
+                <div className="violetBtn">
                     <p>
-                        we’re ready
+                        chat with us
                         <br />
-                        hire us!
+                        in telegram
                     </p>
                 </div>
             </Link>

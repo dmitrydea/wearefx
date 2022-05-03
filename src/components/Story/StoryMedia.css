@@ -3,7 +3,6 @@
     width: 100vw;
     background-image: url('../../images/X.svg');
     background-repeat: space;
-    background-size: 15%;
     background-position: center;
     position: relative;
 }.story-mobile .casesBtn{
@@ -13,15 +12,15 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 60px 30px;
+    padding: 60px 25px;
     text-transform: uppercase;
     color: #dae0f2;
     align-items: center;
 }
 .link {
     color: #dae0f2;
-    width: 100px;
     text-align: center;
+    font-size: 18px !important;
 }
 .to-home {
     content: '';
@@ -128,4 +127,12 @@
 .posMob1{
     bottom: 390px;
     right: 30px;
+}
+
+@media (max-width: 425px) {
+    .story-footer-left a {
+        font-size: 18px !important;
+        font-weight: 500 !important;
+        margin-bottom: 36px !important;
+    }
 }

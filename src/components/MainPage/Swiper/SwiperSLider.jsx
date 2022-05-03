@@ -51,7 +51,7 @@ export default class SimpleSlider extends Component {
             },
         ]
         return (
-            <div>
+            <div id='cases-slider-wraper'>
                 <Slider {...settings}>
                     <SwiperItem linkTo={`/cases/${casesArray[0].id}`} title={'Puma Ukraine'} paragraph={'Granding, VFX, motion'} current={1}/>
                     <SwiperItem title={'Puma Ukraine'} paragraph={'Granding, VFX, motion'} current={2}/>

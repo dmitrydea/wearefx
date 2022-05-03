@@ -7,7 +7,7 @@ const StoryFooter = ({mForFooter}) => {
         <div className={`story-footer ${mForFooter}`}>
             <div className="story-footer-left">
                 <Link to='/wearefx'>Home</Link>
-                <Link to='/cases'>Cases</Link>
+                <Link className='active' to='/cases'>Cases</Link>
                 <Link to='/story'>Our story</Link>
                 <Link to='/hire'>Hire us</Link>
             </div>
