@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import StoryFooter from '../Pages/StoryPage/StoryComponents/StoryBottom/StoryFooter'
 import Slider from 'react-slick'
@@ -10,9 +10,14 @@ import slide_log_1 from '../../images/personal/NAVI.png';
 import slide_log_2 from '../../images/personal/Puma.png';
 import slide_2 from '../../images/personal/gif2.png';
 import next_proj from '../../images/gifcase2.svg';
+import ReactPlayer from 'react-player'
+import VideoFullControls from '../Pages/CasesPagePersonal/VideoFullControls/VideoFullControls'
+import videoPower from '../MainPage/video/videoPower.webm'
+import videoPower_m from '../MainPage/video/videoPower.mp4'
 
 const CasesPersonalMobile = () => {
     const [isClicked, setIsClicked] = useState(false)
+    const [showModal, setShowModal] = useState(false)
     const settingsSliderVideos = {
         infinite: true,
         speed: 500,
@@ -23,10 +28,89 @@ const CasesPersonalMobile = () => {
             setCurrentSlide(next + 1);
         }
     }
+    const [videoState, setVideoState] = useState({
+        playing: false,
+        muted: false,
+        video: videoPower_m,
+        loadedSeconds: 1,
+        playedSeconds: 0,
+    })
+    const [fullscreen, setFullscreen] = useState(false)
+    const refVideo = useRef(null)
     const [CurrentSlide, setCurrentSlide] = useState(1);
     const [AllSlides, setAllSlides] = useState(3);
+    const { playing, muted, video, loadedSeconds, playedSeconds } = videoState
+    const handlePlay = () => {
+        setVideoState({ ...videoState, playing: !videoState.playing })
+    }
+    const handleMuted = () => {
+        setVideoState({ ...videoState, muted: !videoState.muted })
+    }
+    const handleProgress = (e) => {
+        setVideoState({ ...videoState, ...e })
+    }
+    const handleEnded = (e) => {
+        setVideoState({ ...videoState, playing: !videoState.playing })
+    }
+    const handleProgressTrack = (e) => {
+        var stream = document.querySelectorAll('.slider-player .slick-active video');
+        stream = stream && stream[0] ? stream[0] : null; 
+        if(stream == null) return; 
+        stream.currentTime  = Number(e);
+        //refPlayer.current.seekTo(Number(e))
+    }
+    const handleFullScreen = () => {
+        setFullscreen(true)
+
+    }
+    const handleFullScreenClose = () => {
+        setFullscreen(false)
+
+    }
+    const ModalProcess = () => {
+        if (showModal) {
+            setVideoState({ ...videoState, playing: false });
+            refVideo.current.seekTo(0);
+        }
+        setShowModal(!showModal)
+    }
     return (
         <div className="story-mobile">
+            <div className={showModal ? 'full_video_modal show_modal' : 'full_video_modal'}>
+                <div className='full_video_modal_wrapper'>
+                    <div className='full_video_modal_noise'></div>
+                    <div className='full_video_modal_logo'>
+                        <Link to="/wearefx" className="to-home"></Link>
+                    </div>
+                    <div className='full_video_modal_content'>
+                        <div className="full_video_modal_content_video">
+                            <div onClick={ModalProcess} className="backHref">&#60; Back to case</div>
+                            <ReactPlayer
+                                width={'100%'}
+                                height={'25vh'}
+                                url={video}
+                                muted={muted}
+                                playing={playing}
+                                ref={refVideo}
+                                onProgress={handleProgress}
+                                onEnded={handleEnded}
+                            />
+                        </div>
+                        <VideoFullControls
+                            playing={playing}
+                            handlePlay={handlePlay}
+                            muted={muted}
+                            fullscreen={fullscreen}
+                            handleMuted={handleMuted}
+                            loadedSeconds={loadedSeconds}
+                            playedSeconds={playedSeconds}
+                            handleProgressTrack={handleProgressTrack}
+                            handleFullScreen={handleFullScreen}
+                            handleFullScreenClose={handleFullScreenClose}
+                        />
+                    </div>
+                </div>
+            </div>
             <div className='nose_'>
                 <div className="mobile-header">
                     <Link to="/storyMobile" className="link">
@@ -52,7 +136,7 @@ const CasesPersonalMobile = () => {
                                 <img className='logos_icon' src={slide_log_2} alt="" />
                                 <img className='logos_icon' src={slide_log_1} alt="" />
                             </div>
-                            <div className='btn_play_video'>Play full video</div>
+                            <div onClick={ModalProcess} className='btn_play_video'>Play full video</div>
                         </div>
                         <div className='sl-itm'>
                         <img src={slide_} alt="" />
@@ -60,7 +144,7 @@ const CasesPersonalMobile = () => {
                                 <img className='logos_icon' src={slide_log_2} alt="" />
                                 <img className='logos_icon' src={slide_log_1} alt="" />
                             </div>
-                            <div className='btn_play_video'>Play full video</div>
+                            <div onClick={ModalProcess} className='btn_play_video'>Play full video</div>
                         </div>
                         <div className='sl-itm'>
                         <img src={slide_} alt="" />
@@ -68,7 +152,7 @@ const CasesPersonalMobile = () => {
                                 <img className='logos_icon' src={slide_log_2} alt="" />
                                 <img className='logos_icon' src={slide_log_1} alt="" />
                             </div>
-                            <div className='btn_play_video'>Play full video</div>
+                            <div onClick={ModalProcess} className='btn_play_video'>Play full video</div>
                         </div>
                     </Slider>
                     <div className='paginationSliders'>
@@ -87,7 +171,7 @@ const CasesPersonalMobile = () => {
                 <div>
                     <div className='sl-itm'>
                         <img src={slide_2} alt="" />
-                        <div className='btn_play_video'>Play full video</div>
+                        <div onClick={ModalProcess} className='btn_play_video'>Play full video</div>
                     </div>
                 </div>
                 <TextBlock
