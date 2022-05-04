@@ -1333,13 +1333,16 @@
         top: auto !important;
         bottom: 0 !important;
     }
+    .video-controls-full .video-center, .video-controls-full .video-center .play-mute {
+        width: 98% !important;
+    }
  }
 @media (max-width: 1024px) {
     .go_to_full_controls .play-mute div:nth-child(3) {
         order: 3 !important;
     }
     .go_to_full_controls .play-mute div:nth-child(2) {
-        width: 75% !important;
+        width: 70% !important;
         order: 2 !important;
         margin-top: 0 !important;
     }
@@ -1365,7 +1368,7 @@
         width: 100%;
     }
     .video-controls-full .video-center, .video-controls-full .video-center .play-mute {
-        width: 100% !important;
+        width: 100%;
         flex-wrap: wrap;
     }
     .video-controls-full .video-center .play-mute {
