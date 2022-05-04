@@ -44,13 +44,13 @@
     object-fit: cover;
 }
 .no_overflow {
-    overflow-y: hidden !important;
+    overflow-y: hidden;
 }
 
 .mainPageSelector {
     opacity: 0;
     animation: unFocusFocus 2s forwards;
-    overflow: hidden !important;
+    overflow: hidden;
 }
 @keyframes unFocusFocus {
     0% {

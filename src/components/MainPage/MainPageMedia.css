@@ -1338,6 +1338,13 @@
     }
  }
 @media (max-width: 1024px) {
+    .no_overflow {
+        overflow-y: visible !important;
+    }
+    
+    .mainPageSelector {
+        overflow: visible !important;
+    }
     .go_to_full_controls .play-mute div:nth-child(3) {
         order: 3 !important;
     }
@@ -2057,7 +2064,7 @@
         flex-direction: column;
         position: absolute;
         right: 50px;
-        bottom: 110px;
+        bottom: 60px;
     }
     .mobile__btns a {
         margin-bottom: 60px;
@@ -2176,7 +2183,7 @@
         content: '';
         width: 400px;
         transform: rotate(-90deg);
-        bottom: 260px;
+        bottom: 200px;
         position: absolute;
         left: -150px;
     }
