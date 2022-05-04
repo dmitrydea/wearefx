@@ -2057,7 +2057,7 @@
         flex-direction: column;
         position: absolute;
         right: 50px;
-        bottom: 60px;
+        bottom: 110px;
     }
     .mobile__btns a {
         margin-bottom: 60px;
@@ -2176,7 +2176,7 @@
         content: '';
         width: 400px;
         transform: rotate(-90deg);
-        bottom: 200px;
+        bottom: 260px;
         position: absolute;
         left: -150px;
     }
