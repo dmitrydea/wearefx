@@ -1436,7 +1436,7 @@
         height: 0%;
         background: #000;
         transition: height 0.5s ease-in-out;
-        z-index: 99999;
+        z-index: 9999999;
     }
     .full_video_modal_x {
         position: absolute;
