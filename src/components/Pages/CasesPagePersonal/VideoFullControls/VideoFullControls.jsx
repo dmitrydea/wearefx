@@ -25,20 +25,12 @@ const VideoFullControls = ({
             <div
                 className={
                     fullscreen
-                        ? (showElements ? 'visibleCursor video-controls video-controls-full displayNoneMain' : 'visibleCursor video-controls video-controls-hide video-controls-full')
+                        ? (showElements ? 'visibleCursor video-controls video-controls-full go_to_full_controls' : 'visibleCursor video-controls video-controls-hide video-controls-full go_to_full_controls')
                         : (showElements ? 'video-controls video-controls-full' : 'video-controls video-controls-hide video-controls-full')
                 }
             >
-                <div className={
-                            showElements
-                                ? 'video-text'
-                                : 'video-text displayNone'
-                        }>
-                    <div className="casesArrow" />
-                    <p>Scroll<br />down<br />to view<br />details</p>
-                </div>
                 <div className="video-center">
-                    <div className={showElements ? 'play-mute' : 'play-mute displayNoneMain' }>
+                    <div className={showElements ? 'play-mute' : 'play-mute' }>
                         <div>
                             <button
                                 className={
@@ -92,7 +84,7 @@ const VideoFullControls = ({
                                         ? showElements
                                             ? ` fullscreen`
                                             : ` fadeIn fullscreen`
-                                        : 'displayNone'
+                                        : 'fullscreen'
                                 }
                                 onClick={() => handleFullScreen()}
                             ></button>
