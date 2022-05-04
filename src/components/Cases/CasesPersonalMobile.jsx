@@ -67,7 +67,7 @@ const CasesPersonalMobile = () => {
         if (doc_) {
             var px = window.innerWidth / 2;
             var py = window.innerHeight / 2;
-            doc_.style = "width: " + window.innerHeight + "px; height: " + (window.innerWidth + (isIOS ? 60 : 0)) + "px;" +
+            doc_.style = "width: " + (window.innerHeight + (isIOS ? 60 : 0)) + "px; height: " + (window.innerWidth) + "px;" +
             "left: " + (px-py) + "px;top: " + (py-px) + "px;";
             doc_controls.style = "width: " + window.innerHeight + "px; height: " + window.innerWidth + "px;" +
             "left: " + (px-py) + "px;top: " + (py-px) + "px;";
