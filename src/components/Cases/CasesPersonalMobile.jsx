@@ -60,18 +60,26 @@ const CasesPersonalMobile = () => {
         //refPlayer.current.seekTo(Number(e))
     }
     const handleFullScreen = () => {
-        setFullscreen(true)
         var doc_ = document.getElementsByClassName('full_video_modal_content_video')[0] ? document.getElementsByClassName('full_video_modal_content_video')[0] : null;
         var doc_controls = document.getElementsByClassName('video-controls')[0] ? document.getElementsByClassName('video-controls')[0] : null;
-        var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-        if (doc_) {
-            var px = window.innerWidth / 2;
-            var py = (window.innerHeight / 2) + (isIOS ? 28 : 0);
-            var py2 = (window.innerHeight / 2);
-            doc_.style = "width: " + (window.innerHeight + (isIOS ? 56 : 0)) + "px; height: " + (window.innerWidth) + "px;" +
-            "left: " + (px-py) + "px;top: " + (py-px) + "px;";
-            doc_controls.style = "width: " + window.innerHeight + "px; height: " + window.innerWidth + "px;" +
-            "left: " + (px-py2) + "px;top: " + (py2-px) + "px;";
+        if (!fullscreen) {
+            var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+            if (doc_) {
+                var px = window.innerWidth / 2;
+                var py = (window.innerHeight / 2) + (isIOS ? 28 : 0);
+                var py2 = (window.innerHeight / 2);
+                doc_.style = "width: " + (window.innerHeight + (isIOS ? 56 : 0)) + "px; height: " + (window.innerWidth) + "px;" +
+                "left: " + (px-py) + "px;top: " + (py-px) + "px;";
+                doc_controls.style = "width: " + window.innerHeight + "px; height: " + window.innerWidth + "px;" +
+                "left: " + (px-py2) + "px;top: " + (py2-px) + "px;";
+            }
+            setFullscreen(true)
+        } else {
+            if (doc_) {
+                doc_.style = "";
+                doc_controls.style = "";
+            }
+            setFullscreen(false)
         }
     }
     const handleFullScreenClose = () => {

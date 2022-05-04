@@ -84,7 +84,7 @@ const VideoFullControls = ({
                                         ? showElements
                                             ? ` fullscreen`
                                             : ` fadeIn fullscreen`
-                                        : 'fullscreen'
+                                        : 'fullscreen fullscreen-rev'
                                 }
                                 onClick={() => handleFullScreen()}
                             ></button>
