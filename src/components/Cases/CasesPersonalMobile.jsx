@@ -63,10 +63,11 @@ const CasesPersonalMobile = () => {
         setFullscreen(true)
         var doc_ = document.getElementsByClassName('full_video_modal_content_video')[0] ? document.getElementsByClassName('full_video_modal_content_video')[0] : null;
         var doc_controls = document.getElementsByClassName('video-controls')[0] ? document.getElementsByClassName('video-controls')[0] : null;
+        var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
         if (doc_) {
             var px = window.innerWidth / 2;
             var py = window.innerHeight / 2;
-            doc_.style = "width: " + window.innerHeight + "px; height: " + window.innerWidth + "px;" +
+            doc_.style = "width: " + window.innerHeight + "px; height: " + (window.innerWidth + (isIOS ? 60 : 0)) + "px;" +
             "left: " + (px-py) + "px;top: " + (py-px) + "px;";
             doc_controls.style = "width: " + window.innerHeight + "px; height: " + window.innerWidth + "px;" +
             "left: " + (px-py) + "px;top: " + (py-px) + "px;";
