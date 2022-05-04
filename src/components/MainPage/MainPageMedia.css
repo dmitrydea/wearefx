@@ -1341,6 +1341,12 @@
     }
  }
 @media (max-width: 1024px) {
+    .muted-btn {
+        margin-right: 0 !important;
+    }
+    .fullscreen {
+        margin-right: 10px;
+    }
     .no_overflow {
         overflow-y: visible !important;
     }

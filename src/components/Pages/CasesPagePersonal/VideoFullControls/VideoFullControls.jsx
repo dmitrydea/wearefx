@@ -72,14 +72,6 @@ const VideoFullControls = ({
                         <div>
                             <button
                                 className={
-                                    showElements ? `muted-btn` : 'fadeIn muted-btn'
-                                }
-                                onClick={() => handleMuted()}
-                            >
-                                {!muted ? 'mute' : 'unmute'}
-                            </button>
-                            <button
-                                className={
                                     !fullscreen
                                         ? showElements
                                             ? ` fullscreen`
@@ -88,6 +80,14 @@ const VideoFullControls = ({
                                 }
                                 onClick={() => handleFullScreen()}
                             ></button>
+                            <button
+                                className={
+                                    showElements ? `muted-btn` : 'fadeIn muted-btn'
+                                }
+                                onClick={() => handleMuted()}
+                            >
+                                {!muted ? 'mute' : 'unmute'}
+                            </button>
                         </div>  
                     </div>
                 </div>
