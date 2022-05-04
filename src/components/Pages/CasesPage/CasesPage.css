@@ -417,7 +417,7 @@
     }
     .casesBtn, .pos33 {
         left: 50%;
-        right: auto !important;
+        right: auto;
         transform: translateX(-50%);
     }
     .casesBtnPage {
