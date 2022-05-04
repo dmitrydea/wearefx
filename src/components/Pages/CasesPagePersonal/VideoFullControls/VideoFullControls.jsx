@@ -25,7 +25,7 @@ const VideoFullControls = ({
             <div
                 className={
                     fullscreen
-                        ? (showElements ? 'visibleCursor video-controls video-controls-full' : 'visibleCursor video-controls video-controls-hide video-controls-full')
+                        ? (showElements ? 'visibleCursor video-controls video-controls-full displayNoneMain' : 'visibleCursor video-controls video-controls-hide video-controls-full')
                         : (showElements ? 'video-controls video-controls-full' : 'video-controls video-controls-hide video-controls-full')
                 }
             >

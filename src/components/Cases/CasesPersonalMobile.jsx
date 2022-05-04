@@ -61,7 +61,13 @@ const CasesPersonalMobile = () => {
     }
     const handleFullScreen = () => {
         setFullscreen(true)
-
+        var doc_ = document.getElementsByClassName('full_video_modal_content_video')[0] ? document.getElementsByClassName('full_video_modal_content_video')[0] : null;
+        if (doc_) {
+            var px = window.innerWidth / 2;
+            var py = window.innerHeight / 2;
+            doc_.style = "width: " + window.innerHeight + "px !important; height: " + window.innerWidth + "px !important;" +
+            "left: " + (px-py) + "px !important;top: " + (py-px) + "px !important;";
+        }
     }
     const handleFullScreenClose = () => {
         setFullscreen(false)
@@ -79,12 +85,13 @@ const CasesPersonalMobile = () => {
             <div className={showModal ? 'full_video_modal show_modal' : 'full_video_modal'}>
                 <div className='full_video_modal_wrapper'>
                     <div className='full_video_modal_noise'></div>
-                    <div className='full_video_modal_logo'>
+                    <div className='full_video_modal_x'></div>
+                    <div className={fullscreen ? 'full_video_modal_logo displayNoneMain' : 'full_video_modal_logo'}>
                         <Link to="/wearefx" className="to-home"></Link>
                     </div>
+                    <div onClick={ModalProcess} className={fullscreen ? 'backHref displayNoneMain' : 'backHref'}>&#60; Back to case</div>
                     <div className='full_video_modal_content'>
-                        <div className="full_video_modal_content_video">
-                            <div onClick={ModalProcess} className="backHref">&#60; Back to case</div>
+                        <div className={fullscreen ? 'full_video_modal_content_video go_to_full' : 'full_video_modal_content_video'}>
                             <ReactPlayer
                                 width={'100%'}
                                 playsinline={true}
@@ -97,19 +104,19 @@ const CasesPersonalMobile = () => {
                                 onEnded={handleEnded}
                             />
                         </div>
-                        <VideoFullControls
-                            playing={playing}
-                            handlePlay={handlePlay}
-                            muted={muted}
-                            fullscreen={fullscreen}
-                            handleMuted={handleMuted}
-                            loadedSeconds={loadedSeconds}
-                            playedSeconds={playedSeconds}
-                            handleProgressTrack={handleProgressTrack}
-                            handleFullScreen={handleFullScreen}
-                            handleFullScreenClose={handleFullScreenClose}
-                        />
                     </div>
+                    <VideoFullControls
+                        playing={playing}
+                        handlePlay={handlePlay}
+                        muted={muted}
+                        fullscreen={fullscreen}
+                        handleMuted={handleMuted}
+                        loadedSeconds={loadedSeconds}
+                        playedSeconds={playedSeconds}
+                        handleProgressTrack={handleProgressTrack}
+                        handleFullScreen={handleFullScreen}
+                        handleFullScreenClose={handleFullScreenClose}
+                    />
                 </div>
             </div>
             <div className='nose_'>
