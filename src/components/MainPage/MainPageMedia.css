@@ -2073,7 +2073,7 @@
         flex-direction: column;
         position: absolute;
         right: 50px;
-        bottom: 60px;
+        bottom: 140px;
     }
     .mobile__btns a {
         margin-bottom: 60px;
@@ -2084,7 +2084,7 @@
         background: rgba(237, 245, 252, 0.24);
     }
     .mobile__btns a:nth-child(2) {
-        margin-bottom: 220px !important;
+        margin-bottom: 170px !important;
     }
     .mobile__btns a:last-child {
         margin-bottom: 0px;
@@ -2190,11 +2190,11 @@
     }
     .main__bottom__video {    
         content: '';
-        width: 400px;
+        width: 340px;
         transform: rotate(-90deg);
-        bottom: 200px;
+        bottom: 248px;
         position: absolute;
-        left: -150px;
+        left: -120px;
     }
     .main__bottom {
         position: absolute;
