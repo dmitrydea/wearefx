@@ -87,6 +87,7 @@ const CasesPersonalMobile = () => {
                             <div onClick={ModalProcess} className="backHref">&#60; Back to case</div>
                             <ReactPlayer
                                 width={'100%'}
+                                playsInline
                                 height={'25vh'}
                                 url={video}
                                 muted={muted}
