@@ -177,15 +177,6 @@ export const Hire = ({
                     </div>
                 </div>
             </div>
-            <Link to="/hire" onClick={() => ToFullScreen()}>
-                <span className="shape pos1" />
-                <div className="hireBtn gradientBtn ">
-                    <p>
-                        chat with us
-                        <br /> in telegram
-                    </p>
-                </div>
-            </Link>
         </div>
     )
 }
