@@ -37,8 +37,6 @@ const StoryMain = () => {
                     lighting and 3D renderers.{' '}
                 </p>
                 <p className='margin__special'>
-                    Our’s services include Autodesk Smoke, Flame,<br />DaVinci
-                    Resolve, Adobe Premiere Pro and Avid<br />Media Composer suites.
                 </p>
             </div>
             <div className="story-main-content story-main-content-mobile">
@@ -58,8 +56,6 @@ const StoryMain = () => {
                     host of in house, and After Effects compositors.{' '}
                 </p>
                 <p className='margin__special'>
-                    Our’s services include Autodesk Smoke, Flame,DaVinci
-                    Resolve, Adobe Premiere Pro and Avid Media Composer suites.
                 </p>
             </div>
             <div className="story-ellipse" />

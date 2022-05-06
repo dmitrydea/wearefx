@@ -5,7 +5,7 @@
     width: 100vw;
     z-index: 1000203920392092039023;
     height: 100vh;
-    object-fit: cover;
+    object-fit: contain;
 }
 .displayed{
     display: block !important;

@@ -173,6 +173,7 @@ export const CasesPage = () => {
             title: `test test`,
             casesArrayItemBack: 'mcHoveredBack',
             personalClass: 'hush-MC',
+            delay: '0.2s',
             page: 2,
             isHovered: false,
             description: "Granding, VFX, motion"
@@ -182,6 +183,7 @@ export const CasesPage = () => {
             title: `test test`,
             casesArrayItemBack: 'mcHoveredBack',
             personalClass: 'hush-MC',
+            delay: '0.3s',
             page: 2,
             isHovered: false,
             description: "Granding, VFX, motion"
@@ -191,6 +193,7 @@ export const CasesPage = () => {
             title: `test test`,
             casesArrayItemBack: 'mcHoveredBack',
             personalClass: 'hush-MC',
+            delay: '0.4s',
             page: 2,
             isHovered: false,
             description: "Granding, VFX, motion"
@@ -200,6 +203,7 @@ export const CasesPage = () => {
             title: `test test`,
             casesArrayItemBack: 'mcHoveredBack',
             personalClass: 'hush-MC',
+            delay: '0.5s',
             page: 2,
             isHovered: false,
             description: "Granding, VFX, motion"

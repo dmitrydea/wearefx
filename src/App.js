@@ -40,7 +40,7 @@ function App({ setShowOneTime, showOneTime }) {
         return <Preloader />
     } else {
         var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-        return width > 811 ? (
+        return width >= 1367 ? (
             <div className={'App'}>
                 <div>
                     <CursorProvider

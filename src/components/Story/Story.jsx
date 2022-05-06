@@ -136,7 +136,7 @@ export const Story = ({
                 </div>
             </div>
             <Link to="/story" onClick={() => ToFullScreen()}>
-                <span className="shape pos2" />
+                <span className="shape pos2 shape-test" />
                 <div className="storyBtn gradientBtn">
                     <p>
                         View our
