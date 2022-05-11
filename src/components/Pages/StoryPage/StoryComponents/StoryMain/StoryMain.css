@@ -40,12 +40,13 @@
     position: absolute;
     right: 240px;
     content: '';
+    border-radius: 50%;
     width: 781px !important;
     height: 781px !important;
-    background-image: url('../../../../../images/storyEllipse.svg');
+    background-image: url('../../../../../images/foto.jpg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     top: 558px;
     z-index: 2000;
 }
