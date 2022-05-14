@@ -51,11 +51,16 @@
 @media (max-width: 1920px) {
     .hireBLockFull {
         margin-left: 350px;
+        margin-top: 220px;
     }
 }
-@media (max-width: 1550px) {
+@media (max-width: 1600px) {
     .hireBLock__right__middle h3 {
         font-size: 35px !important;
+    }
+    .hireBLockFull {
+        margin-left: 16%;
+        margin-top: 100px;
     }
 }
 @media (max-width: 1341px) {

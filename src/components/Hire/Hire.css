@@ -212,7 +212,7 @@
     flex-direction: column;
 }
 .hireBLock__right div {
-    overflow: hidden !important;
+    
 }
 .hireBLock__right__top {
     display: flex;
@@ -246,12 +246,21 @@
 }
 .hireBLock__right__bottom {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     margin-top: 108px;
     font-weight: normal;
     font-size: 18px;
 }
+.hireBLock__right__bottom .hbr_col {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.hireBLock__right__bottom .contact {
+    margin-right: 48px;
+ }
 .contact p:nth-child(1) {
     color: #dae0f2;
     text-transform: uppercase;

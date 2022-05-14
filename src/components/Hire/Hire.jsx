@@ -158,22 +158,60 @@ export const Hire = ({
                         <h3>contact@wearefx<span className='span__special__color'>.</span>xyz</h3>
                     </div>
                     <div className="hireBLock__right__bottom">
-                        <div className="contact contactss">
-                            <p>Studio manager</p>
-                            <p>Alex Dysenko</p>
-                            <div className="contact__tel">
-                                <p>a@wearefx<span className='span__special__color'>.</span>xyz</p>
-                                <Link to="tel:+380935925000">
-                                    +380935925000
-                                </Link>
+                        <div className='hbr_col'>
+                            <div className="contact contactss">
+                                <p>Studio manager</p>
+                                <p>Alex Dysenko</p>
+                                <div className="contact__tel">
+                                    <p>a@wearefx<span className='span__special__color'>.</span>xyz</p>
+                                    <Link to="tel:+380935925000">
+                                        +380935925000
+                                    </Link>
+                                </div>
+                            </div>
+                            <div className="contact contactss">
+                                <p>Studio manager</p>
+                                <p>Stas Ravskyi</p>
+                                <div className="contact__tel">
+                                    <p>s@wearefx<span className='span__special__color'>.</span>xyz</p>
+                                    <a href="tel:+380636312065">+380636312065</a>
+                                </div>
+                            </div>
+                            <div className="contact contactss">
+                                <p>Studio manager</p>
+                                <p>Stas Ravskyi</p>
+                                <div className="contact__tel">
+                                    <p>s@wearefx<span className='span__special__color'>.</span>xyz</p>
+                                    <a href="tel:+380636312065">+380636312065</a>
+                                </div>
                             </div>
                         </div>
-                        <div className="contact contactss">
-                            <p>Studio manager</p>
-                            <p>Stas Ravskyi</p>
-                            <div className="contact__tel">
-                                <p>s@wearefx<span className='span__special__color'>.</span>xyz</p>
-                                <a href="tel:+380636312065">+380636312065</a>
+                        <div className='hbr_col'>
+                            <div className="contact contactss">
+                                <p>Studio manager</p>
+                                <p>Alex Dysenko</p>
+                                <div className="contact__tel">
+                                    <p>a@wearefx<span className='span__special__color'>.</span>xyz</p>
+                                    <Link to="tel:+380935925000">
+                                        +380935925000
+                                    </Link>
+                                </div>
+                            </div>
+                            <div className="contact contactss">
+                                <p>Studio manager</p>
+                                <p>Stas Ravskyi</p>
+                                <div className="contact__tel">
+                                    <p>s@wearefx<span className='span__special__color'>.</span>xyz</p>
+                                    <a href="tel:+380636312065">+380636312065</a>
+                                </div>
+                            </div>
+                            <div className="contact contactss">
+                                <p>Studio manager</p>
+                                <p>Stas Ravskyi</p>
+                                <div className="contact__tel">
+                                    <p>s@wearefx<span className='span__special__color'>.</span>xyz</p>
+                                    <a href="tel:+380636312065">+380636312065</a>
+                                </div>
                             </div>
                         </div>
                     </div>

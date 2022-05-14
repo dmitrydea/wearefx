@@ -35,6 +35,30 @@ const HireMobile = () => {
                 <div className="story-full-text-mail">a@wearefx.xyz</div>
                 <div className="story-full-text-phone">+380935925000</div>
             </div>
+            <div className="story-contact">
+                <p>Studio manager</p>
+                <p>Alex Dysenko</p>
+                <div className="story-full-text-mail">a@wearefx.xyz</div>
+                <div className="story-full-text-phone">+380935925000</div>
+            </div>
+            <div className="story-contact">
+                <p>Studio manager</p>
+                <p>Alex Dysenko</p>
+                <div className="story-full-text-mail">a@wearefx.xyz</div>
+                <div className="story-full-text-phone">+380935925000</div>
+            </div>
+            <div className="story-contact">
+                <p>Studio manager</p>
+                <p>Alex Dysenko</p>
+                <div className="story-full-text-mail">a@wearefx.xyz</div>
+                <div className="story-full-text-phone">+380935925000</div>
+            </div>
+            <div className="story-contact">
+                <p>Studio manager</p>
+                <p>Alex Dysenko</p>
+                <div className="story-full-text-mail">a@wearefx.xyz</div>
+                <div className="story-full-text-phone">+380935925000</div>
+            </div>
             <div className="hire-social">
                 <div></div>
                 <div></div>
