@@ -23,7 +23,7 @@ const StoryMobile = () => {
             </div>
             <div className="story-mobile-text">
                 <p className="story-mobile-text1">
-                    We are full-service experiential VFX production studio based
+                    We are a full-service experiential VFX production studio based
                     in Ukraine inspired by the creative potential of emerging
                     technologies<span className='schar__'>.</span> 😎
                 </p>

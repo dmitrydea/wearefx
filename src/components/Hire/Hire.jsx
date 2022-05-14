@@ -4,6 +4,8 @@ import Cube from '../Cube/Cube'
 import { Link } from 'react-router-dom'
 import Line from '../Line/Line'
 import useWindowDimensions from '../useWindowDimension/useWindowDimensions'
+import Pdf from '../PrivacyPolicy.pdf';
+
 
 export const Hire = ({
     polyline,
@@ -140,13 +142,13 @@ export const Hire = ({
                                 Brāh lab ﹤
                             </Link>
                         </p>
-                        <Link
+                        <a
                             className="violet_on_hover"
-                            to="/wearefx"
-                            onClick={() => ToFullScreen()}
+                            target = "_blank"
+                            href={Pdf}
                         >
                             Privacy Policy ﹤
-                        </Link>
+                        </a>
                     </div>
                     <div className="hireBLock__right__middle">
                         <p>

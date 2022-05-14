@@ -18,7 +18,7 @@ const StoryMobileFull = () => {
                 &#60; Back to story
             </Link>
             <div className="sftf story-full-text">
-                We pushing the boundaries of visual effects and work with our
+                We push the boundaries of visual effects and work with our
                 clients to innovate in the real world.
             </div>
             <div className="story-bottom-marquee">
@@ -95,13 +95,13 @@ const StoryMobileFull = () => {
             <div className="stftf2 story-full-text ">
                 Specialized in high end CG and VFX for Advertising, TV, Print,
                 digital, series, short and now long format films since its
-                launch, WeareFX has consistently evolved their processes as VFX
+                launch, WeareFX has consistently evolved its processes as VFX
                 specialists with a strong emphasis on art direction, design and
                 technique development.
             </div>
             <div className="story-p-text spt2">
-                Wearefx’s fully equipped and growing Ukraine based studio is
-                accompanied with a host of talents, including experienced lead
+                WeAreFX`s is fully equipped and growing Ukraine-based studio accompanied 
+                with a host of talents, including experienced lead
                 3D Project Managers, 3D VFX artists, animators, lead lighting
                 and 3D renderers. Their dedicated compositing teams include
                 specialized Flame Artists, Shoot Supervisors and a host of in

@@ -266,8 +266,8 @@ export const Cases = ({
             <div className="casesTextBlock">
                 <div className="casesArrow" />
                 <p>
-                    We’re always looking the truth<br /> about the brand we work with
-                    and tell it<br /> naturaly and gorgeous, like no one else before.
+                    We’re always looking for the truth<br /> about the brand we work with
+                    and telling it<br /> naturally and gorgeously, like no one else before.
                 </p>
             </div>
             <Link to="/cases" onClick={() => ToFullScreen()}>

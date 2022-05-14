@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import StoryFooter from '../Pages/StoryPage/StoryComponents/StoryBottom/StoryFooter'
 import './HireMobile.css'
+import Pdf from '../PrivacyPolicy.pdf';
 
 const HireMobile = () => {
     return (
@@ -55,7 +56,12 @@ const HireMobile = () => {
                     <p>Wearefx © 2021 by </p>
                     <p className="violet_on_hover fw_norm"> Brāh lab ﹤</p>
                 </div>
-                <p className="violet_on_hover fw_norm">Privacy Policy ﹤</p>
+                <p className="violet_on_hover fw_norm">
+                    <a className="violet_on_hover" target = "_blank"
+                        href={Pdf}>
+                        Privacy Policy
+                    </a>
+                </p>
                 <Link to="/storyMobileFull">
                     <div className="casesBtn gradientBtn violetMobileMarg">
                         <p>

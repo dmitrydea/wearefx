@@ -5,6 +5,7 @@ import CursorProvider from '../../CursorProvider/CursorProvider'
 import './HirePage.css'
 import '../StoryPage/StoryComponents/StoryHeader/StoryHeader.css'
 import HirePageHeader from './HirePageHeader'
+import Pdf from '../../PrivacyPolicy.pdf';
 
 const HirePage = () => {
     useEffect(() => {
@@ -52,9 +53,10 @@ const HirePage = () => {
                                     Brāh lab
                                 </Link>
                             </p>
-                            <Link className="violet_on_hover" to="/wearefx">
+                            <a className="violet_on_hover" target = "_blank"
+                            href={Pdf}>
                                 Privacy Policy
-                            </Link>
+                            </a>
                         </div>
                         <div className="hireBLock__right__middle">
                             <p>For general inquiries<br /> & new projects </p>

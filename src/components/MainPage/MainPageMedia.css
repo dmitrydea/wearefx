@@ -1,3 +1,7 @@
+.hire-footer-right p a {
+    color: #dae0f2;
+    text-decoration: underline !important;
+}
 @media (min-width: 1920px) {
     .secondCircle{
         left: 60px;

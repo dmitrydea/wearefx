@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './StoryBottom.css'
+import Pdf from '../../../../PrivacyPolicy.pdf';
 
 const StoryFooter = ({mForFooter}) => {
     return (
@@ -25,7 +26,13 @@ const StoryFooter = ({mForFooter}) => {
                     <p>Wearefx © 2021 by </p>
                     <p className="violet_on_hover"> Brāh lab ﹤</p>
                 </div>
-                <p className="violet_on_hover">Privacy Policy ﹤</p>
+                <p className="violet_on_hover">
+                    <a className="violet_on_hover" target = "_blank"
+                        href={Pdf}>
+                        Privacy Policy
+                    </a>
+                </p>
+                
             </div>
         </div>
     )

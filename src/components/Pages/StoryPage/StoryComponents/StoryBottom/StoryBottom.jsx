@@ -7,7 +7,7 @@ const StoryBottom = () => {
         <div className="story-bottom">
             <div className="story-main-content content-2 content-2-mb">
                 <p>
-                    We pushing the boundaries<br />of visual effects and work<br />with
+                    We push the boundaries<br />of visual effects and work<br />with
                     our clients to innovate<br />in the real world.
                 </p>
             </div>

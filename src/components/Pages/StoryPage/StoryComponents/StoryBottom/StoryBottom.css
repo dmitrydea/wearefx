@@ -184,6 +184,11 @@
     font-weight: normal;
     text-transform: uppercase;
     text-decoration: underline;
+    color: #dae0f2;
+}
+.story-footer-right p:nth-child(2) a {
+    color: #dae0f2;
+    text-decoration: underline;
 }
 @media (max-width: 800px) {
     .story-footer {

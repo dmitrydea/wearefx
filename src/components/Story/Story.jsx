@@ -109,7 +109,7 @@ export const Story = ({
             />
             <div className={visibleBB ? "storyBlock" : "displayNone"}>
                 <h3>
-                    We are full-service <br />experiential VFX <br />production studio based
+                    We are a full-service <br />experiential VFX <br />production studio based
                     in <br />Ukraine inspired by the <br />creative potential of <br />emerging
                     technologies. 😎
                 </h3>
