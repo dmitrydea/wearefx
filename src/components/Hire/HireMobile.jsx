@@ -54,7 +54,16 @@ const HireMobile = () => {
             <div className="hire-footer-right">
                 <div>
                     <p>Wearefx © 2021 by </p>
-                    <p className="violet_on_hover fw_norm"> Brāh lab ﹤</p>
+                    <p className="violet_on_hover fw_norm">
+                        <a
+                            className="violet_on_hover"
+                            target="_blank"
+                            href="https://brah.design/"
+                        >
+                            {' '}
+                            Brāh lab ﹤
+                        </a>
+                    </p>
                 </div>
                 <p className="violet_on_hover fw_norm">
                     <a className="violet_on_hover" target = "_blank"

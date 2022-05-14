@@ -48,10 +48,11 @@ const HirePage = () => {
                         <div className="hireBLock__right__top">
                             <p>
                                 Wearefx © 2022 by
-                                <Link className="violet_on_hover" to="/wearefx">
+                                <a className="violet_on_hover" target="_blank"
+                                href="https://brah.design/">
                                     {' '}
                                     Brāh lab
-                                </Link>
+                                </a>
                             </p>
                             <a className="violet_on_hover" target = "_blank"
                             href={Pdf}>

@@ -133,14 +133,14 @@ export const Hire = ({
                     <div className="hireBLock__right__top">
                         <p>
                             Wearefx © 2021 by
-                            <Link
+                            <a
                                 className="violet_on_hover"
-                                to="/wearefx"
-                                onClick={() => ToFullScreen()}
+                                target="_blank"
+                                href="https://brah.design/"
                             >
                                 {' '}
                                 Brāh lab ﹤
-                            </Link>
+                            </a>
                         </p>
                         <a
                             className="violet_on_hover"

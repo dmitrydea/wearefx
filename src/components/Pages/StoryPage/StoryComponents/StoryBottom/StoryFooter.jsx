@@ -24,7 +24,16 @@ const StoryFooter = ({mForFooter}) => {
             <div className="story-footer-right">
                 <div>
                     <p>Wearefx © 2021 by </p>
-                    <p className="violet_on_hover"> Brāh lab ﹤</p>
+                    <p className="violet_on_hover">
+                        <a
+                            className="violet_on_hover"
+                            target="_blank"
+                            href="https://brah.design/"
+                        >
+                            {' '}
+                            Brāh lab ﹤
+                        </a>
+                    </p>
                 </div>
                 <p className="violet_on_hover">
                     <a className="violet_on_hover" target = "_blank"
